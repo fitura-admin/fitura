@@ -13,7 +13,7 @@ export default function DemoInput() {
     <section className={`flex-row gap-4 align-center ${classes.container}`}>
       <div className={`relative`}>
         <TextInput
-          onChange={(v) => setEmail(v.target.value)}
+          onChange={(v) => setEmail(v.target.value.trim())}
           value={email}
           placeholder="Your email"
           className={`${classes.input} ${error && classes.red_border} padding-20-24 text-18 medium white`}

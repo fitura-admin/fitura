@@ -10,6 +10,7 @@ const brevoApiClient = axios.create({
     "api-key": process.env.BREVO_API_KEY!,
   },
 });
+console.log(1);
 
 export async function POST(req: NextRequest) {
   const { email } = await req.json();
