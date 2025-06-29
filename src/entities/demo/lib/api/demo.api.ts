@@ -10,7 +10,7 @@ const apiClient = axios.create({
 
 export const subscripeEmail = async (email: string) => {
   try {
-    const response = await apiClient.post(`/api/subscribe-brevo/`, {
+    const response = await apiClient.post(`/api/subscribe-brevo`, {
       email,
     });
 
