@@ -3,17 +3,19 @@ import "./styles/reset.scss";
 import "./styles/fonts.scss";
 import "./styles/global.scss";
 import PageBg from "../entities/bg/ui";
+import KeyboardAwareWrapper from "../shared/ui/keyboard-autoscroll/ui";
 
 export const metadata: Metadata = {
   title: "Fitura",
   description: "Fintess & SPA. Coming soon",
-  icons: ["/logo.svg"],
+  icons: ["/icon.svg"],
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -24,8 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="body relative">
-        <PageBg />
-        {children}
+        <KeyboardAwareWrapper>
+          <PageBg />
+          {children}
+        </KeyboardAwareWrapper>
       </body>
     </html>
   );

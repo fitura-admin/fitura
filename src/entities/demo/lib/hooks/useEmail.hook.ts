@@ -37,7 +37,7 @@ export const useEmail = () => {
     if (error) {
       validateEmail();
     }
-  }, [error, validateEmail]);
+  }, [email, error]);
 
   return {
     setEmail,
