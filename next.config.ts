@@ -21,10 +21,8 @@ const nextConfig: NextConfig = {
   },
 
   env: {
-    BREVO_API_KEY: process.env.BREVO_API_KEY,
-    BREVO_GROUP_ID: process.env.BREVO_GROUP_ID,
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-    BREVO_APU_URL: process.env.BREVO_API_URL,
+    BREVO_API_URL: process.env.BREVO_API_URL,
   },
 
   output: "standalone",
