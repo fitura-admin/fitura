@@ -16,12 +16,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Email is required" }, { status: 400 });
   }
 
-  const LIST_ID = Number(process.env.BREVO_GROUP_ID);
-
   try {
     await brevoApiClient.post(`/contacts`, {
       email,
-      listIds: [LIST_ID],
+      listIds: [2],
       updateEnabled: true,
     });
 
