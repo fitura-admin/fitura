@@ -17,6 +17,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    console.log(process.env.BREVO_API_URL, process.env.BREVO_API_KEY?.length);
     await brevoApiClient.post(`/contacts`, {
       email,
       listIds: [2],
@@ -25,7 +26,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: "Success" }, { status: 200 });
   } catch (error: any) {
-    console.error("Brevo API error:", error.response?.status, error.response?.data);
+    console.error(
+      "Brevo API error:",
+      error.response?.status,
+      error.response?.data,
+    );
     const msg = error?.response?.data?.message || "Server error";
     return NextResponse.json({ message: msg }, { status: 500 });
   }
