@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export const subscripeEmail = async (email: string) => {
   try {
-    const response = await apiClient.post(`/contacts`, {
+    const response = await apiClient.post(`https://api.brevo.com/v3/contacts`, {
       email: email,
       listIds: [2],
       updateEnabled: true,
