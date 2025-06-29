@@ -25,7 +25,12 @@ export default function DemoInput() {
           </span>
         )}
       </div>
-      <Button type="subscribe" size="20-28" onClick={() => handleSubscribe()} className={loading ? classes.button : ""}>
+      <Button
+        type="subscribe"
+        size="20-28"
+        onClick={() => handleSubscribe()}
+        className={loading ? classes.button : ""}
+      >
         {loading ? (
           <span className={classes.load}></span>
         ) : (
