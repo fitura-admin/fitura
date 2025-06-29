@@ -58,6 +58,10 @@
     transform: translate(10%, 110%);
 }
 
+.button {
+    min-width: 130px;
+}
+
 @media screen and (width <= 768px) {
     .container {
         flex-direction: column;

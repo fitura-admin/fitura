@@ -17,6 +17,7 @@ export default function DemoInput() {
           value={email}
           placeholder="Your email"
           className={`${classes.input} ${error && classes.red_border} padding-20-24 text-18 medium white`}
+          name="fitura-email"
         />
         {error && (
           <span className={`red text-14 absolute ${classes.error}`}>
@@ -24,7 +25,7 @@ export default function DemoInput() {
           </span>
         )}
       </div>
-      <Button type="subscribe" size="20-28" onClick={() => handleSubscribe()}>
+      <Button type="subscribe" size="20-28" onClick={() => handleSubscribe()} className={loading ? classes.button : ""}>
         {loading ? (
           <span className={classes.load}></span>
         ) : (
