@@ -26,7 +26,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ id: response.data.id }, { status: 200 });
   } catch (error: any) {
-    console.error("Brevo error:", error.response?.data || error.message);
     return NextResponse.json(
       { message: error.response?.data?.message || "Server error" },
       { status: error.response?.status || 500 },
