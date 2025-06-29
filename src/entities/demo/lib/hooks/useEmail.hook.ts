@@ -1,3 +1,4 @@
+"use client";
 import { useCallback, useEffect, useState } from "react";
 import { subscripeEmail } from "~/src/entities/demo/lib/api/demo.api";
 
