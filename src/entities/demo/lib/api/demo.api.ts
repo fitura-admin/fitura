@@ -3,9 +3,9 @@ import axios from "axios";
 const apiClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BREVO_API_URL,
   headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
     "api-key": process.env.NEXT_PUBLIC_BREVO_API_KEY!,
+    "Content-Type": "application/json",
+    "Accept": "application/json",
   },
 });
 
