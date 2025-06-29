@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
 const brevoApiClient = axios.create({
@@ -17,21 +17,21 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    console.log(process.env.BREVO_API_URL, process.env.BREVO_API_KEY?.length);
-    await brevoApiClient.post(`/contacts`, {
-      email,
+    const response = await brevoApiClient.post(`/contacts`, {
+      email: email,
       listIds: [2],
       updateEnabled: true,
     });
 
-    return NextResponse.json({ message: "Success" }, { status: 200 });
+    return NextResponse.json({ id: response.data.id }, { status: 200 });
   } catch (error: any) {
-    console.error(
+    console.log(
       "Brevo API error:",
-      error.response?.status,
-      error.response?.data,
+      error.response?.code,
+      error.response?.message,
     );
-    const msg = error?.response?.data?.message || "Server error";
+    console.log(error);
+    const msg = error?.response?.message || "Server error";
     return NextResponse.json({ message: msg }, { status: 500 });
   }
 }
