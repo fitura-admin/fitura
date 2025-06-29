@@ -12,7 +12,7 @@ export function useKeyboardAutoScroll() {
           behavior: "smooth",
           block: "center",
         });
-      }, 300);
+      }, 10);
     };
 
     const inputs = document.querySelectorAll("input, textarea");
