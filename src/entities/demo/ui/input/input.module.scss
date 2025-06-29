@@ -1,0 +1,76 @@
+.button_text {
+    color: rgba(255, 255, 255, 0.90);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.10);
+}
+
+.input {
+    min-width: 400px;
+    border-radius: 100px;
+    box-shadow: $input-shadow;
+    background: $input-bg-color;
+    -webkit-backdrop-filter: $input-filter;
+    backdrop-filter: $input-filter;
+    border: $input-border;
+    transition: all $transition;
+    caret-color: rgba(255, 255, 255, 0.40);
+
+    color: rgba(255, 255, 255, 0.90);
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.40);
+    }
+
+    &::selection {
+        background-color: rgba(255, 255, 255, 0.40);
+    }
+
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    &:focus-visible {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(2.5px);
+    }
+}
+
+.load {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    animation: rotate infinite 1s ease;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+.error {
+    bottom: 0;
+    left: 0;
+    transform: translate(10%, 110%);
+}
+
+@media screen and (width <= 768px) {
+    .container {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .input {
+        min-width: calc(100vw - 2 * $space-4);
+    }
+
+    .error {
+        top: 0;
+        bottom: unset;
+        transform: translate(10%, -110%);
+    }
+}

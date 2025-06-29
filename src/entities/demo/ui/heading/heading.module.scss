@@ -1,0 +1,15 @@
+.logo {
+    width: 220px;
+    height: 58px;
+}
+
+.opacity {
+    opacity: 0.7;
+}
+
+@media screen and (width <= 460px) {
+    .logo {
+        width: 140px;
+        height: 46px;
+    }
+}
