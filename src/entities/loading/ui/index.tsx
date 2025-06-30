@@ -11,7 +11,7 @@ export default function LoadingSplash() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setActive(false);
-    }, 10500);
+    }, 12000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -19,7 +19,7 @@ export default function LoadingSplash() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHidden(true);
-    }, 12000);
+    }, 13000);
 
     return () => clearTimeout(timer);
   }, []);
