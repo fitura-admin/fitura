@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./loading.scss";
+import "./styles/loading.scss";
 import Logo from "~/public/loading-logo.svg";
 
 export default function Loading() {
