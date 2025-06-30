@@ -28,7 +28,7 @@ export default function LoadingSplash() {
     <div
       className={`center ${classes.container} ${hidden ? classes.none : null} ${!active ? classes.hidden : ""} absolute`}
     >
-        <Logo className={classes.logo} />
+      <Logo className={classes.logo} />
     </div>
   );
 }
