@@ -1,0 +1,42 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(113deg, #12246D 0%, #13101E 100%) center / cover no-repeat;
+    transition: opacity $transition;
+    inset: 0;
+    z-index: 1000;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.none {
+    display: none;
+}
+
+.logo {
+    path[fill="#fff"] {
+        stroke: $white;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: square;
+        stroke-dasharray: 400;
+        stroke-dashoffset: 500;
+        animation: draw 4s linear infinite forwards;
+    }
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 500;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 500;
+    }
+}

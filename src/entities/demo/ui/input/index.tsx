@@ -33,11 +33,15 @@ export default function DemoInput() {
           if (completed) return;
           handleSubscribe();
         }}
-        className={loading ? classes.button : ""}
+        className={`${loading ? classes.button : ""} relative`}
       >
-        <span className={`white text-18 semibold ${classes.button_text}`}>
-          {completed ? "Completed" : "Subscribe"}
-        </span>
+        {loading ? (
+          <span className={classes.loader}></span>
+        ) : (
+          <span className={`white text-18 semibold ${classes.button_text}`}>
+            {completed ? "Completed" : "Subscribe"}
+          </span>
+        )}
       </Button>
     </section>
   );

@@ -34,15 +34,14 @@
     }
 }
 
-.load {
-    position: relative;
+.loader {
+    position: absolute;
     left: 50%;
     translate: -50% 0;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
     animation: rotate infinite 1s ease;
 }
 
@@ -63,6 +62,7 @@
 
 .button {
     min-width: 130px;
+    min-height: 62px;
 }
 
 @media screen and (width <= 768px) {
