@@ -13,11 +13,11 @@
     "@svgr/webpack": "^8.1.0",
     "axios": "^1.10.0",
     "eslint-plugin-prettier": "^5.5.1",
-    "gsap": "^3.13.0",
     "next": "15.3.4",
     "prettier": "^3.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-use": "^17.6.0",
     "sass": "^1.89.2",
     "webpack-cli": "^6.0.1"
   },

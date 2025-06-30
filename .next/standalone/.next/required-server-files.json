@@ -1,10 +1,7 @@
 {
   "version": 1,
   "config": {
-    "env": {
-      "NEXT_PUBLIC_API_URL": "https://fitura-swart.vercel.app/api",
-      "BREVO_API_URL": "https://api.brevo.com/v3"
-    },
+    "env": {},
     "eslint": {
       "ignoreDuringBuilds": false
     },
@@ -76,7 +73,7 @@
     "basePath": "",
     "sassOptions": {
       "includePaths": [
-        "C:\\next\\futura\\src"
+        "C:\\next\\fitura\\src"
       ],
       "prependData": "\n      @use \"app/styles/colors.scss\" as *;\n      @use \"app/styles/sizes.scss\" as *;\n      @use \"app/styles/text.scss\" as *;\n    "
     },
@@ -104,7 +101,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\next\\futura",
+    "outputFileTracingRoot": "C:\\next\\fitura",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -287,10 +284,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\next\\futura"
+      "root": "C:\\next\\fitura"
     }
   },
-  "appDir": "C:\\next\\futura",
+  "appDir": "C:\\next\\fitura",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
