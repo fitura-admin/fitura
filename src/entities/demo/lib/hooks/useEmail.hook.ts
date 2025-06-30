@@ -6,6 +6,7 @@ export const useEmail = () => {
   const [email, setEmail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [completed, setCompleted] = useState<boolean>(false);
 
   const validateEmail = useCallback(() => {
     if (!email.includes("@")) return false;
@@ -26,6 +27,7 @@ export const useEmail = () => {
 
       await subscripeEmail(email);
       setError(null);
+      setCompleted(true);
     } catch (err) {
       console.error(error);
       setError("Something went wrong. Try again");
@@ -46,5 +48,6 @@ export const useEmail = () => {
     handleSubscribe,
     loading,
     error,
+    completed,
   };
 };

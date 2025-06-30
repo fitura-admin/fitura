@@ -1,3 +1,4 @@
+"use client";
 import Demo from "~/src/entities/demo/ui";
 
 export default function Home() {

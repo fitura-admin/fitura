@@ -1,0 +1,18 @@
+.loading-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(113deg, #12246D 0%, #13101E 100%) center / cover no-repeat;
+}
+
+.loading-logo {
+    animation: loading 1.3s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1)
+    }
+}

@@ -7,7 +7,8 @@ import TextInput from "~/src/shared/ui/inputs/text-input";
 import Button from "~/src/shared/ui/button";
 
 export default function DemoInput() {
-  const { email, setEmail, loading, error, handleSubscribe } = useEmail();
+  const { email, setEmail, loading, error, handleSubscribe, completed } =
+    useEmail();
 
   return (
     <section className={`flex-row gap-4 align-center ${classes.container}`}>
@@ -28,16 +29,15 @@ export default function DemoInput() {
       <Button
         type="subscribe"
         size="20-28"
-        onClick={() => handleSubscribe()}
+        onClick={() => {
+          if (completed) return;
+          handleSubscribe();
+        }}
         className={loading ? classes.button : ""}
       >
-        {loading ? (
-          <span className={classes.load}></span>
-        ) : (
-          <span className={`white text-18 semibold ${classes.button_text}`}>
-            Subscribe
-          </span>
-        )}
+        <span className={`white text-18 semibold ${classes.button_text}`}>
+          {completed ? "Completed" : "Subscribe"}
+        </span>
       </Button>
     </section>
   );
