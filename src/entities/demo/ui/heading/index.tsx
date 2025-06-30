@@ -1,7 +1,6 @@
 import React from "react";
 
 import classes from "./heading.module.scss";
-import Logo from "~/public/logo.svg";
 import Image from "next/image";
 
 export default function DemoHeading() {
@@ -16,7 +15,7 @@ export default function DemoHeading() {
         </h1>
       </div>
       <h2 className={`light text-28 white text-center ${classes.opacity}`}>
-        Fitness & SPA
+        fitness & spa
       </h2>
     </div>
   );
