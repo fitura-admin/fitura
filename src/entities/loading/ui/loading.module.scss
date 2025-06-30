@@ -1,6 +1,6 @@
 .container {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background: linear-gradient(113deg, #12246D 0%, #13101E 100%) center / cover no-repeat;
     transition: opacity $transition;
     inset: 0;
