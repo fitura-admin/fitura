@@ -27,11 +27,15 @@
     }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <=500px) {
     .logo {
-        max-width: 266px;
-        max-height: 192px;
+        position: relative;
+        max-width: 320px;
+        overflow: visible;
+        transform: translateX(-25%);
     }
+
+
 }
 
 @keyframes draw {
