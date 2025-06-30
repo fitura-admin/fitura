@@ -27,6 +27,13 @@
     }
 }
 
+@media screen and (width <= 768px) {
+    .logo {
+        max-width: 266px;
+        max-height: 192px;
+    }
+}
+
 @keyframes draw {
     0% {
         stroke-dashoffset: 500;
