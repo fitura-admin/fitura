@@ -1,5 +1,5 @@
 {
   "/api/subscribe/route": "/api/subscribe",
-  "/page": "/",
-  "/_not-found/page": "/_not-found"
+  "/_not-found/page": "/_not-found",
+  "/page": "/"
 }
