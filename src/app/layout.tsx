@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Fitura",
   description: "Fintess & SPA. Coming soon",
   icons: ["/icon.svg"],
-  
 };
 
 export const viewport: Viewport = {
