@@ -14,6 +14,7 @@ export default function PageBg({ setActive }: Props) {
         muted
         loop
         playsInline
+        autoPlay
         preload="metadata"
         onCanPlayThrough={() => setActive(false)}
       >
