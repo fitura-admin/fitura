@@ -2,6 +2,8 @@
     width: 100vw;
     min-height: 100vh;
     background: url("/demo-bg.png") no-repeat center / cover;
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 .main {

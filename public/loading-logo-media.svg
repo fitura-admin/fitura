@@ -1,14 +1,15 @@
 <svg width="360" height="392" viewBox="0 0 360 392" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.5" filter="url(#filter0_f_225_1014)">
-<path d="M313 202.621C313 275.751 275.399 292 201.945 292C128.491 292 47 275.751 47 202.621C47 129.491 101.891 100 175.345 100C248.799 100 313 129.491 313 202.621Z" fill="url(#paint0_linear_225_1014)"/>
+<g opacity="0.5" filter="url(#filter0_f_225_1016)">
+<path d="M313 202.621C313 275.751 275.399 292 201.945 292C128.491 292 47 275.751 47 202.621C47 129.491 101.891 100 175.345 100C248.799 100 313 129.491 313 202.621Z" fill="url(#paint0_linear_225_1016)"/>
 </g>
+<path d="M200.336 173.321C199.444 172.263 197.777 171 194.897 171C188.111 171 181.193 177.004 175.921 187.474C173.557 192.166 171.604 197.605 170.097 203.581C169.895 203.581 169.686 203.588 169.484 203.588C166.45 203.588 164.546 202.219 163.821 199.51C162.475 194.508 165.439 184.87 175.516 177.025V176.256H167.949C159.63 184.609 156.659 194.388 158.437 200.999C159.769 205.958 163.633 208.999 168.849 209.225C168.117 212.999 167.559 216.936 167.175 221H172.768C173.194 216.598 173.828 212.499 174.624 208.717C190.524 205.472 202.059 187.904 202.059 178.683C202.059 176.482 201.48 174.683 200.336 173.328V173.321ZM176.151 202.48C180.914 185.654 188.962 176.644 194.897 176.644C195.308 176.644 195.852 176.701 196.089 176.983C196.208 177.124 196.473 177.561 196.473 178.676C196.473 184.807 188.055 198.487 176.144 202.48H176.151Z" fill="white"/>
 <defs>
-<filter id="filter0_f_225_1014" x="-53" y="0" width="466" height="392" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_225_1016" x="-53" y="0" width="466" height="392" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_225_1014"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_225_1016"/>
 </filter>
-<linearGradient id="paint0_linear_225_1014" x1="180" y1="70.2069" x2="180" y2="335.034" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_225_1016" x1="180" y1="70.2069" x2="180" y2="335.034" gradientUnits="userSpaceOnUse">
 <stop stop-color="#E46A1E"/>
 <stop offset="1" stop-color="#105D7E"/>
 </linearGradient>
