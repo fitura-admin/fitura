@@ -1,23 +1,23 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 import classes from "./bg.module.scss";
 
-export default function PageBg() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+interface Props {
+  setActive: Dispatch<SetStateAction<boolean>>;
+}
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!videoRef.current) return;
-      videoRef.current.play();
-    }, 9000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function PageBg({ setActive }: Props) {
   return (
     <div className={classes.container}>
-      <video muted loop playsInline preload="metadata" ref={videoRef}>
+      <video
+        muted
+        loop
+        playsInline
+        autoPlay
+        preload="metadata"
+        onCanPlayThrough={() => setActive(false)}
+      >
         <source src="/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
