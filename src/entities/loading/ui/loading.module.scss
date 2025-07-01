@@ -38,6 +38,17 @@
 
 }
 
+@media screen and (width <=500px) {
+    .logo {
+        position: relative;
+        max-width: 320px;
+        overflow: visible;
+        transform: translateX(-25%);
+    }
+
+
+}
+
 @keyframes draw {
     0% {
         stroke-dashoffset: 500;

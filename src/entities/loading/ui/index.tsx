@@ -4,25 +4,22 @@ import React, { useEffect, useState } from "react";
 import classes from "./loading.module.scss";
 import Logo from "~/public/loading-logo.svg";
 
-export default function LoadingSplash() {
-  const [active, setActive] = useState<boolean>(true);
+interface Props {
+  active: boolean;
+}
+
+export default function LoadingSplash({ active }: Props) {
   const [hidden, setHidden] = useState<boolean>(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setActive(false);
-    }, 12000);
+      if (active) {
+        setHidden(false);
+      }
+    }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setHidden(true);
-    }, 13000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  }, [active]);
 
   return (
     <div
