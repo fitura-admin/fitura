@@ -13,8 +13,8 @@ export default function LoadingSplash({ active }: Props) {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (active) {
-        setHidden(false);
+      if (!active) {
+        setHidden(true);
       }
     }, 500);
 
