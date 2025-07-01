@@ -2,9 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./styles/reset.scss";
 import "./styles/fonts.scss";
 import "./styles/global.scss";
-import PageBg from "../entities/bg/ui";
 import KeyboardAwareWrapper from "../shared/ui/keyboard-autoscroll/ui";
-import LoadingSplash from "../entities/loading/ui";
 
 export const metadata: Metadata = {
   title: "Fitura",
@@ -27,11 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="body relative">
-        <KeyboardAwareWrapper>
-          <LoadingSplash />
-          <PageBg />
-          {children}
-        </KeyboardAwareWrapper>
+        <KeyboardAwareWrapper>{children}</KeyboardAwareWrapper>
       </body>
     </html>
   );
