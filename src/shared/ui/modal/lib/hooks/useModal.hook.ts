@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAppDispatch } from "~/src/app/store/hook";
-import { setModalOpen } from "~/src/app/store/reducers/navigation.slice";
+import {
+  setAnyModalOpen,
+  setModalOpen,
+} from "~/src/app/store/reducers/navigation.slice";
 
 interface Props {
   isOpened: boolean;
@@ -15,8 +18,10 @@ export const useModal = ({ isOpened, onClose, customClickOutside }: Props) => {
 
   useEffect(() => {
     if (isOpened) {
+      dispatch(setAnyModalOpen(true));
       document.body.classList.add("no-scroll");
     } else {
+      dispatch(setAnyModalOpen(false));
       document.body.classList.remove("no-scroll");
     }
 
@@ -28,7 +33,7 @@ export const useModal = ({ isOpened, onClose, customClickOutside }: Props) => {
   useEffect(() => {
     const handlePopState = () => {
       if (isOpened) {
-        dispatch(setModalOpen(false));
+        onClose();
       }
     };
 
@@ -36,7 +41,7 @@ export const useModal = ({ isOpened, onClose, customClickOutside }: Props) => {
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [isOpened, dispatch]);
+  }, [isOpened, onClose, dispatch]);
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;

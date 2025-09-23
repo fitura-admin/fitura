@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
+import { useAppSelector } from "~/src/app/store/hook";
+import { selectNavigation } from "~/src/app/store/reducers/navigation.slice";
 
 export const useScrollSectionsShared = ({
   itemsLength,
@@ -8,6 +10,7 @@ export const useScrollSectionsShared = ({
   itemsLength: number;
   onSectionChange: (index: number) => void;
 }) => {
+  const { anyModalOpen } = useAppSelector(selectNavigation);
   const contentRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress, scrollY } = useScroll({
     target: contentRef,
@@ -35,6 +38,7 @@ export const useScrollSectionsShared = ({
   }, [scrollYProgress, itemsLength, onSectionChange]);
 
   useEffect(() => {
+    if (anyModalOpen) return;
     const el = contentRef.current;
     if (!el) return;
 

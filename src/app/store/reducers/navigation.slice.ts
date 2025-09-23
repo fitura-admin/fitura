@@ -12,6 +12,7 @@ interface InitialState {
   navSection: string;
   isNavClicked: boolean;
   modalOpen: boolean;
+  anyModalOpen: boolean;
 }
 
 const initialState: InitialState = {
@@ -22,6 +23,7 @@ const initialState: InitialState = {
   navSection: "home",
   isNavClicked: false,
   modalOpen: false,
+  anyModalOpen: false,
 };
 
 export const navigationSlice = createSlice({
@@ -49,6 +51,9 @@ export const navigationSlice = createSlice({
     setModalOpen: (state, action: PayloadAction<boolean>) => {
       state.modalOpen = action.payload;
     },
+    setAnyModalOpen: (state, action: PayloadAction<boolean>) => {
+      state.anyModalOpen = action.payload;
+    },
   },
 });
 
@@ -60,6 +65,7 @@ export const {
   setNavSection,
   setNavClicked,
   setModalOpen,
+  setAnyModalOpen,
 } = navigationSlice.actions;
 export const selectNavigation = (state: { navigation: InitialState }) =>
   state.navigation;
