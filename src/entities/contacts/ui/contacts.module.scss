@@ -1,0 +1,19 @@
+.section {
+    display: flex;
+    background: $bg-100;
+    overflow: hidden;
+    min-height: 70dvh;
+}
+
+.wrapper {
+    justify-content: flex-end;
+    padding-top: $space-100 !important;
+    padding-bottom: $space-7 !important;
+    gap: 95px;
+}
+
+@media screen and (width <=768px) {
+    .wrapper {
+        padding-top: 80px !important;
+    }
+}

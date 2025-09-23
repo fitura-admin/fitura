@@ -1,0 +1,27 @@
+.logo {
+    max-width: 140px;
+    max-height: 42px;
+}
+
+.logo__media {
+    display: none;
+}
+
+.logo__desktop {
+    display: block;
+}
+
+@media screen and (width <= 768px) {
+    .logo {
+        max-width: 94px;
+        max-height: 28px;
+    }
+
+    .logo__desktop {
+        display: none;
+    }
+
+    .logo__media {
+        display: block;
+    }
+}

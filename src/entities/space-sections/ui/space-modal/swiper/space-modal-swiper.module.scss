@@ -1,0 +1,28 @@
+.wrapper {
+    position: relative;
+}
+
+.container,
+.slide {
+    max-width: 806px;
+    max-height: 500px;
+    height: 500px;
+    border-radius: $space-4;
+    user-select: none;
+}
+
+@media screen and (width <= 1024px) {
+    .slide,
+    .container {
+        max-width: calc(100vw - $space-10 * 2);
+        height: auto;
+    }
+}
+
+@media screen and (width <= 768px) {
+    .slide,
+    .container {
+        max-width: calc(100vw - $space-4 * 2);
+        min-height: 204px;
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+    gap: $space-6;
+}
+
+.text {
+    text-align: left;
+    white-space: pre-wrap;
+
+    &.p {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (width <= 768px) {
+    .container {
+        align-items: center;
+        gap: $space-4;
+    }
+
+    .text {
+        text-align: center;
+        line-height: $space-8;
+    }
+
+    .p {
+        line-height: $space-5;
+    }
+}

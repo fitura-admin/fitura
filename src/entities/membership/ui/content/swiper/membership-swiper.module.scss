@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
+
+.swiper {
+    max-width: 100vw;
+    width: 100%;
+    height: 499px;
+    z-index: 1;
+}
+
+.slide {
+    max-width: 760px;
+}
+
+@media screen and (width <= 768px) {
+    .slide {
+        max-width: calc(100vw - 26px * 2);
+    }
+}

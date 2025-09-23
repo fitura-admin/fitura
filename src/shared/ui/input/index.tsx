@@ -2,7 +2,8 @@ import React, { Ref } from "react";
 
 import classes from "./input.module.scss";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -11,6 +12,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   name?: string;
   disabled?: boolean;
   ref?: Ref<HTMLInputElement>;
+  error?: string | null;
 }
 
 export default function Input({
@@ -22,8 +24,9 @@ export default function Input({
   name,
   disabled,
   ref,
+  error = null,
   ...rest
-}: Props) {
+}: InputProps) {
   return (
     <label htmlFor={name} className={classes.label}>
       <input
@@ -37,6 +40,7 @@ export default function Input({
         onChange={onChange}
         className={`${className} ${classes.input}`}
       />
+      {error && <span className="heading h8 red">{error}</span>}
     </label>
   );
 }

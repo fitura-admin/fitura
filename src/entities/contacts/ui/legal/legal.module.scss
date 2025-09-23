@@ -1,0 +1,27 @@
+.container {
+    gap: 14px;
+}
+
+.text {
+    opacity: 0.8;
+    cursor: default;
+    @media screen and (any-hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.link {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        cursor: pointer;
+}
+
+@media screen and (width <=768px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}

@@ -1,0 +1,31 @@
+.options {
+    min-width: 140px;
+    transform-origin: top right;
+    border-radius: $space-5 $space-6px $space-5 $space-5;
+    -webkit-backdrop-filter: $blur-10;
+    backdrop-filter: $blur-10;
+    box-shadow: $shadow-200;
+    background-color: rgba(255, 255, 255, 0.15);
+    right: 0;
+    gap: $space-2;
+}
+
+.selectButton {
+    min-width: 44px;
+}
+
+@media screen and (width <=768px) {
+    .options {
+        right: unset;
+        left: 50%;
+        translate: -50% 0;
+        transform-origin: bottom center;
+        border-radius: $space-5;
+        gap: $space-5;
+    }
+
+    .container {
+        position: absolute !important;
+        bottom: calc(env(safe-area-inset-bottom) + $space-6);
+    }
+}

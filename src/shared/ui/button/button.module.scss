@@ -1,5 +1,5 @@
 .button {
-    display: grid;
+    display: inline-flex;
     align-items: center;
     transition: all $transition !important;
     user-select: none;
@@ -9,6 +9,10 @@
     &.activeScale:active {
         transform: scale(0.98);
     }
+
+    &.justifyCenter {
+        justify-content: center;
+    }
 }
 
 .ghost {
@@ -16,27 +20,68 @@
     color: inherit;
 }
 
-.subscribe {
-    border-radius: 100px;
-    border: $button-border;
-    background: $button-bg-color;
-    box-shadow: $button-shadow;
-    -webkit-backdrop-filter: $button-filter;
-    backdrop-filter: $button-filter;
-
-    &:hover {
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
-        background: rgba(255, 255, 255, 0.15);
-    }
+.primary {
+    border: $btn-primary-border;
+    background: $btn-primary-color;
+    box-shadow: $shadow-100;
+    backdrop-filter: $blur-4;
 
     &:active {
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-        background: rgba(255, 255, 255, 0.30);
+        background: $btn-primary-active;
     }
 }
 
-.size-20-28 {
-    padding: $space-5 $space-7;
+.modal {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+}
+
+.white {
+    background-color: $neutral-100;
+    box-shadow: $shadow-100;
+
+    &:active {
+        background-color: $neutral-300;
+    }
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: translate(0, 1px);
+    }
+
+    16% {
+        transform: translate(1px, 0);
+    }
+
+    33% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(1px, 1px);
+    }
+
+    66% {
+        transform: translate(0, 1px);
+    }
+
+    100% {
+        transform: translate(1px, 1px);
+    }
+}
+
+@media (any-hover: hover) {
+    .hoverAnimation:hover {
+        animation: hoverAnimation 0.3s ease infinite;
+    }
+
+    .white:hover {
+        background-color: $neutral-200;
+    }
+
+    .primary:hover {
+        background: $btn-primary-hover;
+    }
 }

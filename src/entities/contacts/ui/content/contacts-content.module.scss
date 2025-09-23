@@ -1,0 +1,34 @@
+.container {
+    gap: $space-10;
+    max-width: 1462px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.bg,
+.bg__main {
+    overflow: visible;
+}
+
+.bg__main {
+    display: block;
+}
+
+.heading_text {
+    align-self: center;
+}
+
+@media screen and (width <= 768px) {
+    .bg__main {
+        display: none;
+    }
+}

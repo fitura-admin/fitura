@@ -1,9 +1,40 @@
-$white: #fff;
-$input-bg-color: rgba(26, 26, 26, 0.15);
-$button-bg-color: rgba(255, 255, 255, 0.05);
-$button-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-$button-filter: blur(4px);
-$button-border: 1px solid rgba(255, 255, 255, 0.08);
-$input-filter: blur(1.5px);
-$input-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.05) inset;
-$input-border: 1px solid rgba(255, 255, 255, 0.06);
+$neutral-100: #ffffff;
+$neutral-200: #dfdfdf;
+$neutral-300: #bfbfbf;
+$neutral-400: #9f9f9f;
+$neutral-500: #808080;
+$neutral-600: #606060;
+$neutral-700: #404040;
+$neutral-800: #202020;
+
+$bg-100: #15002f;
+$bg-200: #080a20;
+$bg-300: #060906;
+$bg-400: #010c1a;
+$bg-500: #080022;
+
+$colors-100: #6a00ff;
+$colors-101: #ea008c;
+$colors-200: #0036b8;
+$colors-201: #ff7849;
+$colors-300: #00b0a7;
+$colors-301: #ff7a00;
+$colors-400: #145b67;
+$colors-401: #1556bf;
+$colors-500: #0c5ba2;
+$colors-501: #612af0;
+
+$shadow-100: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+$shadow-200: 0 16px 32px 0 rgba(0, 0, 0, 0.14);
+$shadow-300: 0 20px 50px 0 rgba(0, 0, 0, 0.30);
+
+$blur-2: blur(2px);
+$blur-4: blur(4px);
+$blur-8: blur(8px);
+$blur-10: blur(10px);
+$blur-20: blur(20px);
+
+$btn-primary-color: rgba(255, 255, 255, 0.15);
+$btn-primary-hover: rgba(255, 255, 255, 0.24);
+$btn-primary-active: rgba(255, 255, 255, 0.30);
+$btn-primary-border: 1px solid rgba(255, 255, 255, 0.08);

@@ -1,0 +1,53 @@
+.pagination {
+    position: absolute;
+    left: 50%;
+    bottom: $space-7;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    width: 100%;
+    transition: opacity $transition;
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    display: flex;
+    flex-direction: row;
+    gap: $space-2;
+    align-items: center;
+    max-width: 600px;
+
+    .pagination__item {
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 2px;
+        width: 100%;
+        flex: 1 0 0;
+
+        &.past {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        &.active {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.4);
+                width: calc(100% * var(--progress));
+            }
+        }
+    }
+}
+
+@media screen and (width <=768px) {
+    .pagination {
+        max-width: 240px;
+    }
+}

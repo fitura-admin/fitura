@@ -7,7 +7,18 @@
     url("./fonts/Inter-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: "Inter";
+  src:
+    local("Inter"),
+    url("./fonts/Inter-Regular.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 };
 
 @font-face {
@@ -19,7 +30,7 @@
     url("./fonts/Inter-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
 };
 
 @font-face {
@@ -31,7 +42,7 @@
     url("./fonts/Inter-LightBETA.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
 };
 
 @font-face {
@@ -43,5 +54,29 @@
     url("./fonts/ABCSolarPlusVariable-Trial.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: "ABCSolarPlusVariable";
+  src:
+    local("ABCSolarPlusVariable"),
+    url("./fonts/ABCSolarPlusVariable-Trial.woff2") format("woff2"),
+    url("./fonts/ABCSolarPlusVariable-Trial.woff") format("woff"),
+    url("./fonts/ABCSolarPlusVariable-Trial.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: "ABCSolarPlusVariable";
+  src:
+    local("ABCSolarPlusVariable"),
+    url("./fonts/ABCSolarPlusVariable-Trial.woff2") format("woff2"),
+    url("./fonts/ABCSolarPlusVariable-Trial.woff") format("woff"),
+    url("./fonts/ABCSolarPlusVariable-Trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 };

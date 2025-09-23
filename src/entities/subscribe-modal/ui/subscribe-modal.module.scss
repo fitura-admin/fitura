@@ -1,0 +1,17 @@
+.container {
+    padding: $space-8 $space-8 $space-11;
+    gap: $space-8;
+    width: 380px;
+}
+
+@media screen and (width <= 768px) {
+    .container {
+        width: calc(100vw - $space-4 * 2);
+    }
+}
+
+@media screen and (width <= 420px) {
+    .container {
+        padding: $space-5 $space-5 $space-8;
+    }
+}

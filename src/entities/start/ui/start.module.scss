@@ -1,0 +1,40 @@
+.section {
+    height: 200svh;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        bottom: -$space-3;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, rgba(21, 0, 47, 0.00) 74.69%, #15002F 94.97%);
+        z-index: 2;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .bgVideo {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 100vw;
+        z-index: -10;
+        min-height: 100vh;
+    }
+}
+
+.container {
+    height: 100vh;
+}
+
+.marquee {
+    opacity: 0.8;
+}
+
+@media screen and (width <=768px) {
+    .section {
+        height: 150svh;
+    }
+}

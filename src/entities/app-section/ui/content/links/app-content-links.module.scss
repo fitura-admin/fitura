@@ -1,0 +1,49 @@
+.list {
+    gap: $space-6;
+    justify-content: flex-start;
+}
+
+.button {
+    position: relative;
+    z-index: 3;
+}
+
+.button__container {
+    min-height: 58px;
+    gap: $space-3;
+    padding: $space-4 $space-5;
+}
+
+.button__icon {
+    display: inline-block;
+}
+
+.button__iconMedia {
+    display: none;
+}
+
+.button__text {
+    color: rgba(255, 255, 255, 0.90);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+    white-space: nowrap;
+}
+
+@media screen and (width <=768px) {
+    .list {
+        gap: $space-4;
+        justify-content: center;
+    }
+
+    .button__container {
+        padding: $space-3 $space-4;
+        min-height: 44px;
+    }
+
+    .button__icon {
+        display: none;
+    }
+
+    .button__iconMedia {
+        display: inline-block;
+    }
+}

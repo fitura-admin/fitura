@@ -1,0 +1,22 @@
+.container {
+    padding: 2px 0;
+    opacity: 0;
+    transition: opacity $transition;
+}
+
+.active {
+    opacity: 1;
+}
+
+.line {
+    cursor: pointer;
+    background-color: $neutral-100;
+    width: $space-8;
+    height: 2px;
+    opacity: 0.4;
+    transition: opacity $transition;
+
+    &.active {
+        opacity: 1;
+    }
+}

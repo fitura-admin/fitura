@@ -1,10 +1,31 @@
-$transition: 0.5s ease;
+$transition: 0.4s ease;
 
+$container-width: 1920px;
+$container-width-desktop: 1152px;
+$container-offset: 16px;
 
+$sc-p-b: 100px;
+$sc-p-b-s: 37px;
+
+$space-1: 4px;
+$space-6px: 6px;
 $space-2: 8px;
-
+$space-10px: 10px;
+$space-3: 12px;
+$space-3-half: 14px;
 $space-4: 16px;
+$space-4-half: 18px;
 $space-5: 20px;
 $space-6: 24px;
 $space-7: 28px;
+$space-30: 30px;
+$space-8: 32px;
+$space-9: 36px;
+$space-10: 40px;
+$space-11: 44px;
+$space-12: 48px;
 $space-60px: 60px;
+$space-80: 80px;
+$space-100: 100px;
+
+$button-primary-border-radius: 100px;

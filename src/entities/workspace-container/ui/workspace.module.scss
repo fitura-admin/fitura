@@ -1,0 +1,41 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wrapper {
+    --gap: 7vh;
+    gap: var(--gap);
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 10vh;
+    max-width: 1442px !important;
+    padding-top: $space-100;
+    z-index: 2;
+}
+
+@media screen and (width <=1440px) {
+    .wrapper {
+        padding-bottom: 6vh;
+    }
+}
+
+@media screen and (width <=900px) {
+    .wrapper {
+        overflow: hidden;
+    }
+}
+
+@media screen and (width <=768px) {
+    .wrapper {
+        --gap: 30px;
+    }
+}
+
+@media screen and (height <=700px) {
+    .wrapper {
+        padding-top: $space-30;
+    }
+}

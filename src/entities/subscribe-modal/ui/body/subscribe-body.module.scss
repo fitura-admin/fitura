@@ -1,0 +1,29 @@
+.container {
+    gap: $space-4;
+}
+
+.input {
+    padding: $space-3 $space-4;
+    border-radius: $space-100;
+    background: rgba(26, 26, 26, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    &,
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        transition: border $transition, color $transition;
+    }
+
+    @media screen and (any-hover: hover) {
+        &:hover {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.90);
+        }
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        color: rgba(255, 255, 255, 0.90);
+    }
+}

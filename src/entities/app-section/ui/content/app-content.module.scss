@@ -1,0 +1,19 @@
+.container {
+    max-width: 411px;
+    max-height: 314px;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    top: 40%;
+}
+
+@media screen and (width <= 768px) {
+    .container {
+       justify-content: start !important;
+       gap: $space-8;
+       max-height: initial;
+       height: initial;
+       top: 0 !important;
+       transform: none !important;
+    }
+}

@@ -1,0 +1,56 @@
+.container {
+    position: absolute;
+    inset: 0;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.20);
+
+    @media screen and (any-hover: hover) {
+        &:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -50px;
+        bottom: -50px;
+        left: -25px;
+        right: -25px;
+        z-index: -1;
+    }
+}
+
+.prev {
+    left: -133px;
+    translate: -100% -50%;
+}
+
+.next {
+    right:  -133px;
+    translate: 100% -50%;
+}
+
+@media screen and (width <=1280px) {
+    .prev {
+        left: -5vw;
+    }
+
+    .next {
+        right: -5vw;
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .container {
+        display: none;
+        pointer-events: none;
+    }
+}

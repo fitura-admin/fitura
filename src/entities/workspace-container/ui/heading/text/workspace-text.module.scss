@@ -1,0 +1,43 @@
+.heading__text {
+    position: relative;
+    gap: $space-3;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.subheading {
+    white-space: pre-wrap;
+    opacity: 0.8;
+    text-wrap: pretty;
+    width: 100%;
+    letter-spacing: -0.28px;
+}
+
+.leftTopText_container {
+    display: grid;
+    position: absolute;
+    top: -$space-3;
+    left: 50%;
+    transform: translate(-50%, -100%)
+}
+
+.text__top {
+    white-space: nowrap;
+    align-self: center;
+}
+
+@media screen and (width <=820px) {
+    .leftTopText_container {
+        top: -$space-2;
+        max-height: 26px;
+        padding: $space-2;
+        border-radius: $space-100;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .leftTopText {
+        line-height: 10px;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,52 @@
+.container {
+    gap: $space-2;
+    align-self: center;
+}
+
+.imageContainer {
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    height: 62px;
+    overflow: hidden;
+    border-radius: $space-4;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+        z-index: 1;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+    }
+}
+
+.imageActive {
+    &::after {
+        opacity: 0;
+    }
+}
+
+@media screen and (width <=768px) {
+    .container {
+        position: absolute;
+        bottom: $space-10;
+        transform: translateX($space-4);
+        max-width: 100vw;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-align: start;
+
+        scrollbar-width: 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            min-width: 100px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.section {
+    display: flex;
+    height: 100%;
+
+    background-color: $bg-100;
+    overflow: hidden;
+}
+
+.wrapper {
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+    padding-top: $space-100 !important;
+    padding-bottom: $space-100 !important;
+}
+
+@media screen and (width <=768px) {
+    .wrapper {
+        gap: $space-7;
+    }
+}

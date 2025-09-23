@@ -10,39 +10,126 @@ $second-family: "ABCSolarPlusVariable", sans-serif;
     font-family: $second-family;
     font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss09' on, 'ss16' on, 'ss17' on, 'ss18' on;
 }
-//
 
+//
+.heading {
+    font-family: $second-family;
+    font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss09' on, 'ss16' on, 'ss17' on, 'ss18' on;
+    font-weight: 500;
+}
+
+.display1 {
+    font-size: clamp(3.75rem, 3.132rem + 2.35vw, 5.25rem);
+    line-height: clamp(4.5rem, 4.294rem + 0.78vw, 5rem);
+}
+
+.display2 {
+    font-size: 60px;
+    line-height: 72px;
+}
+
+.h1 {
+    font-size: clamp(2rem, 1.485rem + 1.96vw, 3.25rem);
+}
+
+.h2 {
+    font-size: clamp(1.75rem, 1.338rem + 1.57vw, 2.75rem);
+    line-height: clamp(2rem, 1.588rem + 1.57vw, 3rem);
+}
+
+.h3 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.h4 {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.h5 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.h6 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.h7 {
+    font-family: $font-family;
+    font-feature-settings: none;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.h8 {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+//
+.body-text {
+    font-family: $font-family;
+}
+
+.big {
+    font-size: clamp(0.875rem, 0.75rem + 0.56vw, 1.25rem);
+    line-height: clamp(1.25rem, 1.083rem + 0.74vw, 1.75rem);
+}
+
+.base {
+    font-size: clamp(0.875rem, 0.84rem + 0.13vw, 1rem);
+    line-height: 24px;
+}
+
+.small {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+//
 .light {
     font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
 }
 
 .medium {
     font-weight: 500;
 }
-//
 
+//
 .text-center {
     text-align: center;
 }
+
 //
-
-.text-60 {
-    font-size: clamp(3.125rem, 2.869rem + 1.14vw, 3.75rem);
-}
-
-.text-28 {
-    font-size: clamp(1.25rem, 1.045rem + 0.91vw, 1.75rem);
-}
-
-.text-14 {
-    font-size: 12px;
-}
-//
-
 .white {
-    color: $white;
+    color: $neutral-100;
 }
 
 .red {
     color: #ff0000;
+}
+
+.black {
+    color: $neutral-800;
+}
+
+@mixin heading($size) {
+    font-family: $second-family;
+    font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss09' on, 'ss16' on, 'ss17' on, 'ss18' on;
+    font-weight: 500;
+    font-size: $size;
+}
+
+@mixin base($weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: 16px;
+    line-height: 24px;
 }

@@ -1,18 +1,21 @@
 "use client";
-import { useState } from "react";
-import Demo from "~/src/entities/demo/ui";
-import LoadingSplash from "../entities/loading/ui";
-import PageBg from "../entities/bg/ui";
+import React from "react";
+import StartSection from "~/src/entities/start/ui";
+import MembershipSection from "~/src/entities/membership/ui";
+import ContactsSection from "../entities/contacts/ui";
+import AppSection from "../entities/app-section/ui";
+import SpaceSections from "../entities/space-sections/ui";
+import SubscribeModal from "../entities/subscribe-modal/ui";
 
 export default function Home() {
-  const [active, setActive] = useState<boolean>(true);
   return (
     <>
-      <LoadingSplash active={active} />
-      <PageBg setActive={setActive} />
-      <main className="main absolute">
-        <Demo />
-      </main>
+      <StartSection />
+      <SpaceSections />
+      <MembershipSection />
+      <AppSection />
+      <ContactsSection />
+      <SubscribeModal />
     </>
   );
 }

@@ -1,0 +1,59 @@
+.heading {
+    --width: 463px;
+    gap: $space-5;
+    max-width: var(--width);
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+.bgImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+
+    &,
+    svg {
+        overflow: visible;
+    }
+
+}
+
+.bgImage__media {
+    display: none;
+}
+
+.heading__text,
+.button {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (height <=820px) {
+    .subheading__container {
+        display: none;
+    }
+}
+
+@media screen and (width <=768px) {
+    .heading {
+        --p-top: 136px;
+        gap: $space-5;
+    }
+
+    .heading__text {
+        gap: $space-2;
+    }
+
+    .bgImage__vector {
+        display: none;
+    }
+
+    .bgImage__media {
+        display: block;
+    }
+
+}

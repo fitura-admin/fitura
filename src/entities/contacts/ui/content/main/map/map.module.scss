@@ -1,0 +1,28 @@
+.dummy,
+.container {
+    width: clamp(42.563rem, 19.563rem + 28.75vw, 54.063rem);
+    flex: 1 1 auto;
+    min-height: 482px;
+    border-radius: $space-5;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dummy {
+    background: $neutral-800;
+}
+
+.link {
+    display: none;
+}
+
+@media screen and (width <=768px) {
+    .container,
+    .dummy {
+        width: 100%;
+        min-height: 242px;
+    }
+}

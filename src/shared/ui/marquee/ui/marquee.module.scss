@@ -1,0 +1,44 @@
+.wrapper {
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    bottom: 60px;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    width: max-content;
+    will-change: transform;
+}
+
+.item {
+    padding: 0 $space-3;
+}
+
+.text {
+    padding-left: $space-6;
+    color: $neutral-100;
+    font-size: clamp(2rem, 2.07rem + -0.27vw, 1.75rem);
+    font-weight: 300;
+    line-height: 44px;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+@media screen and (width <=768px) {
+    .wrapper {
+        bottom: $space-11;
+    }
+
+    .item {
+        padding: 0 $space-2;
+    }
+
+    .text {
+        padding-left: $space-4;
+    }
+}

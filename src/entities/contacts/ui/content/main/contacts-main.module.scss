@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    gap: $space-30;
+    min-height: 0;
+    height: 100%;
+}
+
+@media screen and (width <= 1440px) {
+    .container {
+        gap: $space-6
+    }
+}
+
+@media screen and (width <= 768px) {
+  .container {
+    gap: $space-3;
+    flex-direction: column !important;
+  }
+}

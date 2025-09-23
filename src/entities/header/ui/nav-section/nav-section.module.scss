@@ -1,0 +1,20 @@
+.container {
+    gap: $space-60px;
+}
+
+.nav_open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: $blur-20;
+    z-index: -1;
+    -webkit-backdrop-filter: $blur-20;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (width <=768px) {
+    .container {
+        display: none !important;
+    }
+}

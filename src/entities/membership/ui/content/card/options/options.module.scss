@@ -1,0 +1,19 @@
+.line {
+    width: 100%;
+    background-color: $neutral-100;
+    opacity: 0.2;
+    border-radius: $space-100;
+    min-height: 1px;
+}
+
+.container {
+    gap: $space-6;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+@media screen and (width <=520px) {
+    .container {
+        gap: $space-4;
+    }
+}

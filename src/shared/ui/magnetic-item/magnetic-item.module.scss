@@ -1,0 +1,18 @@
+.area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    translate: -50% -50%;
+}
+
+.children {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (width <= 768px) {
+    .area {
+        display: none;
+    }
+}

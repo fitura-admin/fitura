@@ -1,0 +1,42 @@
+.container {
+    gap: $space-12;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.heading {
+    align-items: center;
+    gap: $space-7;
+
+    p {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (width <=768px) {
+    .container {
+        gap: $space-4;
+    }
+
+    .heading {
+        gap: $space-5;
+
+        div {
+            line-height: 100% !important;
+        }
+
+        p {
+            letter-spacing: -0.32px;
+        }
+    }
+}
+
+@media screen and (width <=480px) {
+    .heading {
+        p {
+            max-width: 247px;
+        }
+    }
+}

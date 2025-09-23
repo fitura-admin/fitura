@@ -1,0 +1,64 @@
+.wrapper {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: $space-6;
+    column-gap: $space-3;
+}
+
+.item {
+    grid-column: span 6;
+
+    p {
+        opacity: 0.8;
+        cursor: default;
+    }
+
+    @media screen and (any-hover: hover) {
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.check {
+    display: grid;
+    place-content: center;
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: $space-100;
+
+    background-color: rgba(255, 255, 255, 0.04);
+
+    backdrop-filter: $blur-2;
+    -webkit-backdrop-filter: $blur-2;
+}
+
+@media screen and (width <=520px) {
+    .container {
+        gap: $space-2;
+    }
+
+    .item {
+        grid-column: span 12;
+
+        &:nth-child(2n) {
+            order: 1;
+        }
+    }
+}
+
+@media screen and (height <=820px) {
+    .container {
+        gap: $space-2;
+    }
+}

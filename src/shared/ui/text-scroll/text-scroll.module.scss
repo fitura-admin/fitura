@@ -1,0 +1,37 @@
+.container {
+    overflow: hidden;
+    position: relative;
+    gap: $space-3;
+
+    .text {
+        transition-property: transform, opacity;
+        transition-timing-function: ease;
+        position: relative;
+
+        &:last-of-type {
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    }
+}
+
+.active {
+    transform: translateY(-100%);
+    &:first-of-type {
+        transform: translateY(-110%);
+    }
+}
+
+@media screen and (any-hover: hover) {
+    .container:hover {
+        opacity: 1;
+
+        .text {
+            transform: translateY(-110%);
+            &:last-of-type {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
