@@ -31,7 +31,6 @@ export default function Marquee({
     "2000 m² of Gym",
     "Spa & Recovery",
     "premium equipment",
-    "Fitura App",
     "Opening soon",
   ];
 
