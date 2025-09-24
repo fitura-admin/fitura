@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useWindowSize } from "react-use";
 import { useMagneticItem } from "./hook/useMagneticItem.hook";
 
 import classes from "./magnetic-item.module.scss";
@@ -18,10 +19,13 @@ export const MagneticItem: React.FC<MagneticItemProps> = ({
   className = "",
   areaSize = 100,
 }) => {
+  const { width } = useWindowSize();
   const { springX, springY, containerRef } = useMagneticItem({
     maxDistance: areaSize,
     strength,
   });
+
+  if (width <= 1024) return <>{children}</>;
 
   return (
     <motion.div

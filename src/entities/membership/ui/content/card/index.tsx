@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function MembershipCard({ item, index }: Props) {
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   const cardContent: React.ReactNode = useMemo(
     () => (
