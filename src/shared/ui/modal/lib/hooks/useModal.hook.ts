@@ -28,7 +28,7 @@ export const useModal = ({ isOpened, onClose, customClickOutside }: Props) => {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpened]);
+  }, [isOpened, dispatch]);
 
   useEffect(() => {
     const handlePopState = () => {

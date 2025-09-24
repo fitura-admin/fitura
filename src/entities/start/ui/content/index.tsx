@@ -2,7 +2,9 @@ import React from "react";
 
 import classes from "./content.module.scss";
 import TextScroll from "~/src/shared/ui/text-scroll";
-import BtnComingSoon from "~/src/entities/btn-coming-soon/ui";
+import LinkContainer from "~/src/shared/ui/link-container";
+import AnimatedItem from "~/src/shared/ui/animated-item";
+import Button from "~/src/shared/ui/button";
 
 export default function StartContent() {
   return (
@@ -18,14 +20,13 @@ export default function StartContent() {
           Jurmala Outlet Village
         </p>
       </div>
-      <BtnComingSoon
-        size="14-20"
-        radius={100}
-        delay={0.1}
-        strength={0.1}
-        areaSize={350}
-        text="Explore"
-      />
+      <AnimatedItem delay={0.1}>
+        <LinkContainer href="#space">
+          <Button type="primary" size={"14-20"} radius={100}>
+            <span className="white heading h7">Explore</span>
+          </Button>
+        </LinkContainer>
+      </AnimatedItem>
     </div>
   );
 }

@@ -92,7 +92,7 @@ export const useScrollSectionsShared = ({
       el.removeEventListener("touchstart", handleTouchStart);
       el.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [itemsLength, currentSection]);
+  }, [itemsLength, currentSection, anyModalOpen]);
 
   return {
     contentRef,

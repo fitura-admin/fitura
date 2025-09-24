@@ -95,10 +95,12 @@ export const useStartSection = () => {
     if (!ctx) return;
 
     const firstImage = images[0];
-    if (firstImage && firstImage.complete) {
-      drawCover(ctx, firstImage, canvas);
-    } else if (firstImage) {
-      firstImage.onload = () => drawCover(ctx, firstImage, canvas);
+    if (firstImage) {
+      if (firstImage.complete && firstImage.naturalWidth !== 0) {
+        drawCover(ctx, firstImage, canvas);
+      } else {
+        firstImage.onload = () => drawCover(ctx, firstImage, canvas);
+      }
     }
 
     const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -106,11 +108,12 @@ export const useStartSection = () => {
         isMounted.current = true;
         if (latest >= 0.99) return;
       }
+      const progress = Math.min(1, Math.max(0, latest));
 
       const minFrame = 0;
       const maxFrame = images.length - 1;
 
-      let frameIndex = Math.round(minFrame + latest * (maxFrame - minFrame));
+      let frameIndex = Math.round(minFrame + progress * (maxFrame - minFrame));
       frameIndex = Math.min(maxFrame, Math.max(minFrame, frameIndex));
 
       const img = images[frameIndex];
