@@ -22,7 +22,7 @@ export const useClientLayout = () => {
       return;
     }
 
-    const framesCount = 121;
+    const framesCount = width < 768 ? 101 : 121;
     const desktopFrames = Array.from(
       { length: framesCount },
       (_, i) => `/start/desktop-frames/${String(i + 1)}.webp`,
@@ -38,6 +38,7 @@ export const useClientLayout = () => {
       img.src = src;
       return img;
     });
+    console.log(canvasImages.length);
     total += canvasImages.length;
 
     function check() {

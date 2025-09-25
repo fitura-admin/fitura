@@ -21,12 +21,13 @@ export const useStartSection = () => {
 
   useEffect(() => {
     const isMobile = width < 769;
+    const framesCount = width < 769 ? 101 : 121;
     const framesPath = isMobile
       ? "/start/mobile-frames"
       : "/start/desktop-frames";
     const imgs: HTMLImageElement[] = [];
 
-    for (let i = 1; i <= 121; i++) {
+    for (let i = 1; i <= framesCount; i++) {
       const img = new Image();
       img.src = `${framesPath}/${i}.webp`;
       imgs.push(img);
