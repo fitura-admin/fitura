@@ -111,7 +111,7 @@ export const useStartSection = () => {
       }
       const progress = Math.min(1, Math.max(0, latest));
 
-      const minFrame = 1;
+      const minFrame = 0;
       const maxFrame = images.length - 1;
 
       let frameIndex = Math.round(minFrame + progress * (maxFrame - minFrame));
