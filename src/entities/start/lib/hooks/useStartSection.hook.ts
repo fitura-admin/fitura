@@ -21,7 +21,7 @@ export const useStartSection = () => {
 
   useEffect(() => {
     const isMobile = width < 769;
-    const framesCount = width < 769 ? 101 : 121;
+    const framesCount = isMobile ? 101 : 121;
     const framesPath = isMobile
       ? "/start/mobile-frames"
       : "/start/desktop-frames";
