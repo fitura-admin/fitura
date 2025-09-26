@@ -16,9 +16,9 @@ export const useStartSection = () => {
     offset: ["start start", "end start"],
   });
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 150,
-    damping: 20,
-    mass: 0.3,
+    stiffness: 120,
+    damping: 28,
+    mass: 0.6,
   });
 
   const [images, setImages] = useState<HTMLImageElement[]>([]);
