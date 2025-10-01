@@ -26,7 +26,7 @@ export default function CardHeadingInfo({ price, moreContent }: Props) {
           word={"€\u00A0" + price}
           className={`heading white ${classes.info__price}`}
         />
-        <p className={`heading white ${classes.info__period}`}>/&nbsp;month</p>
+        <p className={`heading white ${classes.info__period}`}>/&nbsp;4&nbsp;weeks</p>
       </div>
       <AnimatedItem delay={0.1}>
         <MagneticItem strength={0.1} areaSize={150}>
