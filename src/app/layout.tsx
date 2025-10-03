@@ -12,9 +12,13 @@ import CLientRootLayout from "./client-layout";
 import NoiseOverlay from "../shared/ui/noise-overlay/ui";
 
 export const metadata: Metadata = {
-  title: "Fitura SIA",
-  description:
-    "Fitness complex of the future. Smart training in one place. Progress tracked energy unlocked.",
+  title: "Fitura Fitness & SPA",
+  description: `
+    📍Via Jurmala Outlet Village
+    2,000m² of wellness in one space
+    Open-space gym · SPA zone
+    Train · Recover · Recharge
+  `,
   icons: ["/icon.svg"],
 };
 
