@@ -3,7 +3,7 @@ import { SelectLangI } from "./shared.types";
 export const langs: SelectLangI[] = [
   {
     title: "English",
-    action: "en",
+    action: "",
     shortcut: "En",
   },
   {

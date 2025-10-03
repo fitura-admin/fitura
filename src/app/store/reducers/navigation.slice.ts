@@ -1,12 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { langs } from "~/src/shared/model/shared.const";
-import { SelectLangI } from "~/src/shared/model/shared.types";
 
 // TO DO: Сделать универсальный редьюсер если не лень
+export type LangT = "lv" | "ru" | "";
 
 interface InitialState {
   isAppLoaded: boolean;
-  lang: SelectLangI;
+  lang: LangT;
   burgerOpen: boolean;
   spaceSection: number;
   navSection: string;
@@ -17,7 +16,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   isAppLoaded: false,
-  lang: langs[0],
+  lang: "",
   burgerOpen: false,
   spaceSection: 0,
   navSection: "home",
@@ -36,7 +35,7 @@ export const navigationSlice = createSlice({
     setBurgerOpen: (state, action: PayloadAction<boolean>) => {
       state.burgerOpen = action.payload;
     },
-    setAppLang: (state, action: PayloadAction<SelectLangI>) => {
+    setAppLang: (state, action: PayloadAction<LangT>) => {
       state.lang = action.payload;
     },
     setCurrentSection: (state, action: PayloadAction<number>) => {

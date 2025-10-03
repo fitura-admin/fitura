@@ -1,17 +1,14 @@
-"use client";
 import React from "react";
-import { useClientLayout } from "../lib/useClientLayout.hook";
 
 import Loader from "~/src/entities/loader-provider/ui";
 import Header from "~/src/entities/header/ui";
+import ClientHooks from "./client-hooks";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export default function ClientLayout({ children }: Props) {
-  useClientLayout();
-
   return (
     <>
       <Loader />
@@ -19,6 +16,7 @@ export default function ClientLayout({ children }: Props) {
       <div id="scroll_wrapper">
         <main>{children}</main>
       </div>
+      <ClientHooks />
     </>
   );
 }

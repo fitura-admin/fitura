@@ -1,7 +1,7 @@
-export type AppLangType = "en" | "ru" | "lv";
+import { LangT } from "~/src/app/store/reducers/navigation.slice";
 
 export interface SelectLangI {
   title: string;
-  action: AppLangType;
+  action: LangT;
   shortcut: string;
 }

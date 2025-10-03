@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { setAppLang } from "~/src/app/store/reducers/navigation.slice";
-import { useAppDispatch } from "~/src/app/store/hook";
+import { useSwitchLang } from "~/src/entities/header/lib/hooks/useSwitchLang.hook";
 
 import classes from "./item.module.scss";
 import Check from "~/public/shared/check2.svg";
@@ -14,13 +13,15 @@ interface Props {
 }
 
 export default function HeaderSelectButton({ item, active }: Props) {
-  const dispatch = useAppDispatch();
+  const changeLang = useSwitchLang();
+
   return (
     <Button
       type="ghost"
       className={`flex-row gap-6px align-center space-between ${active ? classes.active : classes.container}`}
-      onClick={() => dispatch(setAppLang(item))}
+      onClick={() => changeLang(item.action)}
       needHoverAnimation={false}
+      justifyCenter={false}
     >
       <span className="body-text base white">{item.title}</span>
       {active && <Check />}
