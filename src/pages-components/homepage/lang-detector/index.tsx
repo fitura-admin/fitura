@@ -13,7 +13,7 @@ export default function LangDetector() {
 
   useEffect(() => {
     dispatch(setAppLang(currentLanguage));
-  }, [currentLanguage]);
+  }, [currentLanguage, dispatch]);
 
   return null;
 }

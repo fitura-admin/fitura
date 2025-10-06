@@ -1,9 +1,9 @@
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useCallback } from "react";
+
 import { LangT } from "~/src/app/store/reducers/navigation.slice";
 
 export const useSwitchLang = () => {
-  const { lang } = useParams();
   const { push } = useRouter();
   const pathname = usePathname();
 
@@ -15,7 +15,7 @@ export const useSwitchLang = () => {
 
       push(newPath);
     },
-    [push, pathname, lang],
+    [push, pathname],
   );
 
   return changeLanguage;

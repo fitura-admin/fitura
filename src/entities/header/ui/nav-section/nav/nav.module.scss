@@ -6,8 +6,6 @@
     .container {
         flex-direction: column !important;
         gap: $space-10;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        z-index: 0;
     }
 }

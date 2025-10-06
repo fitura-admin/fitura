@@ -74,11 +74,11 @@ export default function Select<T>(props: Props<T>) {
             ref={contentRef}
             style={{
               top: optionsFromBottom
-                ? "unset"
+                ? undefined
                 : `calc(100% + ${optionsPosTop}px)`,
               bottom: optionsFromBottom
                 ? `calc(100% + ${optionsPosTop}px)`
-                : "unset",
+                : undefined,
               left: optionsPosLeft ? `${optionsPosLeft}px` : undefined,
               right: optionsPosRight ? `${optionsPosRight}px` : undefined,
             }}

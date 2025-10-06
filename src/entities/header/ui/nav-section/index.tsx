@@ -18,16 +18,21 @@ export default function HeaderNavSection() {
         <HeaderNav />
         <HeaderLangSelect />
       </div>
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {burgerOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0, pointerEvents: "none" }}
-            animate={{ opacity: 1, height: "100dvh", pointerEvents: "all" }}
-            exit={{ opacity: 0, height: 0, pointerEvents: "none" }}
-            className={`flex-column align-center ${classes.nav_open}`}
-          >
-            <HeaderNav />
-            <HeaderLangSelect />
+          <motion.div className={classes.nav_open_wrapper}>
+            <div className={classes.nav_backdrop} />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className={classes.nav_content}
+            >
+              <HeaderNav>
+                <HeaderLangSelect />
+              </HeaderNav>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
