@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import HomePage from "../pages-components/homepage";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <HomePage />;
+  redirect("/en");
 }

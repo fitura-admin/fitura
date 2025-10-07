@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // TO DO: Сделать универсальный редьюсер если не лень
-export type LangT = "lv" | "ru" | "";
+export type LangT = "lv" | "ru" | "en";
 
 interface InitialState {
   isAppLoaded: boolean;
@@ -16,7 +16,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   isAppLoaded: false,
-  lang: "",
+  lang: "en",
   burgerOpen: false,
   spaceSection: 0,
   navSection: "home",

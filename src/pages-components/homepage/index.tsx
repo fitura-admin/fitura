@@ -4,7 +4,7 @@ import MembershipSection from "~/src/entities/membership/ui";
 import SpaceSections from "~/src/entities/space-sections/ui";
 import StartSection from "~/src/entities/start/ui";
 import SubscribeModal from "~/src/entities/subscribe-modal/ui";
-import LangDetector from "./lang-detector";
+import LangDetector from "../../entities/lang-detector";
 
 export default function HomePage() {
   return (

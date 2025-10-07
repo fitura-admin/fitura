@@ -3,6 +3,7 @@ import React from "react";
 import Loader from "~/src/entities/loader-provider/ui";
 import Header from "~/src/entities/header/ui";
 import ClientHooks from "./client-hooks";
+import LangDetector from "../../lang-detector";
 
 interface Props {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export default function ClientLayout({ children }: Props) {
         <main>{children}</main>
       </div>
       <ClientHooks />
+      <LangDetector />
     </>
   );
 }

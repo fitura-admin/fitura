@@ -8,7 +8,7 @@ export default function LangDetector() {
   const dispatch = useAppDispatch();
   const { lang } = useParams();
   const currentLanguage = useMemo(() => {
-    return lang ? (lang as LangT) : "";
+    return lang ? (lang as LangT) : "en";
   }, [lang]);
 
   useEffect(() => {
