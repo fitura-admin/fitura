@@ -1,0 +1,17 @@
+{
+    "heading": {
+        "space": "2000 m²",
+        "gym": "Fitura Gym",
+        "groupClasses": "Grupu nodarbības",
+        "spa": "SPA",
+        "lab": "Fitura Lab"
+    },
+    "subheading": {
+        "space": "Vairāk nekā trenažieru zāle — vieta, kur kustība un atslodze kļūst par daļu no tevis.",
+        "gym": "Vairāk nekā 150 modernākie trenažieri vienuviet.\nRadīta rezultātu sasniegšanai",
+        "groupClasses": "Cīņas māksla, dejas, funkcionālie un spēka treniņi, body & mind, stiepšanās un pilates.",
+        "spa": "Somu sauna, hammams, tvaika pirts un džakuzi — atjaunojiet savu ķermeni un prātu.",
+        "lab": "Skābekļa kamera, −110 °C krioterapija, hipoksijas un presoterapija, atpūtas zona — pilnīga ķermeņa atjaunošanās."
+    },
+    "buttonText": "Drīzumā"
+}

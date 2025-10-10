@@ -1,0 +1,36 @@
+{
+    "heading": "Izvēlies savu plānu",
+    "plans": {
+        "full": {
+            "heading": "Full Access",
+            "text": "Viss iekļauts: trenažieru zāle, SPA, grupu nodarbības, atjaunošanās procedūras un daudz vēl vairāk.",
+            "price": "€ 69.5"
+        },
+        "duo": {
+            "heading": "Duo",
+            "text": "Sasniedziet mērķus kopā — treniņi, atjaunošanās procedūras un pilna piekļuve diviem.",
+            "price": "€ 129.5"
+        },
+        "junior": {
+            "heading": "Junior",
+            "text": "Programma jauniešiem 16–18 g.: pilna piekļuve trenažieru zālei, SPA, grupu nodarbībām, lietotnei u.c.",
+            "price": "€ 50"
+        },
+        "pricePeriod": "/ 4 nedēļas"
+    },
+    "inEveryPlan": {
+        "heading": "Iekļauts katrā abonementā:",
+        "options": [
+            "Neierobežota piekļuve klubam",
+            "Grupu nodarbības",
+            "Bezmaksas viesu ielūgumi draugiem",
+            "Premium klases trenažieru zāle",
+            "SPA zona",
+            "Ķermeņa sastāva analīze ar InBody",
+            "1 bezmaksas individuālais treniņš",
+            "1 atjaunošanās sesija Fitura Lab",
+            "Pieeja kluba mobilajai lietotnei"
+        ]
+    },
+    "buttonText": "Sākt"
+}

@@ -8,7 +8,8 @@ export default function MembershipHeading() {
   return (
     <div className={`${classes.container} p-sc-animate`}>
       <TextScroll
-        word="Choose your plan"
+        nameSpace="membership"
+        tName="heading"
         textClassName="heading h1 white"
         className={`${classes.text}`}
         onInView

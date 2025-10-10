@@ -11,7 +11,7 @@ const errorText = "Enter a valid email";
 
 export const useSubscribeModal = () => {
   const dispatch = useAppDispatch();
-  const { modalOpen } = useAppSelector(selectNavigation);
+  const { modalOpen, lang } = useAppSelector(selectNavigation);
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -54,5 +54,6 @@ export const useSubscribeModal = () => {
     modalOpen,
     loading,
     success,
+    lang,
   };
 };

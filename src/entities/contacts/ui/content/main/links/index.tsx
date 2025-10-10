@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./contacts-links.module.scss";
 import Inst from "~/public/contacts/instagram.svg";
@@ -14,6 +16,7 @@ interface ILink {
 }
 
 export default function ContactsLinks() {
+  const { t } = useTranslation("contacts", { useSuspense: false });
   const links: ILink[] = [
     {
       Icon: Inst,
@@ -22,7 +25,7 @@ export default function ContactsLinks() {
     },
     {
       Icon: GeoAlt,
-      title: `Jaunā iela 12, Piņķi, Babītes pagasts, Mārupes novads, LV-2107, Latvia "Via Jurmala Outlet Village"`,
+      title: t("address"),
       href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
     },
   ];

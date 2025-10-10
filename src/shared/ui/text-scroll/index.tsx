@@ -1,28 +1,31 @@
 "use client";
 import React from "react";
 import { useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import classes from "./text-scroll.module.scss";
 
 interface Props {
-  word: string;
   className?: string;
   textClassName?: string;
   speed?: number;
   direction?: "horizontal" | "vertical";
   onInView?: boolean;
   delay?: number;
+  nameSpace: string;
+  tName: string;
 }
 
 export default function TextScroll({
   className = "",
   textClassName = "",
-  word,
   speed = 0.6,
   direction = "vertical",
   onInView = false,
-  delay,
+  nameSpace,
+  tName,
 }: Props) {
+  const { t, i18n } = useTranslation(nameSpace, { useSuspense: false });
   const ref = React.useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { amount: 0.5, once: false });
 
@@ -33,14 +36,20 @@ export default function TextScroll({
 
   return (
     <div
-      className={`${direction == "vertical" ? "flex-column" : "flex-row"} ${classes.container} ${className}`}
+      className={`flex-${direction == "vertical" ? "column" : "row"} ${classes.container} ${className}`}
       ref={ref}
     >
-      <span className={classNameConst} style={style}>
-        {word}
+      <span
+        className={classNameConst}
+        style={{
+          userSelect: "none",
+          ...style,
+        }}
+      >
+        {t(tName)}
       </span>
       <span className={classNameConst} style={style} aria-hidden={true}>
-        {word}
+        {t(tName)}
       </span>
     </div>
   );

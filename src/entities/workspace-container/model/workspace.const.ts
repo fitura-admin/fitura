@@ -191,43 +191,38 @@ interface ISub {
   IconMedia: FC<SVGProps<SVGSVGElement>>;
 }
 export interface IWorkspaceHeading {
-  top: string;
-  sub: string;
+  tName: string;
   Icon: ISub | null;
 }
+
 export const workspaceHeadings: IWorkspaceHeading[] = [
   {
-    top: "2000 m²",
-    sub: `Not just a gym — a space for movement,\nrecovery, and renewal.`,
+    tName: "space",
     Icon: null,
   },
   {
-    top: "Fitura Gym",
-    sub: `Space with 150+ top-tier machines. \nBuilt for focus, flow, and results.`,
+    tName: "gym",
     Icon: {
       Icon: TrainersSub,
       IconMedia: TrainersSubMedia,
     },
   },
   {
-    top: "Group classes",
-    sub: `Group workouts: cardio, core, strength,\nbody & mind, stretching and dance classes.`,
+    tName: "groupClasses",
     Icon: {
       Icon: GroupSub,
       IconMedia: GroupSubMedia,
     },
   },
   {
-    top: "SPA",
-    sub: `Finish sauna, hammam, steam room & hydro pool —\nreload your body & mind.`,
+    tName: "spa",
     Icon: {
       Icon: SpaSub,
       IconMedia: SpaSubMedia,
     },
   },
   {
-    top: "Fitura Lab",
-    sub: `Oxygen chamber, cryo at –110°C, hypoxic & pressotherapy, relaxing couch — full body recovery.`,
+    tName: "lab",
     Icon: null,
   },
 ];

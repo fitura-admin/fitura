@@ -8,8 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-import CLientRootLayout from "./client-layout";
-import NoiseOverlay from "../shared/ui/noise-overlay/ui";
+import CLientRootLayout from "~/src/app/client-layout";
+import NoiseOverlay from "~/src/shared/ui/noise-overlay/ui";
 
 export const metadata: Metadata = {
   title: "Fitura Fitness & SPA",
@@ -31,11 +31,15 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: "en" | "ru" | "lv" };
 }>) {
+  const lang = params.lang || "en";
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className="body relative flex-column">
         <CLientRootLayout>{children}</CLientRootLayout>
         <NoiseOverlay mono opacity={0.05} scale={2} />

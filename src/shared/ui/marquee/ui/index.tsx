@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useMarquee } from "~/src/shared/ui/marquee/hook/useMarquee.hook";
+import { useTranslation } from "react-i18next";
 
 import classes from "./marquee.module.scss";
 import Dot from "~/public/start/dot.svg";
@@ -27,11 +28,13 @@ export default function Marquee({
     relativityCount,
     direction,
   });
+  const { t } = useTranslation("start", { useSuspense: false });
+
   const text: string[] = [
-    "2000 m² of Gym",
-    "Spa & Recovery",
-    "premium equipment",
-    "Opening soon",
+    t("marquee.first"),
+    t("marquee.second"),
+    t("marquee.third"),
+    t("marquee.fourth"),
   ];
 
   const list = items

@@ -1,0 +1,20 @@
+{
+    "header": {
+        "home": "Sākums",
+        "space": "Telpas",
+        "membership": "Abonementi",
+        "app": "Lietotne",
+        "contacts": "Kontakti"
+    },
+    "text": {
+        "heading": "Nākotnes fitness",
+        "subtext": "Augstākās klases fitness. Saprātīga cena.\nVia Jurmala Outlet Village",
+        "buttonText": "Uzzināt vairāk"
+    },
+    "marquee": {
+        "first": "SPA & atjaunošanās procedūras",
+        "second": "augstākās klases aprīkojums",
+        "third": "atklāšana drīzumā",
+        "fourth": "Zāle 2000 m² platībā"
+    }
+}

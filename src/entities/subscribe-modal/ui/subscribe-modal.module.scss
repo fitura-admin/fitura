@@ -4,6 +4,10 @@
     width: 380px;
 }
 
+.lv {
+    width: 420px;
+}
+
 @media screen and (width <= 768px) {
     .container {
         width: calc(100vw - $space-4 * 2);

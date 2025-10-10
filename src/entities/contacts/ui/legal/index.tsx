@@ -1,22 +1,25 @@
+"use client";
 import React from "react";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 import classes from "./legal.module.scss";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import LinkContainer from "~/src/shared/ui/link-container";
 
 interface ILegalInfo {
-  text: string;
+  tName: string;
   href?: string;
 }
 
 export default function ContactsLegal() {
+  const { t } = useTranslation("contacts", { useSuspense: false });
   const legalInfoStrings: ILegalInfo[] = [
     {
-      text: "2025. Fitura. All rights reserved.",
+      tName: "footerRights",
     },
     {
-      text: "Legal notice",
+      tName: "footerLinkLegal",
       href: "legal-notice",
     },
   ];
@@ -33,16 +36,16 @@ export default function ContactsLegal() {
         return (
           <AnimatedItem
             index={index}
-            key={index + item.text}
+            key={index + t(item.tName)}
             slideIn
             direction={index === 0 ? "right" : "left"}
           >
             {item.href ? (
               <LinkContainer href={item.href} className={className}>
-                {item.text}
+                {t(item.tName)}
               </LinkContainer>
             ) : (
-              <p className={className}>{item.text}</p>
+              <p className={className}>{t(item.tName)}</p>
             )}
           </AnimatedItem>
         );

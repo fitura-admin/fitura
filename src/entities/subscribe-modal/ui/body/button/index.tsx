@@ -3,6 +3,7 @@ import React from "react";
 import classes from "./subscribe-button.module.scss";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import Button from "~/src/shared/ui/button";
+import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
   buttonClick: () => void;
@@ -38,9 +39,12 @@ export default function SubscribeButton({
         {loading ? (
           <span className={classes.loader} />
         ) : (
-          <span className={`heading h8 ${classes.text}`}>
-            {success ? "You are subscribed" : "Get Notified"}
-          </span>
+          <TextTranslate
+            as="span"
+            className={`heading h8 ${classes.text}`}
+            nameSpace="modal"
+            tName={success ? "buttonText.success" : "buttonText.default"}
+          />
         )}
       </Button>
     </AnimatedItem>

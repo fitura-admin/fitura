@@ -12,7 +12,8 @@ export default function ContactsContent() {
         <BgVector className={classes.bg__main} />
       </div>
       <TextScroll
-        word="Contacts"
+        nameSpace="contacts"
+        tName="heading"
         textClassName={`heading h1 white text-center `}
         className={`${classes.heading_text}`}
         onInView

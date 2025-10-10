@@ -11,7 +11,6 @@ export const useSpaceModal = ({ onClose, isOpened, swiperRef }: Props) => {
   const paginationRef = useRef<HTMLUListElement>(null);
   const navigationRef = useRef<HTMLDivElement>(null);
   const touchStartedInside = useRef<boolean>(false);
-  const mouseStartedInside = useRef<boolean>(false);
 
   const isInside = useCallback(
     (target: EventTarget | null): boolean => {

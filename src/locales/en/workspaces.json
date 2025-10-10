@@ -1,0 +1,17 @@
+{
+    "heading": {
+        "space": "2000 m²",
+        "gym": "Fitura Gym",
+        "groupClasses": "Group classes",
+        "spa": "SPA",
+        "lab": "Fitura Lab"
+    },
+    "subheading": {
+        "space": "Not just a gym — a space for movement,\nrecovery, and renewal.",
+        "gym": "Space with 150+ top-tier machines.\nBuilt for focus, flow, and results.",
+        "groupClasses": "Martial arts, cardio, core, strength,\nbody & mind, stretching and dance classes.",
+        "spa": "Finnish sauna, hammam, steam room & hydro pool —\nreload your body & mind.",
+        "lab": "Oxygen chamber, cryo at –110°C, hypoxic & pressotherapy, relaxing couch — full body recovery."
+    },
+    "buttonText": "Coming soon"
+}

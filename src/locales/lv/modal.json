@@ -1,0 +1,10 @@
+{
+    "heading": "Piesakies jaunumu saņemšanai\nSekot jaunumiem",
+    "text": "Jūsu jaunā wellness pieredze jau ir pavisam tuvu.",
+    "buttonText": {
+        "default": "Saņemt paziņojumu",
+        "error": "Ievadiet derīgu e-pastu",
+        "success": "Jūs esat abonējis"
+    },
+    "placeholder": "Jūsu e-pasts"
+}

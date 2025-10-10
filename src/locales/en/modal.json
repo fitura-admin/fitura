@@ -1,0 +1,10 @@
+{
+    "heading": "Subscribe for updates",
+    "text": "Your new wellness experience\nis almost here",
+    "buttonText": {
+        "default": "Get notified",
+        "error": "Enter a valid email",
+        "success": "You are subscribed"
+    },
+    "placeholder": "Your email"
+}

@@ -1,0 +1,36 @@
+{
+    "heading": "Choose your plan",
+    "plans": {
+        "full": {
+            "heading": "Full Access",
+            "text": "All-inclusive membership with gym, spa, classes, recovery, and more",
+            "price": "€ 69.5"
+        },
+        "duo": {
+            "heading": "Duo",
+            "text": "Train, recover, and thrive together\n— full access for two",
+            "price": "€ 129.5"
+        },
+        "junior": {
+            "heading": "Junior",
+            "text": "Smart start for ages 16-18: full gym, spa, classes, app access, and more",
+            "price": "€ 50"
+        },
+        "pricePeriod": "/ 4 weeks"
+    },
+    "inEveryPlan": {
+        "heading": "Included in Every Membership:",
+        "options": {
+            "1": "Unlimited Access to the Fitura space",
+            "2": "Group Workouts",
+            "3": "Premium Gym Facilities",
+            "4": "SPA Zone Access",
+            "5":"Body Composition Analysis (InBody)",
+            "6": "Unlimited Guest Passes",
+            "7": "1 Free Personal Training Session",
+            "8": "1 Fitura Lab Recovery Session",
+            "9": "Access to Fitura Member App"
+        }
+    },
+    "buttonText": "Get started"
+}

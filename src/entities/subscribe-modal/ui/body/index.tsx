@@ -1,4 +1,6 @@
+"use client";
 import React, { Dispatch, SetStateAction } from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./subscribe-body.module.scss";
 import EmailInput from "~/src/shared/ui/inputs/email";
@@ -22,12 +24,14 @@ export default function SubscribeBody({
   loading,
   success,
 }: Props) {
+  const { t } = useTranslation("modal", { useSuspense: false });
+
   return (
     <div className={`flex-column ${classes.container}`}>
       <AnimatedItem slideIn direction="down" duration={0.3} delay={0.2}>
         <EmailInput
           className={classes.input}
-          placeholder={"Your email"}
+          placeholder={t("placeholder")}
           value={email}
           onChange={(v) => setEmail(v.target.value)}
           error={error}

@@ -4,6 +4,7 @@ import React, { useCallback } from "react";
 import classes from "./workspace-text.module.scss";
 import HeadingAnimatedItem from "../animated";
 import { IWorkspaceHeading } from "~/src/entities/workspace-container/model/workspace.const";
+import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
   width: number;
@@ -39,7 +40,12 @@ export default function WorkspaceHeadingText(props: Props) {
         renderItem={(item) => {
           return (
             <div className={`relative ${classes.text__top}`}>
-              <h2 className={`white h2 text-center`}>{item.top}</h2>
+              <TextTranslate
+                as="h2"
+                className="white h2 text-center"
+                nameSpace="workspaces"
+                tName={`heading.${item.tName}`}
+              />
               {getIcon(item)}
             </div>
           );
@@ -51,11 +57,12 @@ export default function WorkspaceHeadingText(props: Props) {
         delay={0.2}
         renderItem={(item) => {
           return (
-            <p
+            <TextTranslate
+              as="p"
               className={`text-center white body-text small ${classes.subheading}`}
-            >
-              {item.sub}
-            </p>
+              nameSpace="workspaces"
+              tName={`subheading.${item.tName}`}
+            />
           );
         }}
       />

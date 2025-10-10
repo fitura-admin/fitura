@@ -37,7 +37,7 @@ export default function MembershipSwiper() {
           centeredSlides
         >
           {membershipSlides.map((item, index) => (
-            <SwiperSlide key={index + item.title} className={classes.slide}>
+            <SwiperSlide key={index + item.type} className={classes.slide}>
               <MembershipCard item={item} />
             </SwiperSlide>
           ))}

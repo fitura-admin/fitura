@@ -1,6 +1,4 @@
 export interface IMembershipCard {
-  title: string;
-  subTitle: string;
-  price: string;
+  type: "full" | "duo" | "junior";
   moreContent?: boolean;
 }

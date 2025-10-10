@@ -1,4 +1,5 @@
 import React from "react";
+import { loadResources } from "../i18n/resources";
 
 import StoreProvider from "~/src/app/store/store-provider";
 import ClientLayout from "~/src/entities/client-layout/ui";
@@ -9,9 +10,11 @@ export default function CLientRootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const i18nRes = loadResources();
+
   return (
     <StoreProvider>
-      <Providers>
+      <Providers i18nResources={i18nRes}>
         <ClientLayout>{children}</ClientLayout>
       </Providers>
     </StoreProvider>

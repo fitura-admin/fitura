@@ -3,24 +3,17 @@ import React from "react";
 import classes from "./list.module.scss";
 import Check from "~/public/membership/check.svg";
 import AnimatedItem from "~/src/shared/ui/animated-item";
+import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
+
+const tNameDefault = "inEveryPlan.options";
 
 export default function CardOptionsList() {
-  const options: string[] = [
-    "Unlimited Access to the Fitura space",
-    "Group Workouts",
-    "Premium Gym Facilities",
-    "Body Composition Analysis (InBody)",
-    "Unlimited Guest Passes",
-    "1 Free Personal Training Session",
-    "1 Fitura Lab Recovery Session",
-    "Access to Fitura Member App",
-    "SPA Zone Access",
-  ];
+  const options = Array(9).fill(null);
 
   return (
     <div className={`${classes.wrapper}`}>
       <div className={`${classes.container}`}>
-        {options.map((item, index) => (
+        {options.map((_, index) => (
           <AnimatedItem
             key={index}
             className={`flex-row gap-3 align-center ${classes.item}`}
@@ -31,7 +24,12 @@ export default function CardOptionsList() {
             <div className={`${classes.check}`}>
               <Check />
             </div>
-            <p className="body-text base white">{item}</p>
+            <TextTranslate
+              as="p"
+              className="body-text base white"
+              nameSpace="membership"
+              tName={`${tNameDefault}.${index + 1}`}
+            />
           </AnimatedItem>
         ))}
       </div>

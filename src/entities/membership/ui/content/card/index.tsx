@@ -14,18 +14,15 @@ interface Props {
   index?: number;
 }
 
+const CardContent = ({ item }: Props) => (
+  <>
+    <MembershipCardHeading {...item} />
+    {item.moreContent ? <CardOptions /> : null}
+  </>
+);
+
 export default function MembershipCard({ item, index }: Props) {
   const { width } = useWindowSize();
-
-  const cardContent: React.ReactNode = useMemo(
-    () => (
-      <>
-        <MembershipCardHeading {...item} />
-        {item.moreContent ? <CardOptions /> : null}
-      </>
-    ),
-    [item],
-  );
 
   const classNameLocal = useMemo(
     () =>
@@ -36,7 +33,11 @@ export default function MembershipCard({ item, index }: Props) {
   );
 
   if (width <= 1024) {
-    return <div className={classNameLocal}>{cardContent}</div>;
+    return (
+      <div className={classNameLocal}>
+        <CardContent item={item} />
+      </div>
+    );
   }
 
   return (
@@ -48,7 +49,7 @@ export default function MembershipCard({ item, index }: Props) {
       delay={0.3}
       className={classNameLocal}
     >
-      {cardContent}
+      <CardContent item={item} />
     </AnimatedItem>
   );
 }

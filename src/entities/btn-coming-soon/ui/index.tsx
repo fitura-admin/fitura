@@ -6,6 +6,7 @@ import { setModalOpen } from "~/src/app/store/reducers/navigation.slice";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import Button from "~/src/shared/ui/button";
 import { MagneticItem } from "~/src/shared/ui/magnetic-item";
+import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
   size: string;
@@ -42,7 +43,12 @@ export default function BtnComingSoon({
             onClick?.();
           }}
         >
-          <span className="white heading h7">{text ?? "Coming soon"}</span>
+          <TextTranslate
+            as="span"
+            className="white heading h7"
+            nameSpace="workspaces"
+            tName="buttonText"
+          />
         </Button>
       </AnimatedItem>
     </MagneticItem>

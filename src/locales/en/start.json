@@ -1,0 +1,20 @@
+{
+    "header": {
+        "home": "Home",
+        "space": "Space",
+        "membership": "Membership",
+        "app": "App",
+        "contacts": "Contacts"
+    },
+    "text": {
+        "heading": "Fitness of the Future",
+        "subtext": "Premium Fitness, smart price.\nJurmala Outlet Village",
+        "buttonText": "Explore"
+    },
+    "marquee": {
+        "first": "spa & recovery",
+        "second": "premium equipment",
+        "third": "opening soon",
+        "fourth": "2000 m² of gym"
+    }
+}

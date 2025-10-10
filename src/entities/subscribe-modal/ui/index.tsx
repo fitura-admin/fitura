@@ -18,13 +18,16 @@ export default function SubscribeModal() {
     buttonClick,
     loading,
     success,
+    lang,
   } = useSubscribeModal();
 
   return (
     <Modal
       isOpened={modalOpen}
       onClose={onClose}
-      classNameContainer={classNames(classes.container, `flex-column`)}
+      classNameContainer={classNames(classes.container, `flex-column`, {
+        [classes.lv]: lang === "lv",
+      })}
     >
       <SubscribeHeading />
       <SubscribeBody

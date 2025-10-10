@@ -12,7 +12,7 @@ import { HeaderNavButtonI } from "~/src/entities/header/model/header.interface";
 
 interface Props extends HeaderNavButtonI {}
 
-export default function HeaderNavButton({ title, link }: Props) {
+export default function HeaderNavButton({ link }: Props) {
   const { handleButtonClick, isActive } = useNavButton({
     link,
   });
@@ -29,7 +29,11 @@ export default function HeaderNavButton({ title, link }: Props) {
           })}
           needHoverAnimation={false}
         >
-          <TextScroll word={title} textClassName={`${classes.button__text}`} />
+          <TextScroll
+            nameSpace="start"
+            tName={`header.${link}`}
+            textClassName={`${classes.button__text}`}
+          />
         </Button>
       </LinkContainer>
     </AnimatedItem>

@@ -8,13 +8,14 @@ import Button from "~/src/shared/ui/button";
 import TextScroll from "~/src/shared/ui/text-scroll";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import { MagneticItem } from "~/src/shared/ui/magnetic-item";
+import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
-  price: string;
+  tName: string;
   moreContent: boolean;
 }
 
-export default function CardHeadingInfo({ price, moreContent }: Props) {
+export default function CardHeadingInfo({ moreContent, tName }: Props) {
   const dispatch = useAppDispatch();
 
   return (
@@ -23,12 +24,16 @@ export default function CardHeadingInfo({ price, moreContent }: Props) {
         <TextScroll
           onInView
           speed={1}
-          word={"€\u00A0" + price}
           className={`heading white ${classes.info__price}`}
+          nameSpace={"membership"}
+          tName={tName}
         />
-        <p className={`heading white ${classes.info__period}`}>
-          /&nbsp;4&nbsp;weeks
-        </p>
+        <TextTranslate
+          as="p"
+          className={`heading white ${classes.info__period}`}
+          nameSpace="membership"
+          tName="plans.pricePeriod"
+        />
       </div>
       <AnimatedItem delay={0.1}>
         <MagneticItem strength={0.1} areaSize={150}>
@@ -38,11 +43,12 @@ export default function CardHeadingInfo({ price, moreContent }: Props) {
             radius={100}
             onClick={() => dispatch(setModalOpen(true))}
           >
-            <span
+            <TextTranslate
+              as="span"
               className={`heading h7 ${moreContent ? "black" : "white"} ${classes.btn__text}`}
-            >
-              Get started
-            </span>
+              nameSpace="membership"
+              tName="buttonText"
+            />
           </Button>
         </MagneticItem>
       </AnimatedItem>
