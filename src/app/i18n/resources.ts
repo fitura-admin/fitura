@@ -1,32 +1,31 @@
-import fs from "fs";
-import path from "path";
-
-export function loadResources() {
-  const localesDir = path.resolve(process.cwd(), "src/locales");
+// src/i18n/resources-http.ts
+export async function loadResources(): Promise<
+  Record<string, Record<string, any>>
+> {
+  const langs = ["en", "ru", "lv"];
+  const namespaces = [
+    "start",
+    "membership",
+    "app",
+    "contacts",
+    "modal",
+    "workspaces",
+  ];
   const resources: Record<string, Record<string, any>> = {};
 
-  // Проходим по всем языковым папкам
-  for (const lng of fs.readdirSync(localesDir)) {
-    const langDir = path.join(localesDir, lng);
-    if (!fs.lstatSync(langDir).isDirectory()) continue;
-
+  for (const lng of langs) {
     resources[lng] = {};
 
-    // Загружаем все JSON файлы в этой папке
-    for (const file of fs.readdirSync(langDir)) {
-      if (!file.endsWith(".json")) continue;
-
-      const ns = path.basename(file, ".json");
-      const filePath = path.join(langDir, file);
-      let content;
+    for (const ns of namespaces) {
       try {
-        content = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        const res = await fetch(`/locales/${lng}/${ns}.json`);
+        if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+        const json = await res.json();
+        resources[lng][ns] = json;
       } catch (e) {
-        console.error(`Ошибка при чтении ${filePath}:`, e);
-        continue;
+        console.error(`Ошибка загрузки /locales/${lng}/${ns}.json:`, e);
+        resources[lng][ns] = {}; // чтобы не падало
       }
-
-      resources[lng][ns] = content;
     }
   }
 

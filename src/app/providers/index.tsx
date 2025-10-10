@@ -5,15 +5,12 @@ import ClientI18NProvider from "./i18n";
 
 interface Props {
   children: React.ReactNode;
-  i18nResources: Record<string, Record<string, any>>;
 }
 
-export default function Providers({ children, i18nResources }: Props) {
+export default function Providers({ children }: Props) {
   return (
     <KeyboardAwareWrapper>
-      <ClientI18NProvider resources={i18nResources}>
-        {children}
-      </ClientI18NProvider>
+      <ClientI18NProvider>{children}</ClientI18NProvider>
     </KeyboardAwareWrapper>
   );
 }
