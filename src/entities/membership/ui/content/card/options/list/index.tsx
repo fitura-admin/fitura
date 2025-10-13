@@ -28,7 +28,7 @@ export default function CardOptionsList() {
               as="p"
               className="body-text base white"
               nameSpace="membership"
-              tName={`${tNameDefault}.${index + 1}`}
+              tName={`${tNameDefault}.${index}`}
             />
           </AnimatedItem>
         ))}

@@ -7,13 +7,13 @@ import { IAppLink } from "./app.interface";
 export const appLinks: IAppLink[] = [
   {
     title: "App Store",
-    link: "/",
+    link: "#!",
     Icon: Ios,
     IconMedia: IosMedia,
   },
   {
     title: "Google Play",
-    link: "/",
+    link: "#!",
     Icon: Google,
     IconMedia: GoogleMedia,
   },
