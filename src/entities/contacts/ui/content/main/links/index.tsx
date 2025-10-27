@@ -49,15 +49,14 @@ export default function ContactsLinks() {
         {links.map((item, index) => (
           <li key={index} className={`flex-row gap-2 ${classes.link}`}>
             <item.Icon />
-            <LinkContainer href={item.href} target="_blank">
-              <p
-                title={"Copy"}
-                className={`white body-text big regular ${classes.text}`}
-                onClick={() => navigator.clipboard.writeText(item.title)}
-              >
-                {item.title}
-              </p>
-            </LinkContainer>
+            <p
+              title={"Copy"}
+              className={`white body-text big regular ${classes.text}`}
+              href={item.href}
+              target="_blank"
+            >
+              {item.title}
+            </p>
           </li>
         ))}
       </ul>
