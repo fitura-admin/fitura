@@ -30,8 +30,8 @@
       "static/css/2864fd20f60f24b9.css",
       "static/css/c30e7275dcb04138.css",
       "static/chunks/827-75983d44fce95b33.js",
-      "static/chunks/207-01391ee8420eacef.js",
-      "static/chunks/app/layout-71ad98ecbfa512b6.js"
+      "static/chunks/342-83403b6256e8c43e.js",
+      "static/chunks/app/layout-3b130b8501ff0e5c.js"
     ],
     "/[lang]/page": [
       "static/chunks/webpack-2bb8917deb8d52e6.js",
@@ -44,7 +44,7 @@
       "static/chunks/4e6af11a-25274d44b7df24bd.js",
       "static/chunks/827-75983d44fce95b33.js",
       "static/chunks/61-f1282d2ef0384e89.js",
-      "static/chunks/app/[lang]/page-9ba9fd776af9012d.js"
+      "static/chunks/app/[lang]/page-f00901d4953e218a.js"
     ],
     "/[lang]/legal-notice/page": [
       "static/chunks/webpack-2bb8917deb8d52e6.js",
