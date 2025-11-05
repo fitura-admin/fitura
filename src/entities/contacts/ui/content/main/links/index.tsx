@@ -50,7 +50,6 @@ export default function ContactsLinks() {
           <li key={index} className={`flex-row gap-2 ${classes.link}`}>
             <item.Icon />
             <a
-              title={"Copy"}
               className={`white body-text big regular ${classes.text}`}
               href={item.href}
               target="_blank"
