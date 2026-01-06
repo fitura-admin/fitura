@@ -1,4 +1,3 @@
-// src/i18n/resources-http.ts
 export async function loadResources(): Promise<
   Record<string, Record<string, any>>
 > {
