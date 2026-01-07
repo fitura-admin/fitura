@@ -10,7 +10,7 @@ import "swiper/css/autoplay";
 
 import CLientRootLayout from "~/src/app/client-layout";
 import NoiseOverlay from "~/src/shared/ui/noise-overlay/ui";
-import { GA4 } from "../shared/widgets/gtm";
+import { GTM } from "../shared/widgets/gtm";
 
 export const metadata: Metadata = {
   title: "Fitura Fitness & SPA",
@@ -30,7 +30,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const GA4_ID = "G-P3LMGQM1FK";
+const GTM_ID = process.env.GTM_ID!;
 
 export default function RootLayout({
   children,
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body className="body relative flex-column">
-        <GA4 id={GA4_ID} />
+        <GTM id={GTM_ID} />
         <CLientRootLayout>{children}</CLientRootLayout>
         <NoiseOverlay mono opacity={0.05} scale={2} />
       </body>
