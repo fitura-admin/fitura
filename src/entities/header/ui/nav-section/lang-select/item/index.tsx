@@ -17,7 +17,7 @@ export default function HeaderSelectButton({ item, active }: Props) {
 
   return (
     <Button
-      type="ghost"
+      typeButton="ghost"
       className={`flex-row gap-6px align-center space-between ${active ? classes.active : classes.container}`}
       onClick={() => changeLang(item.action)}
       needHoverAnimation={false}

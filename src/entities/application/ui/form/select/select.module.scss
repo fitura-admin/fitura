@@ -1,0 +1,28 @@
+.options {
+  background-color: $neutral-100;
+  border: 1px solid $neutral-100;
+  border-radius: 15px;
+  padding: 14px;
+
+  gap: $space-2;
+  right: 0;
+  left: 0;
+  transform-origin: top center;
+
+  z-index: 10;
+}
+
+.selectButton {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px;
+  border-radius: 55px;
+}
+
+.selectWrapper {
+  display: flex;
+}
+
+.selectWrapper,
+.selectButton {
+  flex: 1 0;
+}

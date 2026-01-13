@@ -6,7 +6,7 @@ import classes from "./button.module.scss";
 export type ButtonTypeT = "ghost" | "primary" | "white" | "modal";
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
-  type: ButtonTypeT;
+  typeButton: ButtonTypeT;
   size?: string;
   radius?: number;
   needActiveScale?: boolean;
@@ -19,7 +19,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button({
-  type,
+  typeButton,
   size,
   radius,
   needActiveScale = true,
@@ -38,13 +38,12 @@ export default function Button({
     return `padding-${size}`;
   };
 
-  const typeRender = () => {
-    return classes[type];
-  };
-
   const getClassName = () => {
     return classNames(
-      `${className} ${classes.button} ${sizeRender()} ${typeRender()}`,
+      className,
+      classes.button,
+      classes[typeButton],
+      sizeRender(),
       {
         [classes.hoverAnimation]: needHoverAnimation,
         [classes.justifyCenter]: justifyCenter,

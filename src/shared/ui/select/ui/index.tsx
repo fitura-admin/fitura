@@ -6,6 +6,7 @@ import { useSelect } from "../hook/useSelect.hook";
 import classes from "./select.module.scss";
 import SelectIcon from "~/public/shared/chevron-compact-down.svg";
 import Button from "~/src/shared/ui/button";
+import classNames from "classnames";
 
 interface Props<T> {
   activeOption: string;
@@ -22,6 +23,7 @@ interface Props<T> {
   optionsClassName?: string;
   doubledHeader?: boolean;
   optionHolder?: string;
+  error?: string | null;
 }
 
 export default function Select<T>(props: Props<T>) {
@@ -39,6 +41,7 @@ export default function Select<T>(props: Props<T>) {
     optionsClassName = "",
     optionHolder,
     optionsFromBottom,
+    error,
   } = props;
   const { active, setActive, contentRef, buttonRef } = useSelect();
 
@@ -50,17 +53,21 @@ export default function Select<T>(props: Props<T>) {
         ref={buttonRef}
         justifyCenter={false}
         needActiveScale={false}
-        type="ghost"
-        className={`flex-row align-center ${selectButtonClassName}`}
+        typeButton="ghost"
+        className={classNames(
+          `flex-row align-center`,
+          selectButtonClassName,
+          error && classes.error,
+        )}
         onClick={() => {
           setActive(!active);
         }}
         needHoverAnimation={false}
       >
         <span
-          className={`body-text medium base white ${selectedOptionClassName}`}
+          className={`${selectedOptionClassName || "body-text medium base white"}`}
         >
-          {activeOption ?? optionHolder}
+          {activeOption || optionHolder}
         </span>
         <SelectIcon className={active ? classes.icon : ""} />
       </Button>
@@ -82,7 +89,11 @@ export default function Select<T>(props: Props<T>) {
               left: optionsPosLeft ? `${optionsPosLeft}px` : undefined,
               right: optionsPosRight ? `${optionsPosRight}px` : undefined,
             }}
-            className={`${optionsClassName} flex-column scrollbar absolute ${classes.options}`}
+            className={classNames(
+              `flex-column scrollbar absolute`,
+              classes.options,
+              optionsClassName,
+            )}
             onClick={() => setActive(false)}
           >
             {options.map((item, index) => {

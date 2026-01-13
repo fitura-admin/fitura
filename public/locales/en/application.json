@@ -1,0 +1,39 @@
+{
+    "heading": "Join the Team",
+    "text": "To apply, please select the position you’re interested in and upload your CV (PDF or PNG format, one file only).",
+    "success": {
+        "heading": "Thank you for your application!",
+        "text": "We’ve received your submission and will review it carefully.\nIf your experience and profile match our current needs, a member of our team will be in touch with you.",
+        "subText": "Thank you for your interest in joining FITURA.\nWe look forward to getting to know you better."
+    },
+    "inputs": {
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "position": "Select a position"
+    },
+    "resume": {
+        "loadText": "Upload CV",
+        "firstPart": "Drag and drop your résumé here or",
+        "link": "upload a file",
+        "secondPart": ". Supported file formats: PDF or PNG. One file only, up to 20 MB."
+    },
+    "select": {
+        "trainee": "Gym Coach",
+        "instructor": "Instructor of group programs",
+        "administrator": "Club Administrator",
+        "manager": "Service Manager",
+        "placeholder": "Select a position"
+    },
+    "checkbox": {
+        "first": {
+            "text": "I have read the ",
+            "link": "privacy policy"
+        },
+        "second": {
+            "text": ". \nI consent to the ",
+            "link": "processing of personal data"
+        }
+    },
+    "buttonText": "Send"
+}

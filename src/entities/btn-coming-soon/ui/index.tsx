@@ -26,7 +26,6 @@ export default function BtnComingSoon({
   delay,
   strength,
   onClick,
-  text,
   radius,
 }: Props) {
   const dispatch = useAppDispatch();
@@ -34,7 +33,7 @@ export default function BtnComingSoon({
     <MagneticItem areaSize={areaSize ?? 300} strength={strength ?? undefined}>
       <AnimatedItem delay={delay ?? 0.5}>
         <Button
-          type="primary"
+          typeButton="primary"
           size={size}
           radius={radius ?? 100}
           className={className}

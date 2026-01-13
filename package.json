@@ -18,6 +18,7 @@
     "classnames": "^2.5.1",
     "eslint-plugin-prettier": "^5.5.1",
     "framer-motion": "^12.23.12",
+    "googleapis": "^170.0.0",
     "gsap": "^3.13.0",
     "i18next": "^25.5.3",
     "next": "15.3.8",

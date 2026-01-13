@@ -43,7 +43,7 @@ export default function SpaceModalNavigation({
       {buttons.map((item, index) => (
         <Button
           key={index}
-          type="primary"
+          typeButton="primary"
           onClick={item.onClick}
           className={`${classes.button} ${item.prev ? classes.prev : classes.next}`}
           radius={100}

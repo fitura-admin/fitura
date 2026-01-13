@@ -30,11 +30,11 @@ export default function SubscribeBody({
     <div className={`flex-column ${classes.container}`}>
       <AnimatedItem slideIn direction="down" duration={0.3} delay={0.2}>
         <EmailInput
-          className={classes.input}
+          inputClassName={classes.input}
           placeholder={t("placeholder")}
           value={email}
           onChange={(v) => setEmail(v.target.value)}
-          error={error}
+          errorText={error}
         />
       </AnimatedItem>
       <SubscribeButton

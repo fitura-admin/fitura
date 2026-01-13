@@ -14,6 +14,9 @@ export const headerNavButtons: HeaderNavButtonI[] = [
     link: "app",
   },
   {
+    link: "career",
+  },
+  {
     link: "contacts",
   },
 ];

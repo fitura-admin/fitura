@@ -26,7 +26,7 @@ export default function StartContent() {
       </div>
       <AnimatedItem delay={0.1}>
         <LinkContainer href="#space">
-          <Button type="primary" size={"14-20"} radius={100}>
+          <Button typeButton="primary" size={"14-20"} radius={100}>
             <TextTranslate
               nameSpace="start"
               tName="text.buttonText"

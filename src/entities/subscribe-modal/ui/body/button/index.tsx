@@ -27,7 +27,7 @@ export default function SubscribeButton({
       delay={0.3}
     >
       <Button
-        type="modal"
+        typeButton="modal"
         size="12-16"
         onClick={buttonClick}
         radius={100}

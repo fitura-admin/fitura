@@ -38,7 +38,7 @@ export default function CardHeadingInfo({ moreContent, tName }: Props) {
       <AnimatedItem delay={0.1}>
         <MagneticItem strength={0.1} areaSize={150}>
           <Button
-            type={moreContent ? "white" : "primary"}
+            typeButton={moreContent ? "white" : "primary"}
             size="10-16"
             radius={100}
             onClick={() => dispatch(setModalOpen(true))}

@@ -1,51 +1,53 @@
-import React from "react";
+import React, { memo } from "react";
+import classNames from "classnames";
 
-import Input from "../../input";
+import classes from "./text-input.module.scss";
+import CustomInput, { InputProps } from "../../input";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-  classNameInput?: string;
-  RightIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
-  rightIconClick?: () => void;
-  placeholder?: string;
-  disabled?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value?: string;
-  name?: string;
-  classNameRightIcon?: string;
-  onKeyDown?: (e: React.KeyboardEvent) => void;
-  title?: string;
-  gap?: number;
+export interface TextInputProps extends InputProps {
+  wrapperClassName?: string;
+  inputClassName?: string;
+  children?: React.ReactNode;
 }
 
-export default function TextInput({
-  className,
-  classNameInput,
-  placeholder,
-  disabled,
-  onChange,
-  value,
-  name,
-  onKeyDown,
-  title,
-  gap,
-}: Props) {
-  return (
-    <section
-      className={`flex-row space-between ${className}`}
-      style={{ gap: `${gap}px` }}
-    >
-      <Input
-        className={classNameInput}
-        placeholder={placeholder}
-        disabled={disabled}
-        onChange={onChange}
-        value={value}
-        type={"text"}
-        name={name}
-        onKeyDown={onKeyDown}
-        title={title}
-      />
-    </section>
-  );
-}
+const TextInput: React.FC<TextInputProps> = memo(
+  ({
+    wrapperClassName,
+    inputClassName,
+    errorText,
+    children,
+    ...inputProps
+  }) => {
+    return (
+      <div
+        className={classNames(
+          classes.wrapper,
+          wrapperClassName,
+          errorText && classes.error,
+          "relative flex-column",
+        )}
+      >
+        <CustomInput
+          {...inputProps}
+          errorText={errorText}
+          className={classNames(classes.input, inputClassName)}
+        />
+        {children}
+        {errorText && (
+          <span
+            className={classNames(
+              classes.errorText,
+              "red text-body super-small",
+            )}
+          >
+            {errorText}
+          </span>
+        )}
+      </div>
+    );
+  },
+);
+
+TextInput.displayName = "TextInput";
+
+export default TextInput;

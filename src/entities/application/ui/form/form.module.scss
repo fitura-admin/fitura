@@ -1,0 +1,35 @@
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(150px);
+  -webkit-backdrop-filter: blur(150px);
+  border-radius: $space-5;
+  padding: $space-60px;
+
+  transition: max-height $transition;
+  max-height: 100%;
+
+  gap: $space-10;
+  max-width: 566px;
+  width: 100%;
+
+  overflow: hidden;
+
+  @media screen and (width <= 768px) {
+    padding: $space-5;
+    gap: $space-30;
+    max-width: calc(100vw - $space-4 * 2);
+  }
+}
+
+.inputs {
+  gap: $space-5;
+
+  @media screen and (width <= 768px) {
+    gap: $space-4;
+  }
+}
+
+.hidden {
+  overflow: hidden;
+  max-height: 0%;
+}

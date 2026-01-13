@@ -22,7 +22,7 @@ export default function HeaderNavButton({ link }: Props) {
       <LinkContainer href={"#" + link} hardPush onClick={handleButtonClick}>
         <Button
           asLink
-          type="ghost"
+          typeButton="ghost"
           size="0"
           className={classNames(classes.button, {
             [classes.active]: isActive,

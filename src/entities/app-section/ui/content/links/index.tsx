@@ -22,7 +22,7 @@ export default function AppContentLinks() {
           >
             <LinkContainer href={item.link} target="_blank">
               <Button
-                type="primary"
+                typeButton="primary"
                 size="0"
                 className={classes.button}
                 justifyCenter={false}

@@ -3,6 +3,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { useWindowSize } from "react-use";
 import { selectNavigation } from "~/src/app/store/reducers/navigation.slice";
 import { useAppSelector } from "~/src/app/store/hook";
+import classNames from "classnames";
 
 import classes from "./lang-select.module.scss";
 import Select from "~/src/shared/ui/select/ui";
@@ -44,7 +45,10 @@ export default function HeaderLangSelect() {
       optionsPosTop={width <= 768 ? 16 : 12}
       optionsClassName={`${classes.options} padding-20`}
       selectButtonClassName={`gap-1 ${classes.selectButton}`}
-      selectedOptionClassName={classes.selectedOption}
+      selectedOptionClassName={classNames(
+        classes.selectedOption,
+        "body-text medium base white",
+      )}
     />
   );
 }

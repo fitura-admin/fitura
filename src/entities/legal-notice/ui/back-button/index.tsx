@@ -7,7 +7,7 @@ import Button from "~/src/shared/ui/button";
 export default function LegalBackButton() {
   return (
     <Button
-      type="primary"
+      typeButton="primary"
       size="0"
       className={classes.container}
       onClick={() => history.back()}

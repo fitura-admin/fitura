@@ -1,0 +1,22 @@
+.button {
+  border-radius: 55px;
+  padding: 14px;
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 1px solid rgba($color: $neutral-100, $alpha: 0.9);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

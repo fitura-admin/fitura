@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+
+  border: 1px dashed rgba($color: $neutral-100, $alpha: 0.2);
+  padding: 14px $space-5;
+  border-radius: $space-10px;
+  background-color: rgba($color: $neutral-100, $alpha: 0.1);  
+
+  gap: $space-8;
+  
+  transition: border $transition;
+  cursor: pointer;
+
+  @media screen and (any-hover: hover) {
+    &:hover {
+      border: 1px dashed rgba($color: $neutral-100, $alpha: 0.7);
+    }
+  }
+}
+
+.withFile {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+  border: none;
+
+  @media screen and (any-hover: hover) {
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.error {
+  border: 1px dashed rgba($color: $colors-101, $alpha: 1);
+}

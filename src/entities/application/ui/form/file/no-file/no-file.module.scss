@@ -1,0 +1,18 @@
+.container {
+    gap: $space-2;
+
+    @media screen and (width <= 768px) {
+        gap: $space-6px;
+    }
+}
+
+.label {
+    span {
+        opacity: 0.8;
+    }
+
+    .link {
+        opacity: 1;
+        text-decoration: underline;
+    }
+}

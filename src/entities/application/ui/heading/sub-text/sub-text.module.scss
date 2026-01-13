@@ -1,0 +1,34 @@
+.container {
+  gap: $space-5;
+  max-width: 615px;
+}
+
+.text,
+.success,
+.successText {
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.text {
+  opacity: 0.8;
+}
+
+.successText {
+  opacity: 0;
+  pointer-events: none;
+  animation: successText 0.3s ease-in-out forwards;
+}
+
+@keyframes successText {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0, 105%);
+  }
+  100% {
+    opacity: 0.6;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+}

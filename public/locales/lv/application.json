@@ -1,0 +1,39 @@
+{
+    "heading": "Pievienojieties komandai",
+    "text": "Lai pieteiktos, lūdzu, izvēlieties interesējošo amatu un pievienojiet savu CV (PDF vai PNG formātā, ne vairāk kā viens fails).",
+    "success": {
+        "heading": "Paldies par jūsu pieteikumu!",
+        "text": "Mēs esam saņēmuši jūsu pieteikumu un to rūpīgi izskatīsim.\nJa jūsu pieredze un profils atbildīs mūsu pašreizējām vajadzībām, mēs ar jums sazināsimies.",
+        "subText": "Paldies par interesi pievienoties FITURA komandai.\nAr prieku iepazīsimies tuvāk."
+    },
+    "inputs": {
+        "name": "Vārds un uzvārds",
+        "email": "E-pasta adrese",
+        "phone": "Tālruņa numurs",
+        "position": "Izvēlieties amatu"
+    },
+    "resume": {
+        "loadText": "Augšupielādējiet CV",
+        "firstPart": "Velciet un nometiet savu CV šeit vai ",
+        "link": "augšupielādējiet failu",
+        "secondPart": ". Atbalstītie failu formāti: PDF vai PNG. Tikai viens fails, līdz 20 MB."
+    },
+    "select": {
+        "trainee": "Sporta zāles treneris",
+        "instructor": "Grupas programmu instruktors",
+        "administrator": "Kluba administrators",
+        "manager": "Pakalpojumu vadītājs",
+        "placeholder": "Izvēlieties amatu"
+    },
+    "checkbox": {
+        "first": {
+            "text": "I have read the ",
+            "link": "privacy policy"
+        },
+        "second": {
+            "text": ". \nI consent to the ",
+            "link": "processing of personal data"
+        }
+    },
+    "buttonText": "Send"
+}

@@ -81,7 +81,8 @@ $second-family: "ABCSolarPlusVariable", sans-serif;
 }
 
 //
-.body-text {
+.body-text,
+.text-body {
     font-family: $font-family;
 }
 
@@ -100,6 +101,11 @@ $second-family: "ABCSolarPlusVariable", sans-serif;
     line-height: 20px;
 }
 
+.super-small {
+    font-size: 12px;
+    line-height: 120%;
+}
+
 //
 .light {
     font-weight: 300;
@@ -113,6 +119,10 @@ $second-family: "ABCSolarPlusVariable", sans-serif;
     font-weight: 500;
 }
 
+.semibold {
+    font-weight: 600;
+}
+
 //
 .text-center {
     text-align: center;
@@ -124,11 +134,18 @@ $second-family: "ABCSolarPlusVariable", sans-serif;
 }
 
 .red {
-    color: #ff0000;
+    color: $colors-101;
 }
 
 .black {
     color: $neutral-800;
+}
+
+.nowrap-text,
+.nowrap_text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
 }
 
 @mixin heading($size) {

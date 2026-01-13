@@ -15,7 +15,7 @@ export default function ClientLayout({ children }: Props) {
       <Loader />
       <Header />
       <div id="scroll_wrapper">
-        <main>{children}</main>
+        <main className="flex-column">{children}</main>
       </div>
       <ClientHooks />
       <LangDetector />

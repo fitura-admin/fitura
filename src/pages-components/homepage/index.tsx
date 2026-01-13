@@ -1,4 +1,5 @@
 import AppSection from "~/src/entities/app-section/ui";
+import ApplicationSection from "~/src/entities/application/ui";
 import ContactsSection from "~/src/entities/contacts/ui";
 import MembershipSection from "~/src/entities/membership/ui";
 import SpaceSections from "~/src/entities/space-sections/ui";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <SpaceSections />
       <MembershipSection />
       <AppSection />
+      <ApplicationSection />
       <ContactsSection />
       <SubscribeModal />
     </>

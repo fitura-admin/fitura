@@ -1,11 +1,23 @@
-import React from "react";
+import React, { memo } from "react";
+import classNames from "classnames";
 
-import Input, { InputProps } from "~/src/shared/ui/input";
+import TextInput, { TextInputProps } from "../text-input";
 
-interface Props extends InputProps {
-  needValidation?: boolean;
-}
+export interface EmailInputProps extends Omit<TextInputProps, "type"> {}
 
-export default function EmailInput({ needValidation = false, ...rest }: Props) {
-  return <Input type="email" {...rest} />;
-}
+const EmailInput: React.FC<EmailInputProps> = memo(
+  ({ errorText, wrapperClassName, ...rest }) => {
+    return (
+      <TextInput
+        {...rest}
+        type="email"
+        inputClassName={classNames(rest.inputClassName)}
+        errorText={errorText}
+        wrapperClassName={wrapperClassName}
+      />
+    );
+  },
+);
+
+EmailInput.displayName = "EmailInput";
+export default EmailInput;

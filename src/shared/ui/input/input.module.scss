@@ -1,8 +1,39 @@
-.input {
-    background-color: transparent;
-    width: 100%;
-}
-
 .label {
-    width: 100%;
+  flex: 1 0;
+  transition: border $transition;
+
+  .input {
+    flex: 1;
+    color: $neutral-100;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $neutral-100;
+    }
+  }
+
+  .separatedPlaceholder {
+    color: $neutral-100;
+  }
+
+  &.error {
+    border: 1px solid $colors-101;
+
+    .input {
+      color: $colors-101;
+      &::placeholder {
+        color: $colors-101;
+      }
+    }
+
+    .separatedPlaceholder {
+      color: $colors-101;
+    }
+
+    .icon path,
+    .icon rect,
+    .icon circle {
+      fill: $colors-101;
+    }
+  }
 }
