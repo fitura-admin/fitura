@@ -37,7 +37,7 @@ export default function ApplicationForm({
 }: Props) {
   return (
     <AnimatePresence initial={false}>
-      {success && (
+      {!success && (
         <motion.div
           initial={{ opacity: 1, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
