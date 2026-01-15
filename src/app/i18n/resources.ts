@@ -10,6 +10,7 @@ export async function loadResources(): Promise<
     "modal",
     "workspaces",
     "application",
+    "cookies",
   ];
   const resources: Record<string, Record<string, any>> = {};
 

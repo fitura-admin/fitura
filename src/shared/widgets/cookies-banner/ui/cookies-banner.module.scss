@@ -1,0 +1,44 @@
+.container {
+    position: fixed;
+    bottom: $space-5;
+    right: $space-5;
+    z-index: 10;
+
+    padding: $space-5;
+    border-radius: $space-5;
+
+    background-color: rgba($color: $neutral-100, $alpha: 0.1);
+    backdrop-filter: blur(150px);
+    box-shadow: $shadow-100;
+
+    display: flex;
+    flex-direction: row;
+    max-width: 636px;
+    width: 100%;
+
+    @media screen and (width <= 768px) {
+        max-width: unset;
+        left: $space-10px;
+        right: $space-10px;
+        flex-direction: column;
+    }
+}
+
+.text {
+    opacity: 0.8;
+}
+
+.link {
+    text-decoration: underline;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.button {
+    border-radius: 55px;
+    background-color: rgba($color: $neutral-100, $alpha: 0.2);
+    padding: $space-10px;
+    min-width: 153px;
+}

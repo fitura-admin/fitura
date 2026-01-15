@@ -10,7 +10,8 @@ import "swiper/css/autoplay";
 
 import CLientRootLayout from "~/src/app/client-layout";
 import NoiseOverlay from "~/src/shared/ui/noise-overlay/ui";
-import { GTM } from "../shared/widgets/gtm";
+import CookiesBanner from "~/src/shared/widgets/cookies-banner/ui";
+import { GTM } from "~/src/shared/widgets/gtm";
 
 export const metadata: Metadata = {
   title: "Fitura Fitness & SPA",
@@ -45,7 +46,10 @@ export default function RootLayout({
     <html lang={lang}>
       <body className="body relative flex-column">
         <GTM id={GTM_ID} />
-        <CLientRootLayout>{children}</CLientRootLayout>
+        <CLientRootLayout>
+          {children}
+          <CookiesBanner />
+        </CLientRootLayout>
         <NoiseOverlay mono opacity={0.05} scale={2} />
       </body>
     </html>
