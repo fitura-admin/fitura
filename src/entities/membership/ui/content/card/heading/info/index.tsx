@@ -1,13 +1,9 @@
-"use client";
 import React from "react";
-import { useAppDispatch } from "~/src/app/store/hook";
-import { setModalOpen } from "~/src/app/store/reducers/navigation.slice";
 
 import classes from "./card-info.module.scss";
 import Button from "~/src/shared/ui/button";
 import TextScroll from "~/src/shared/ui/text-scroll";
 import AnimatedItem from "~/src/shared/ui/animated-item";
-import { MagneticItem } from "~/src/shared/ui/magnetic-item";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
@@ -15,9 +11,9 @@ interface Props {
   moreContent: boolean;
 }
 
-export default function CardHeadingInfo({ moreContent, tName }: Props) {
-  const dispatch = useAppDispatch();
+const linkToPayment = "https://fiturafitness-membership.flybyglobal.com/";
 
+export default function CardHeadingInfo({ moreContent, tName }: Props) {
   return (
     <div className={`flex-row space-between align-center ${classes.info}`}>
       <div className={`flex-row gap-2 flex-start`}>
@@ -36,12 +32,12 @@ export default function CardHeadingInfo({ moreContent, tName }: Props) {
         />
       </div>
       <AnimatedItem delay={0.1}>
-        <MagneticItem strength={0.1} areaSize={150}>
+        <a href={linkToPayment} target="_blank" rel="noopener noreferrer">
           <Button
             typeButton={moreContent ? "white" : "primary"}
             size="10-16"
             radius={100}
-            onClick={() => dispatch(setModalOpen(true))}
+            asLink
           >
             <TextTranslate
               as="span"
@@ -50,7 +46,7 @@ export default function CardHeadingInfo({ moreContent, tName }: Props) {
               tName="buttonText"
             />
           </Button>
-        </MagneticItem>
+        </a>
       </AnimatedItem>
     </div>
   );
