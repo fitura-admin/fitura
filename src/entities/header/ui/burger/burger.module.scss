@@ -46,7 +46,7 @@
     transform: scaleY(0.1);
 }
 
-@media screen and (width <=768px) {
+@media screen and (width <=1024px) {
     .burger {
         display: grid;
         gap: $space-6px;

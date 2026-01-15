@@ -16,7 +16,7 @@
     opacity: 1;
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 1024px) {
     .button {
         .button__text {
             @include heading(28px);

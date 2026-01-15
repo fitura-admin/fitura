@@ -19,6 +19,7 @@
   inset: 0;
   display: grid;
   place-content: center;
+  z-index: 8;
 }
 
 .nav_backdrop {
@@ -38,7 +39,7 @@
   align-items: center;
 }
 
-@media screen and (width <=768px) {
+@media screen and (width <= 1024px) {
   .container {
     display: none !important;
   }

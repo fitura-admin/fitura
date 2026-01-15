@@ -1,10 +1,10 @@
 import React from "react";
 
-import classes from "./legal-button.module.scss";
+import classes from "./privacy-button.module.scss";
 import Icon from "~/public/shared/chevron-left.svg";
 import Button from "~/src/shared/ui/button";
 
-export default function LegalBackButton() {
+export default function PrivacyBackButton() {
   return (
     <Button
       typeButton="primary"

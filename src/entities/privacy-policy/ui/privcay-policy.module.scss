@@ -1,0 +1,41 @@
+.container {
+  border-radius: $space-6;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: $blur-10;
+  width: 100%;
+  justify-content: center;
+  gap: $space-8;
+  padding: $space-8 $space-8 $space-11;
+}
+
+.notice {
+  max-width: 700px;
+  gap: $space-7;
+
+  div {
+    gap: $space-4;
+  }
+}
+
+.text {
+  opacity: 0.8;
+  white-space: pre-wrap;
+}
+
+.line {
+  opacity: 0.1;
+  background: #d9d9d9;
+  height: 2px;
+  width: 100%;
+}
+
+@media screen and (width <= 768px) {
+  .container {
+    gap: $space-5;
+    padding: $space-4 $space-3;
+  }
+
+  .notice {
+    gap: $space-6;
+  }
+}

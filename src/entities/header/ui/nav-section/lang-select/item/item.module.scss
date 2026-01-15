@@ -9,7 +9,7 @@
 .active,
 .container {
   span {
-    @media screen and (width <= 768px) {
+    @media screen and (width <= 1024px) {
       font-size: clamp(0.875rem, 0.75rem + 0.56vw, 1.25rem) !important;
       line-height: clamp(1.25rem, 1.083rem + 0.74vw, 1.75rem) !important;
     }

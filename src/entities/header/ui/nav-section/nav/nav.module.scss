@@ -2,7 +2,7 @@
     gap: $space-8;
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 1024px) {
     .container {
         flex-direction: column !important;
         gap: $space-10;

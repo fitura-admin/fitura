@@ -19,6 +19,10 @@ export default function ContactsLegal() {
       tName: "footerRights",
     },
     {
+      tName: "footerCareer",
+      href: "#career",
+    },
+    {
       tName: "footerLinkLegal",
       href: "legal-notice",
     },

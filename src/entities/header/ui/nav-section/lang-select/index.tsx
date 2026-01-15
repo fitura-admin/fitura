@@ -41,8 +41,8 @@ export default function HeaderLangSelect() {
         />
       )}
       containerRelative
-      optionsFromBottom={width <= 768}
-      optionsPosTop={width <= 768 ? 16 : 12}
+      optionsFromBottom={width <= 1024 ? true : false}
+      optionsPosTop={width <= 1024 ? 16 : 12}
       optionsClassName={`${classes.options} padding-20`}
       selectButtonClassName={`gap-1 ${classes.selectButton}`}
       selectedOptionClassName={classNames(

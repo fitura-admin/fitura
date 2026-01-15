@@ -8,25 +8,40 @@
   padding: $space-8 $space-8 $space-11;
 }
 
-.notice {
-  max-width: 700px;
-  gap: $space-7;
-
-  div {
-    gap: $space-4;
-  }
-}
-
-.text {
-  opacity: 0.8;
-  white-space: pre-wrap;
-}
-
+.link,
 .line {
-  opacity: 0.1;
-  background: #d9d9d9;
-  height: 2px;
-  width: 100%;
+  transition: opacity $transition;
+}
+
+.link {
+  opacity: 0.8;
+
+  .arrow {
+    opacity: 0.3;
+    rotate: 180deg;
+    translate: -50% 0;
+
+    transition: translate $transition;
+  }
+
+  .line {
+    opacity: 0.3;
+    background: #d9d9d9;
+    height: 2px;
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    .line {
+      opacity: 0.5;
+    }
+    .arrow {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
 }
 
 @media screen and (width <= 768px) {
@@ -35,7 +50,7 @@
     padding: $space-4 $space-3;
   }
 
-  .notice {
-    gap: $space-6;
+  .arrow {
+    translate: 0 0;
   }
 }
