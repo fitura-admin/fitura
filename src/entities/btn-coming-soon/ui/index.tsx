@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
-import { useAppDispatch } from "~/src/app/store/hook";
-import { setModalOpen } from "~/src/app/store/reducers/navigation.slice";
 
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import Button from "~/src/shared/ui/button";
-import { MagneticItem } from "~/src/shared/ui/magnetic-item";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 
 interface Props {
@@ -19,28 +16,27 @@ interface Props {
   radius?: number;
 }
 
+const linkToPayment = "https://fiturafitness-membership.flybyglobal.com/";
+
 export default function BtnComingSoon({
   size,
   className,
-  areaSize,
   delay,
-  strength,
   onClick,
   radius,
 }: Props) {
-  const dispatch = useAppDispatch();
   return (
-    <MagneticItem areaSize={areaSize ?? 300} strength={strength ?? undefined}>
-      <AnimatedItem delay={delay ?? 0.5}>
+    <AnimatedItem delay={delay ?? 0.5}>
+      <a href={linkToPayment} target="_blank" rel="noopener noreferrer">
         <Button
           typeButton="primary"
           size={size}
           radius={radius ?? 100}
           className={className}
           onClick={() => {
-            dispatch(setModalOpen(true));
             onClick?.();
           }}
+          asLink
         >
           <TextTranslate
             as="span"
@@ -49,7 +45,7 @@ export default function BtnComingSoon({
             tName="buttonText"
           />
         </Button>
-      </AnimatedItem>
-    </MagneticItem>
+      </a>
+    </AnimatedItem>
   );
 }

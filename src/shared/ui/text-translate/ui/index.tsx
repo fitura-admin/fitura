@@ -19,6 +19,7 @@ export function TextTranslate<T extends ElementType = "p">({
   nameSpace,
   tName,
   ref,
+  children,
   ...rest
 }: PolymorphicProps<T, TextTranslateOwnProps>) {
   const { t } = useTranslation(nameSpace, { useSuspense: false });
@@ -27,6 +28,7 @@ export function TextTranslate<T extends ElementType = "p">({
   return (
     <Tag ref={ref} className={classNames(className)} {...rest}>
       {t(tName)}
+      {children}
     </Tag>
   );
 }

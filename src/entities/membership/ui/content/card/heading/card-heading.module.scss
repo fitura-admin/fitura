@@ -11,6 +11,21 @@
     height: initial;
 }
 
+.age {
+    padding: $space-1 $space-2;
+    
+    opacity: 0.8;
+    border-radius: $space-5;
+    background-color: rgba($color: $neutral-100, $alpha: 0.1);
+    box-shadow: $shadow-100;
+    backdrop-filter: $blur-4;
+    -webkit-backdrop-filter: $blur-4;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .text {
     gap: $space-3;
     align-items: flex-start;

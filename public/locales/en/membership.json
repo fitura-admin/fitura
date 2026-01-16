@@ -4,19 +4,23 @@
         "full": {
             "heading": "Full Access",
             "text": "All-inclusive membership with gym, spa, classes, recovery, and more",
-            "price": "€ 69.5"
+            "price": "€ 69.5",
+            "age": "18+"
         },
         "duo": {
             "heading": "Duo",
             "text": "Train, recover, and thrive together\n— full access for two",
-            "price": "€ 129.5"
+            "price": "€ 129.5",
+            "age": "18+"
         },
         "junior": {
             "heading": "Junior",
             "text": "Smart start for ages 14-18: full gym, spa, classes, app access, and more",
-            "price": "€ 50"
+            "price": "€ 50",
+            "age": "14-18"
         },
-        "pricePeriod": "/ 4 weeks"
+        "pricePeriod": "/ 4 weeks",
+        "joiningFee": "Joining fee"
     },
     "inEveryPlan": {
         "heading": "Included in Every Membership:",

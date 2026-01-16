@@ -4,10 +4,12 @@ import classNames from "classnames";
 import classes from "./card-heading.module.scss";
 import CardHeadingInfo from "./info";
 import TextScroll from "~/src/shared/ui/text-scroll";
-import { IMembershipCard } from "~/src/entities/membership/model/membership.interface";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
+import { IMembershipCard } from "~/src/entities/membership/model";
 
 interface Props extends IMembershipCard {}
+
+const NAMESPACE = "membership";
 
 export default function MembershipCardHeading({
   type,
@@ -15,13 +17,19 @@ export default function MembershipCardHeading({
 }: Props) {
   return (
     <div
-      className={classNames(`flex-column ${classes.container}`, {
+      className={classNames(`flex-column relative ${classes.container}`, {
         [classes.more]: moreContent,
       })}
     >
+      <TextTranslate
+        nameSpace={NAMESPACE}
+        tName={`plans.${type}.age`}
+        as="span"
+        className={`text-body white ${classes.age}`}
+      />
       <div className={`flex-column ${classes.text}`}>
         <TextScroll
-          nameSpace="membership"
+          nameSpace={NAMESPACE}
           tName={`plans.${type}.heading`}
           textClassName="heading h2 white"
           onInView={true}
@@ -30,7 +38,7 @@ export default function MembershipCardHeading({
         <TextTranslate
           as={"p"}
           className="base body-text white"
-          nameSpace="membership"
+          nameSpace={NAMESPACE}
           tName={`plans.${type}.text`}
         />
       </div>

@@ -7,7 +7,7 @@ import classes from "./membership-card.module.scss";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import MembershipCardHeading from "./heading";
 import CardOptions from "./options";
-import { IMembershipCard } from "~/src/entities/membership/model/membership.interface";
+import { IMembershipCard } from "~/src/entities/membership/model";
 
 interface Props {
   item: IMembershipCard;
