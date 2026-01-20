@@ -29,9 +29,7 @@ export default function HeaderNavSection() {
               exit={{ opacity: 0, y: 20 }}
               className={classes.nav_content}
             >
-              <HeaderNav>
-                <HeaderLangSelect />
-              </HeaderNav>
+              <HeaderNav />
             </motion.div>
           </motion.div>
         )}

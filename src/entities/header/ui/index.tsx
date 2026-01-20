@@ -6,10 +6,10 @@ import classes from "./header.module.scss";
 import HeaderLogo from "./logo";
 import HeaderNavSection from "./nav-section";
 import Burger from "./burger";
+import HeaderLangSelect from "./nav-section/lang-select";
 
 export default function Header() {
   const pathname = usePathname();
-  // если станет много страниц, то логику лучше переделать
   const isLegal = pathname.includes("legal-notice");
 
   return (
@@ -17,7 +17,10 @@ export default function Header() {
       <div className="wrapper flex-row space-between align-center relative">
         <HeaderLogo />
         <HeaderNavSection />
-        <Burger />
+        <div className={`flex-row gap-5 align-center ${classes.media}`}>
+          <HeaderLangSelect />
+          <Burger />
+        </div>
       </div>
     </header>
   );

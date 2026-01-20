@@ -11,3 +11,13 @@
     padding-top: $space-5;
     padding-bottom: $space-5;
 }
+
+.media {
+    display: none;
+    pointer-events: none;
+
+    @media screen and (width <= 1024px) {
+        display: flex;
+        pointer-events: all;
+    }
+}

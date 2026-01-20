@@ -33,11 +33,13 @@
     .burger__line {
         &:first-child {
             top: 100%;
-            transform: rotate(45deg) translateY(50%);
+            transform: rotate(45deg);
+            translate: 0 -5px;
         }
         &:last-child {
             bottom: 100%;
-            transform: rotate(-45deg) translateY(-50%);
+            transform: rotate(-45deg);
+            translate: 0 5px;
         }
     }
 }
@@ -49,6 +51,6 @@
 @media screen and (width <=1024px) {
     .burger {
         display: grid;
-        gap: $space-6px;
+        gap: 2px;
     }
 }
