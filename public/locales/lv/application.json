@@ -22,17 +22,16 @@
         "trainee": "Sporta zāles treneris",
         "instructor": "Grupas programmu instruktors",
         "administrator": "Kluba administrators",
-        "manager": "Pakalpojumu vadītājs",
         "placeholder": "Izvēlieties amatu"
     },
     "checkbox": {
         "first": {
-            "text": "I have read the ",
-            "link": "privacy policy"
+            "text": "Esmu iepazinies (-usies) ar ",
+            "link": "privātuma politiku"
         },
         "second": {
-            "text": ". \nI consent to the ",
-            "link": "processing of personal data"
+            "text": ". \nPiekrītu ",
+            "link": "personas datu apstrādei"
         }
     },
     "buttonText": "Send"

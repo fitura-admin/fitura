@@ -16,5 +16,4 @@ export const applicationSelectOptions: string[] = [
   "trainee",
   "instructor",
   "administrator",
-  "manager",
 ];

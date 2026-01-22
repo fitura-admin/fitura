@@ -22,7 +22,6 @@
         "trainee": "Gym Coach",
         "instructor": "Instructor of group programs",
         "administrator": "Club Administrator",
-        "manager": "Service Manager",
         "placeholder": "Select a position"
     },
     "checkbox": {
