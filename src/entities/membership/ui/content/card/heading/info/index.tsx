@@ -39,7 +39,7 @@ export default function CardHeadingInfo({ moreContent, tName }: Props) {
           nameSpace={NAMESPACE}
           tName="plans.joiningFee"
         >
-          &nbsp;– 0 € (<span className={classes.crossed}>50 €</span>)
+          &nbsp;– 12,5 € (<span className={classes.crossed}>50 €</span>)
         </TextTranslate>
       </div>
       <AnimatedItem delay={0.1}>
