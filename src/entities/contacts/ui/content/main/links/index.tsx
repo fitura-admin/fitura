@@ -13,6 +13,7 @@ interface ILink {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   title: string;
   href: string;
+  target?: string;
 }
 
 export default function ContactsLinks() {
@@ -22,11 +23,13 @@ export default function ContactsLinks() {
       Icon: Inst,
       title: "fitura_fitness",
       href: "https://www.instagram.com/fitura_fitness/?igsh=MWd5MzAxc2djdW5taQ%3D%3D",
+      target: "_blank",
     },
     {
       Icon: GeoAlt,
       title: t("address"),
       href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
+      target: "_blank",
     },
     {
       Icon: Tel,
@@ -57,7 +60,7 @@ export default function ContactsLinks() {
             <a
               className={`white body-text big regular ${classes.text}`}
               href={item.href}
-              target="_blank"
+              target={item.target}
             >
               {item.title}
             </a>
