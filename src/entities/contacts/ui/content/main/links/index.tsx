@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 import classes from "./contacts-links.module.scss";
 import Inst from "~/public/contacts/instagram.svg";
 import GeoAlt from "~/public/contacts/geo-alt.svg";
+import Tel from "~/public/contacts/telephone.svg";
 import Image from "next/image";
 import AnimatedItem from "~/src/shared/ui/animated-item";
-import LinkContainer from "~/src/shared/ui/link-container";
 
 interface ILink {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -27,6 +27,11 @@ export default function ContactsLinks() {
       Icon: GeoAlt,
       title: t("address"),
       href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
+    },
+    {
+      Icon: Tel,
+      title: "+63013400",
+      href: "tel:+63013400",
     },
   ];
 

@@ -1,12 +1,9 @@
 import React from "react";
 
 import classes from "./app-content-links.module.scss";
-import LinkContainer from "~/src/shared/ui/link-container";
 import Button from "~/src/shared/ui/button";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import { appLinks } from "~/src/entities/app-section/model/app.const";
-
-// TO DO Добавить ссылки на приложение
 
 export default function AppContentLinks() {
   return (
@@ -20,7 +17,7 @@ export default function AppContentLinks() {
             slideIn
             direction="right"
           >
-            <LinkContainer href={item.link} target="_blank">
+            <a href={item.link} rel="noopener noreferrer" target="_blank">
               <Button
                 typeButton="primary"
                 size="0"
@@ -38,7 +35,7 @@ export default function AppContentLinks() {
                   </span>
                 </div>
               </Button>
-            </LinkContainer>
+            </a>
           </AnimatedItem>
         </li>
       ))}

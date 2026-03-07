@@ -7,13 +7,13 @@ import { IAppLink } from "./app.interface";
 export const appLinks: IAppLink[] = [
   {
     title: "App Store",
-    link: "#!",
+    link: "https://apps.apple.com/tt/app/fitura-fitness/id6755587306",
     Icon: Ios,
     IconMedia: IosMedia,
   },
   {
     title: "Google Play",
-    link: "#!",
+    link: "https://play.google.com/store/apps/details?id=net.senkron.lapis.fiturafitness",
     Icon: Google,
     IconMedia: GoogleMedia,
   },
