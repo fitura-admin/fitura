@@ -33,8 +33,8 @@ export default function ContactsLinks() {
     },
     {
       Icon: Tel,
-      title: "+63013400",
-      href: "tel:+63013400",
+      title: "63013400",
+      href: "tel:63013400",
     },
   ];
 
