@@ -1,0 +1,10 @@
+{
+    "success": {
+        "heading": "Thank you ❤️",
+        "text": "Your payment has been received. Confirmation has been sent to your email"
+    },
+    "fail": {
+        "heading": "Oops 😅",
+        "text": "Something went wrong. Try again"
+    }
+}

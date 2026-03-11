@@ -1,0 +1,10 @@
+{
+    "success": {
+        "heading": "Paldies ❤️",
+        "text": "Jūsu maksājums ir saņemts. Apstiprinājums nosūtīts uz pastu"
+    },
+    "fail": {
+        "heading": "Oops 😅",
+        "text": "Kaut kas nogāja greizi. Mēģiniet vēlreiz"
+    }
+}

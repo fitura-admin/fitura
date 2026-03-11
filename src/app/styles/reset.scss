@@ -35,6 +35,7 @@ svg g,
 svg g path,
 path {
   transition: all $transition;
+  user-select: none;
 }
 
 

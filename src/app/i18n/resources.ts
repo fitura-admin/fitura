@@ -12,6 +12,7 @@ export async function loadResources(): Promise<
     "application",
     "cookies",
     "legal-notice",
+    "payment",
   ];
   const resources: Record<string, Record<string, any>> = {};
 

@@ -1,0 +1,30 @@
+.container {
+  height: 100dvh;
+  width: 100dvw;
+  justify-content: center;
+  gap: $space-6px;
+  overflow: hidden;
+  background: $bg-500;
+
+  padding: 0 $space-4;
+
+  p {
+    opacity: 0.8;
+  }
+
+  p,
+  h1 {
+    z-index: 1;
+    text-align: center;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: visible;
+  z-index: 0;
+}
