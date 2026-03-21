@@ -956,7 +956,7 @@ PATĪKAMU ATPAUTU!
 `;
 
 export const offerHeadings: Record<LangT, string> = {
-  lv: "PUBLISKĀ PIEDĀVĀJUMA",
+  lv: "PUBLISKAIS PIEDĀVĀJUMS",
   en: "PUBLIC OFFER",
   ru: "Публичная оферта",
 };
