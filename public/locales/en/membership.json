@@ -15,7 +15,7 @@
         },
         "junior": {
             "heading": "Junior",
-            "text": "Smart start for ages 14-18: full gym, spa, classes, app access, and more",
+            "text": "Smart start for ages 14-17: full gym, spa, classes, app access, and more",
             "price": "€ 50",
             "age": "14-17"
         },
@@ -28,11 +28,10 @@
             "Unlimited Access to the Fitura space",
             "Group Workouts",
             "Premium Gym Facilities",
-            "SPA Zone Access",
+            "SPA zone will be available soon",
             "Body Composition Analysis (InBody)",
             "Unlimited Guest Passes",
-            "Access to Fitura Member App",
-            "SPA zona būs pieejama apmeklēšanai tuvākajā laikā"
+            "Access to Fitura Member App"
         ]
     },
     "buttonText": "Get started"
