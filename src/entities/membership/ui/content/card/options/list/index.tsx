@@ -8,7 +8,7 @@ import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 const tNameDefault = "inEveryPlan.options";
 
 export default function CardOptionsList() {
-  const options = Array(9).fill(null);
+  const options = Array(8).fill(null);
 
   return (
     <div className={`${classes.wrapper}`}>
