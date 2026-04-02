@@ -7,13 +7,16 @@ import TextScroll from "~/src/shared/ui/text-scroll";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
 import { IMembershipCard } from "~/src/entities/membership/model";
 
-interface Props extends IMembershipCard {}
+interface Props extends IMembershipCard {
+  openModal: () => void;
+}
 
 const NAMESPACE = "membership";
 
 export default function MembershipCardHeading({
   type,
   moreContent = false,
+  openModal,
 }: Props) {
   return (
     <div
@@ -45,6 +48,7 @@ export default function MembershipCardHeading({
       <CardHeadingInfo
         tName={`plans.${type}.price`}
         moreContent={moreContent}
+        openModal={type === "junior" ? openModal : null}
       />
     </div>
   );

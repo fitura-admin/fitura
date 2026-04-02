@@ -34,5 +34,10 @@
             "Access to Fitura Member App"
         ]
     },
-    "buttonText": "Get started"
+    "buttonText": "Get started",
+    "minorsModal": {
+        "title": "Warning for minors",
+        "text": "To purchase a Junior membership, please visit the club daily between 10:00 and 22:00 together with a parent or legal guardian — the required documents will need to be signed on-site.",
+        "buttonText": "Got it"
+    }
 }

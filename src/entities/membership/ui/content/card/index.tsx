@@ -11,17 +11,18 @@ import { IMembershipCard } from "~/src/entities/membership/model";
 
 interface Props {
   item: IMembershipCard;
+  openModal: () => void;
   index?: number;
 }
 
-const CardContent = ({ item }: Props) => (
+const CardContent = ({ item, openModal }: Props) => (
   <>
-    <MembershipCardHeading {...item} />
+    <MembershipCardHeading {...item} openModal={openModal} />
     {item.moreContent ? <CardOptions /> : null}
   </>
 );
 
-export default function MembershipCard({ item, index }: Props) {
+export default function MembershipCard({ item, index, openModal }: Props) {
   const { width } = useWindowSize();
 
   const classNameLocal = useMemo(
@@ -35,7 +36,7 @@ export default function MembershipCard({ item, index }: Props) {
   if (width <= 1024) {
     return (
       <div className={classNameLocal}>
-        <CardContent item={item} />
+        <CardContent item={item} openModal={openModal} />
       </div>
     );
   }
@@ -49,7 +50,7 @@ export default function MembershipCard({ item, index }: Props) {
       delay={0.3}
       className={classNameLocal}
     >
-      <CardContent item={item} />
+      <CardContent item={item} openModal={openModal} />
     </AnimatedItem>
   );
 }

@@ -34,5 +34,10 @@
             "Pieeja kluba mobilajai lietotnei"
         ]
     },
-    "buttonText": "Sākt"
+    "buttonText": "Sākt",
+    "minorsModal": {
+        "title": "Brīdinājums nepilngadīgajiem",
+        "text": "Lai noformētu Junior membership, lūdzam ierasties klubā katru dienu no plkst. 10:00 līdz 22:00 kopā ar vienu no vecākiem vai likumisko pārstāvi — uz vietas būs nepieciešams parakstīt dokumentus.",
+        "buttonText": "Aizvērt"
+    }
 }

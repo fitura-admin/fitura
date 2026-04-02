@@ -1,44 +1,39 @@
 .info {
-    gap: $space-7;
+  gap: $space-7;
 
-    .info__price {
-        font-size: clamp(1.75rem, 1.441rem + 1.18vw, 2.5rem);
-        line-height: $space-8;
-        white-space: nowrap;
-    }
-
-    .info__period {
-        opacity: 0.6;
-        font-size: clamp(0.875rem, 0.84rem + 0.13vw, 1rem);
-        line-height: 11px;
-    }
+  .info__price {
+    font-size: clamp(1.75rem, 1.441rem + 1.18vw, 2.5rem);
+    line-height: $space-8;
     white-space: nowrap;
+  }
+
+  .info__period {
+    opacity: 0.6;
+    font-size: clamp(0.875rem, 0.84rem + 0.13vw, 1rem);
+    line-height: 11px;
+    white-space: nowrap;
+  }
 }
 
 .opacity_6 {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .crossed {
-    text-decoration: line-through;
-}
-
-.btn__text {
-    font-size: clamp(0.875rem, 0.84rem + 0.13vw, 1rem);
-    white-space: nowrap;
+  text-decoration: line-through;
 }
 
 @media screen and (width <= 1280px) {
-    .info__period {
-        margin-top: $space-1;
-    }
+  .info__period {
+    margin-top: $space-1;
+  }
 }
 
 @media screen and (width <= 768px) {
-    .info__price {
-        line-height: $space-5;
-    }
-    .info__period {
-        line-height: $space-10px;
-    }
+  .info__price {
+    line-height: $space-5;
+  }
+  .info__period {
+    line-height: $space-10px;
+  }
 }

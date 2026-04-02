@@ -1,20 +1,23 @@
 import React from "react";
 
 import classes from "./card-info.module.scss";
-import Button from "~/src/shared/ui/button";
 import TextScroll from "~/src/shared/ui/text-scroll";
-import AnimatedItem from "~/src/shared/ui/animated-item";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
+import MembershipCardButton from "./button";
 
 interface Props {
   tName: string;
   moreContent: boolean;
+  openModal: (() => void) | null;
 }
 
-const linkToPayment = "https://fiturafitness-membership.flybyglobal.com/";
 const NAMESPACE = "membership";
 
-export default function CardHeadingInfo({ moreContent, tName }: Props) {
+export default function CardHeadingInfo({
+  moreContent,
+  tName,
+  openModal,
+}: Props) {
   return (
     <div className={`flex-row space-between align-center ${classes.info}`}>
       <div className="flex-column gap-2 flex-start">
@@ -42,23 +45,7 @@ export default function CardHeadingInfo({ moreContent, tName }: Props) {
           &nbsp;– 37,5 € (<span className={classes.crossed}>50 €</span>)
         </TextTranslate>
       </div>
-      <AnimatedItem delay={0.1}>
-        <a href={linkToPayment} target="_blank" rel="noopener noreferrer">
-          <Button
-            typeButton={moreContent ? "white" : "primary"}
-            size="10-16"
-            radius={100}
-            asLink
-          >
-            <TextTranslate
-              as="span"
-              className={`heading h7 ${moreContent ? "black" : "white"} ${classes.btn__text}`}
-              nameSpace={NAMESPACE}
-              tName="buttonText"
-            />
-          </Button>
-        </a>
-      </AnimatedItem>
+      <MembershipCardButton moreContent={moreContent} openModal={openModal} />
     </div>
   );
 }

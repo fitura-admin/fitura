@@ -12,7 +12,11 @@ import MembershipSwiperPagination from "./pagination";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import { membershipSlides } from "~/src/entities/membership/model/membership.const";
 
-export default function MembershipSwiper() {
+interface Props {
+  openModal: () => void;
+}
+
+export default function MembershipSwiper({ openModal }: Props) {
   const slidesCount = useMemo(() => membershipSlides.length, []);
   const { swiperRef, handleSlideChange, currentSlide, setCurrentSlide } =
     useSwiperSlides({ slidesCount: slidesCount });
@@ -38,7 +42,7 @@ export default function MembershipSwiper() {
         >
           {membershipSlides.map((item, index) => (
             <SwiperSlide key={index + item.type} className={classes.slide}>
-              <MembershipCard item={item} />
+              <MembershipCard item={item} openModal={openModal} />
             </SwiperSlide>
           ))}
         </Swiper>
