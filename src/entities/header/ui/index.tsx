@@ -7,13 +7,20 @@ import HeaderLogo from "./logo";
 import HeaderNavSection from "./nav-section";
 import Burger from "./burger";
 import HeaderLangSelect from "./nav-section/lang-select";
+import classNames from "classnames";
 
 export default function Header() {
   const pathname = usePathname();
   const isLegal = pathname.includes("legal-notice");
+  const isSchedule = pathname.includes("schedule");
 
   return (
-    <header className={isLegal ? classes.headerLegal : classes.header}>
+    <header
+      className={classNames(
+        isLegal ? classes.headerLegal : classes.header,
+        isSchedule && classes.noDisplay,
+      )}
+    >
       <div className="wrapper flex-row space-between align-center relative">
         <HeaderLogo />
         <HeaderNavSection />

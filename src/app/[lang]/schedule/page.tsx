@@ -1,5 +1,5 @@
-import HomePage from "~/src/pages-components/homepage";
+import SchedulePage from "~/src/pages-components/schedule";
 
 export default function Page() {
-  return <HomePage />;
+  return <SchedulePage />;
 }

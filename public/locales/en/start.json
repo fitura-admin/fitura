@@ -5,7 +5,8 @@
         "membership": "Membership",
         "app": "App",
         "career": "Career",
-        "contacts": "Contacts"
+        "contacts": "Contacts",
+        "schedule": "Class schedule"
     },
     "text": {
         "heading": "Fitness of the Future",

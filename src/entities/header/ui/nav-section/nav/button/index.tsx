@@ -19,7 +19,11 @@ export default function HeaderNavButton({ link }: Props) {
 
   return (
     <AnimatedItem delay={0.3}>
-      <LinkContainer href={"#" + link} hardPush onClick={handleButtonClick}>
+      <LinkContainer
+        href={link === "schedule" ? "/schedule" : "#" + link}
+        hardPush
+        onClick={handleButtonClick}
+      >
         <Button
           asLink
           typeButton="ghost"

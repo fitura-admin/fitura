@@ -19,4 +19,7 @@ export const headerNavButtons: HeaderNavButtonI[] = [
   {
     link: "contacts",
   },
+  {
+    link: "schedule",
+  },
 ];
