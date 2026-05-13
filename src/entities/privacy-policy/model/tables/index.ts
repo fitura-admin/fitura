@@ -5,8 +5,8 @@ export const pricingTableLangs: Record<LangT, TableData> = {
   ru: {
     id: "main-services",
     columns: [
-      { key: "joinFee", title: "JOIN FEE" },
-      { key: "fullAccess", title: "FULL ACCES" },
+      { key: "joinFee", title: "JOINING FEE" },
+      { key: "fullAccess", title: "FULL ACCESS" },
       { key: "duo", title: "DUO" },
       { key: "junior", title: "JUNIOR" },
     ],
@@ -42,30 +42,39 @@ export const pricingTableLangs: Record<LangT, TableData> = {
         junior: "Доступ в зону СПА",
       },
       {
-        joinFee:
-          "1 (одна) Пробная восстановительная процедура согласно действующей акции в Fitura LAB",
+        joinFee: "",
         fullAccess: "Баня",
         duo: "Баня",
         junior: "Баня",
       },
-      { joinFee: "", fullAccess: "Сауна", duo: "Сауна", junior: "Сауна" },
-      { joinFee: "", fullAccess: "Хаммам", duo: "Хаммам", junior: "Хаммам" },
+      {
+        joinFee: "",
+        fullAccess: "Сауна",
+        duo: "Сауна",
+        junior: "Сауна",
+      },
+      {
+        joinFee: "",
+        fullAccess: "Хаммам",
+        duo: "Хаммам",
+        junior: "Хаммам",
+      },
     ],
   },
   en: {
     id: "main-services",
     columns: [
-      { key: "joinFee", title: "JOIN FEE" },
+      { key: "joinFee", title: "JOINING FEE" },
       { key: "fullAccess", title: "FULL ACCESS" },
       { key: "duo", title: "DUO" },
       { key: "junior", title: "JUNIOR" },
     ],
     rows: [
       {
-        joinFee: "CONTRACT HOLDER + CLUB MEMBER / SEPARATE VISIT",
+        joinFee: "CONTRACT OWNER + CLUB MEMBER / INDIVIDUAL VISIT",
         fullAccess: "",
         duo: "",
-        junior: "Junior",
+        junior: "",
       },
       {
         joinFee: "Personal bracelet with electronic access",
@@ -74,33 +83,41 @@ export const pricingTableLangs: Record<LangT, TableData> = {
         junior: "Gym",
       },
       {
-        joinFee: "Access to the app",
-        fullAccess:
-          "Locker in the changing room for the duration of your visit",
-        duo: "Locker in the changing room for the duration of your visit",
-        junior: "Locker in the changing room for the duration of your visit",
+        joinFee: "App access",
+        fullAccess: "Locker during visit",
+        duo: "Locker during visit",
+        junior: "Locker during visit",
       },
       {
         joinFee: "Body composition analysis",
-        fullAccess: "Group classes according to schedule",
-        duo: "Group classes according to schedule",
-        junior: "Group classes according to schedule",
+        fullAccess: "Group classes per schedule",
+        duo: "Group classes per schedule",
+        junior: "Group classes per schedule",
       },
       {
-        joinFee: "40-minute introductory training session",
-        fullAccess: "Access to the SPA area",
-        duo: "Access to the SPA area",
-        junior: "Access to the SPA area",
+        joinFee: "40-min introductory training",
+        fullAccess: "SPA zone access",
+        duo: "SPA zone access",
+        junior: "SPA zone access",
       },
       {
-        joinFee:
-          "1 (one) Trial recovery treatment according to the current promotion at Fitura LAB",
-        fullAccess: "Bath",
-        duo: "Bath",
-        junior: "Bath",
+        joinFee: "",
+        fullAccess: "Sauna",
+        duo: "Sauna",
+        junior: "Sauna",
       },
-      { joinFee: "", fullAccess: "Sauna", duo: "Sauna", junior: "Sauna" },
-      { joinFee: "", fullAccess: "Hammam", duo: "Hammam", junior: "Hammam" },
+      {
+        joinFee: "",
+        fullAccess: "Steam room",
+        duo: "Steam room",
+        junior: "Steam room",
+      },
+      {
+        joinFee: "",
+        fullAccess: "Hammam",
+        duo: "Hammam",
+        junior: "Hammam",
+      },
     ],
   },
   lv: {
