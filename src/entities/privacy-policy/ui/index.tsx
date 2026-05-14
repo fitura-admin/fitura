@@ -6,6 +6,7 @@ import classes from "./privcay-policy.module.scss";
 import PrivacyBackButton from "./back-button";
 import { DocumentRenderer } from "./document-renderer";
 import { pricingTableLangs, publicOfferSectionsLangs } from "../model";
+import { publicOfferMetas } from "../model/meta";
 import { LangT } from "~/src/app/store/reducers/navigation.slice";
 
 export default function PrivacyPolicySection() {
@@ -14,13 +15,11 @@ export default function PrivacyPolicySection() {
   const currentLang = lang ? (lang as LangT) : "en";
 
   const document = {
-    meta: {
-      title: "Публичная оферта №1",
-      date: "14 января 2026 года",
-    },
+    meta: publicOfferMetas[currentLang],
     sections: publicOfferSectionsLangs[currentLang],
     tables: [pricingTableLangs[currentLang]],
   };
+  console.log(document);
 
   return (
     <div className={`wrapper`}>

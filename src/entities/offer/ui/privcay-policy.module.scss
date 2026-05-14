@@ -9,6 +9,7 @@
 }
 
 .notice {
+  width: 100%;
   max-width: 700px;
   gap: $space-7;
 
@@ -33,6 +34,7 @@
   .container {
     gap: $space-5;
     padding: $space-4 $space-3;
+    flex-direction: column;
   }
 
   .notice {

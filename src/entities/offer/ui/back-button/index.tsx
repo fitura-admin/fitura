@@ -1,10 +1,10 @@
 import React from "react";
 
-import classes from "./back-button.module.scss";
+import classes from "./privacy-button.module.scss";
 import Icon from "~/public/shared/chevron-left.svg";
 import Button from "~/src/shared/ui/button";
 
-export default function OfferBackButton() {
+export default function PrivacyBackButton() {
   return (
     <Button
       typeButton="primary"
