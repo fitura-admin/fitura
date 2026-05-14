@@ -19,7 +19,6 @@ export default function PrivacyPolicySection() {
     sections: publicOfferSectionsLangs[currentLang],
     tables: [pricingTableLangs[currentLang]],
   };
-  console.log(document);
 
   return (
     <div className={`wrapper`}>

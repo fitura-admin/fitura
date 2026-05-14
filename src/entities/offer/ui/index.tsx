@@ -5,9 +5,9 @@ import { useParams } from "next/navigation";
 import classes from "./privcay-policy.module.scss";
 import PrivacyBackButton from "./back-button";
 import { DocumentRenderer } from "./document-renderer";
-import { pricingTableLangs, offerSectionsLangs } from "../model";
-import { publicOfferMetas } from "../model/meta";
 import { LangT } from "~/src/app/store/reducers/navigation.slice";
+import { publicOfferMetas } from "../model";
+import { offerSectionsLangs, pricingTableLangs } from "../model";
 
 export default function OfferSection() {
   const { lang } = useParams();
@@ -19,7 +19,6 @@ export default function OfferSection() {
     sections: offerSectionsLangs[currentLang],
     tables: [pricingTableLangs[currentLang]],
   };
-  console.log(document);
 
   return (
     <div className={`wrapper`}>
