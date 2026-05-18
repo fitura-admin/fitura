@@ -313,12 +313,14 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "4.1. Стоимость Основных услуг, предоставляемых Члену клуба, определяется на основании Прейскуранта, действующего на момент, когда такие Основные услуги подлежат оплате. Прейскурант публикуется на официальном сайте Исполнителя https://www.fitura.lv и/или размещается в общедоступном для ознакомления месте на территории Клуба.",
+          content:
+            "4.1. Стоимость Основных услуг, предоставляемых Члену клуба, определяется на основании Прейскуранта, действующего на момент, когда такие Основные услуги подлежат оплате. Прейскурант публикуется на официальном сайте Исполнителя https://www.fitura.lv и/или размещается в общедоступном для ознакомления месте на территории Клуба.",
         },
 
         {
           type: "paragraph",
-          content: "4.2. Оплата стоимости Основных услуг производится Владельцем контракта в евро, включая НДС на условиях предоплаты за Платежный период оказания Основных услуг в следующем порядке:",
+          content:
+            "4.2. Оплата стоимости Основных услуг производится Владельцем контракта в евро, включая НДС на условиях предоплаты за Платежный период оказания Основных услуг в следующем порядке:",
         },
 
         {
@@ -363,17 +365,20 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
 
         {
           type: "paragraph",
-          content: "4.2.1. При заключении Контракта должна быть произведена оплата за Плату за присоединение, кроме случаев, когда оплата стоимости Платы за присоединение производится в меньшем размере с учетом Специальных предложений, действующих на момент оплаты Контракта. Информация о ценах, действующих тарифах Исполнителя, размере Платы за присоединение размещена на сайте https://www.fitura.lv",
+          content:
+            "4.2.1. При заключении Контракта должна быть произведена оплата за Плату за присоединение, кроме случаев, когда оплата стоимости Платы за присоединение производится в меньшем размере с учетом Специальных предложений, действующих на момент оплаты Контракта. Информация о ценах, действующих тарифах Исполнителя, размере Платы за присоединение размещена на сайте https://www.fitura.lv",
         },
 
         {
           type: "paragraph",
-          content: "4.2.2. Оплата основных услуг за второй и последующие Платежные периоды оказания Основных услуг включает в себя Абонентскую плату, соответствующую цене выбранного тарифа и производится каждый Календарный месяц не позднее последнего дня периода, предшествующего Платежному периоду.",
+          content:
+            "4.2.2. Оплата основных услуг за второй и последующие Платежные периоды оказания Основных услуг включает в себя Абонентскую плату, соответствующую цене выбранного тарифа и производится каждый Календарный месяц не позднее последнего дня периода, предшествующего Платежному периоду.",
         },
 
         {
           type: "paragraph",
-          content: "4.2.3. Плата за присоединение - сумма, подлежащая оплате при заключении Контракта, размер которой устанавливается в Прейскуранте, За которую Клуб непосредственно не предлагает услуги, за исключением указанные в пункте 4. Плата за присоединение уплачивается каждый раз при заключении Контракта. Информация о цене Платы за присоединение размещена на сайте https://www.fitura.lv. В стоимость Платы за присоединение входит: Передача цифрового ключа -Клубного персонального браслета для прохода в Клуб и услуги включенные в Плату за присоединение, доступ к мобильному приложению.",
+          content:
+            "4.2.3. Плата за присоединение - сумма, подлежащая оплате при заключении Контракта, размер которой устанавливается в Прейскуранте, За которую Клуб непосредственно не предлагает услуги, за исключением указанные в пункте 4. Плата за присоединение уплачивается каждый раз при заключении Контракта. Информация о цене Платы за присоединение размещена на сайте https://www.fitura.lv. В стоимость Платы за присоединение входит: Передача цифрового ключа -Клубного персонального браслета для прохода в Клуб и услуги включенные в Плату за присоединение, доступ к мобильному приложению.",
         },
 
         {
@@ -395,47 +400,56 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
 
         {
           type: "paragraph",
-          content: "4.3. О порядке и способах оплаты публикуется на официальном сайте Исполнителя https://www.fitura.lv",
+          content:
+            "4.3. О порядке и способах оплаты публикуется на официальном сайте Исполнителя https://www.fitura.lv",
         },
 
         {
           type: "paragraph",
-          content: "4.4. Публичной офертой установлено, что в случае нарушения срока оплаты Абонентской платы за очередной Платежный период, предусмотренного п. 4.2 настоящей оферты, Исполнитель вводит в отношении Члена клуба Ограничение доступа до момента оплаты Владельцем Контракта Абонентской платы.",
+          content:
+            "4.4. Публичной офертой установлено, что в случае нарушения срока оплаты Абонентской платы за очередной Платежный период, предусмотренного п. 4.2 настоящей оферты, Исполнитель вводит в отношении Члена клуба Ограничение доступа до момента оплаты Владельцем Контракта Абонентской платы.",
         },
 
         {
           type: "paragraph",
-          content: "4.5. При этом Исполнитель не расторгает Контракт с Членом клуба, а ограничевает доступ в Клуб, до момента погашения задолженности по оплате Платежного периода. Также публичной офертой установлено, что Член клуба, Владелец контракта ознакомлены и согласны, что Контракт заключается на условиях Бессрочного договора. Приостановка оказания услуг по инициативе Исполнителя связана с ненадлежащим исполнением обязательств по абонентскому договору, невыполнением условий договора Членом клуба/Владельцем контракта, в части несвоевременного внесения абонентской платы, при этом Клуб свои обязательства исполнял должным образом. Так как Контракт не был расторгнут, а был приостановлен, компенсация денежных средств Члену клуба/Владельцу контракта за указанный период не производится.",
+          content:
+            "4.5. При этом Исполнитель не расторгает Контракт с Членом клуба, а ограничевает доступ в Клуб, до момента погашения задолженности по оплате Платежного периода. Также публичной офертой установлено, что Член клуба, Владелец контракта ознакомлены и согласны, что Контракт заключается на условиях Бессрочного договора. Приостановка оказания услуг по инициативе Исполнителя связана с ненадлежащим исполнением обязательств по абонентскому договору, невыполнением условий договора Членом клуба/Владельцем контракта, в части несвоевременного внесения абонентской платы, при этом Клуб свои обязательства исполнял должным образом. Так как Контракт не был расторгнут, а был приостановлен, компенсация денежных средств Члену клуба/Владельцу контракта за указанный период не производится.",
         },
 
         {
           type: "paragraph",
-          content: "4.6. Досрочное расторжение Контракта Членом клуба возможно при уведомлении Исполнителя в срок не менее 20 (двадцать) календарных дней до даты расторжения и оплаты Последнего Платежного периода путем предоплаты Последнего Платежного Периода, при условии погашения всех имеющихся задолженностей. Расторжение Контракта не ограничивают и не исключают права Клуба потребовать от Члена клуба оплаты задолженности и/или возмещения ущерба по Контракту. Контракт может быть приостановлен по инициативе Члена Клуба путём подачи письменного заявления на ресепшен клуба в период работы администации клуба с 10 до 22 часов. Направив извещение по электронной почте info@fitura.lv. Датой расторжения Контракта будет являться дата окончания по Последнего Педоплаченного Платежного периода.",
+          content:
+            "4.6. Досрочное расторжение Контракта Членом клуба возможно при уведомлении Исполнителя в срок не менее 20 (двадцать) календарных дней до даты расторжения и оплаты Последнего Платежного периода путем предоплаты Последнего Платежного Периода, при условии погашения всех имеющихся задолженностей. Расторжение Контракта не ограничивают и не исключают права Клуба потребовать от Члена клуба оплаты задолженности и/или возмещения ущерба по Контракту. Контракт может быть приостановлен по инициативе Члена Клуба путём подачи письменного заявления на ресепшен клуба в период работы администации клуба с 10 до 22 часов. Направив извещение по электронной почте info@fitura.lv. Датой расторжения Контракта будет являться дата окончания по Последнего Педоплаченного Платежного периода.",
         },
 
         {
           type: "paragraph",
-          content: "4.7. В случае расторжения Контракта и последующего повторного заключения Контракта Владелец контракта, либо Член клуба оплачивает услугу Плата за присоединение в соответствии с настоящей офертой, при этом Исполнитель вправе установить меньший размер Платы за присоединение с учетом специальных предложений, действующих на момент повторного заключения Контракта. Дальнейшая оплата производится в соответствии с условиями раздела 4 настоящей оферты.",
+          content:
+            "4.7. В случае расторжения Контракта и последующего повторного заключения Контракта Владелец контракта, либо Член клуба оплачивает услугу Плата за присоединение в соответствии с настоящей офертой, при этом Исполнитель вправе установить меньший размер Платы за присоединение с учетом специальных предложений, действующих на момент повторного заключения Контракта. Дальнейшая оплата производится в соответствии с условиями раздела 4 настоящей оферты.",
         },
 
         {
           type: "paragraph",
-          content: "4.8. Оплата стоимости Основных услуг производится Владельцем контракта на условиях предоплаты за весь Платежный период Календарный месяц оказания услуг в момент заключения Контракта, в том числе с учетом Специальных предложений, действующих на момент оплаты.",
+          content:
+            "4.8. Оплата стоимости Основных услуг производится Владельцем контракта на условиях предоплаты за весь Платежный период Календарный месяц оказания услуг в момент заключения Контракта, в том числе с учетом Специальных предложений, действующих на момент оплаты.",
         },
 
         {
           type: "paragraph",
-          content: "4.9. Стоимость Дополнительных услуг определяется в соответствии с Прейскурантом, действующим на момент оплаты. Дополнительные услуги оплачиваются Членом клуба или Владельцем контракта путем внесения 100% предоплаты.",
+          content:
+            "4.9. Стоимость Дополнительных услуг определяется в соответствии с Прейскурантом, действующим на момент оплаты. Дополнительные услуги оплачиваются Членом клуба или Владельцем контракта путем внесения 100% предоплаты.",
         },
 
         {
           type: "paragraph",
-          content: "4.10. Оплата стоимости Основных, Дополнительных услуг и Плата за присоединение Исполнителя включает НДС.",
+          content:
+            "4.10. Оплата стоимости Основных, Дополнительных услуг и Плата за присоединение Исполнителя включает НДС.",
         },
 
         {
           type: "paragraph",
-          content: "4.11. Оказания Дополнительных услуг регулируется условиями настоящей Публичной оферты. Описания, порядок оказания услуг и стоимость доводятся до потребителя по месту нахождения Клуба.",
+          content:
+            "4.11. Оказания Дополнительных услуг регулируется условиями настоящей Публичной оферты. Описания, порядок оказания услуг и стоимость доводятся до потребителя по месту нахождения Клуба.",
         },
       ],
     },
@@ -1440,19 +1454,23 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.1.1. Ensure provision of paid services during Club operating hours.",
+          content:
+            "5.1.1. Ensure provision of paid services during Club operating hours.",
         },
         {
           type: "paragraph",
-          content: "5.1.2. Upon Club closure, refund the Contract Owner for paid but unused services.",
+          content:
+            "5.1.2. Upon Club closure, refund the Contract Owner for paid but unused services.",
         },
         {
           type: "paragraph",
-          content: "5.1.3. Notify the Contract Owner and/or Club Member of changes to the offer, Contract, Club Rules, or Price List at least 1 (one) month before they take effect, by posting on https://www.fitura.lv and/or at the Club premises.",
+          content:
+            "5.1.3. Notify the Contract Owner and/or Club Member of changes to the offer, Contract, Club Rules, or Price List at least 1 (one) month before they take effect, by posting on https://www.fitura.lv and/or at the Club premises.",
         },
         {
           type: "paragraph",
-          content: "5.1.4. Provide the Club Member with a Club Bracelet after Contract conclusion, subject to payment of the Joining Fee and provision of personal data in accordance with clause 5.5.3.",
+          content:
+            "5.1.4. Provide the Club Member with a Club Bracelet after Contract conclusion, subject to payment of the Joining Fee and provision of personal data in accordance with clause 5.5.3.",
         },
 
         {
@@ -1461,15 +1479,18 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.2.1. Unilaterally amend the offer, Club Rules, and Price List, subject to prior notification under clause 5.1.3.",
+          content:
+            "5.2.1. Unilaterally amend the offer, Club Rules, and Price List, subject to prior notification under clause 5.1.3.",
         },
         {
           type: "paragraph",
-          content: "5.2.2. Suspend or restrict Basic and/or Additional Services by temporarily closing Club areas for up to 30 calendar days for maintenance or other objective reasons, with at least 2 days' prior notice. Service periods shall be extended accordingly.",
+          content:
+            "5.2.2. Suspend or restrict Basic and/or Additional Services by temporarily closing Club areas for up to 30 calendar days for maintenance or other objective reasons, with at least 2 days' prior notice. Service periods shall be extended accordingly.",
         },
         {
           type: "paragraph",
-          content: "5.2.3. Restrict the Club Member's access by blocking the Club Bracelet:",
+          content:
+            "5.2.3. Restrict the Club Member's access by blocking the Club Bracelet:",
         },
         {
           type: "paragraph",
@@ -1481,7 +1502,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.2.4. Limit membership sales to comply with sanitary and public health requirements.",
+          content:
+            "5.2.4. Limit membership sales to comply with sanitary and public health requirements.",
         },
 
         {
@@ -1490,7 +1512,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.3.1. Pay for Basic Services in a timely manner, including ensuring sufficient funds on the bank card for recurring payments.",
+          content:
+            "5.3.1. Pay for Basic Services in a timely manner, including ensuring sufficient funds on the bank card for recurring payments.",
         },
         {
           type: "paragraph",
@@ -1498,7 +1521,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.3.3. Not assign rights and obligations under the Contract to third parties.",
+          content:
+            "5.3.3. Not assign rights and obligations under the Contract to third parties.",
         },
 
         {
@@ -1507,7 +1531,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.4.1. Terminate the Contract unilaterally in cases provided for by the Offer.",
+          content:
+            "5.4.1. Terminate the Contract unilaterally in cases provided for by the Offer.",
         },
 
         {
@@ -1520,31 +1545,38 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.5.2. Familiarize themselves with and follow safety rules and equipment instructions posted at the Club reception.",
+          content:
+            "5.5.2. Familiarize themselves with and follow safety rules and equipment instructions posted at the Club reception.",
         },
         {
           type: "paragraph",
-          content: "5.5.3. For Club access and Bracelet issuance, provide personal data including full name, date of birth, phone number, email address, photo, and bank card details, and consent to personal data processing.",
+          content:
+            "5.5.3. For Club access and Bracelet issuance, provide personal data including full name, date of birth, phone number, email address, photo, and bank card details, and consent to personal data processing.",
         },
         {
           type: "paragraph",
-          content: "5.5.4. Independently assess their health and ability to use Club services. Visiting the Club involves risk of injury. In case of any deterioration in health, the Club Member must immediately stop training and consult a doctor.",
+          content:
+            "5.5.4. Independently assess their health and ability to use Club services. Visiting the Club involves risk of injury. In case of any deterioration in health, the Club Member must immediately stop training and consult a doctor.",
         },
         {
           type: "paragraph",
-          content: "5.5.5. Ensure control over personal belongings to prevent theft; properly lock lockers and verify they are secured; do not leave items unattended. The Service Provider is not responsible for lost property.",
+          content:
+            "5.5.5. Ensure control over personal belongings to prevent theft; properly lock lockers and verify they are secured; do not leave items unattended. The Service Provider is not responsible for lost property.",
         },
         {
           type: "paragraph",
-          content: "5.5.6. In case of loss or damage to the Club Bracelet, purchase a replacement at the Price List cost.",
+          content:
+            "5.5.6. In case of loss or damage to the Club Bracelet, purchase a replacement at the Price List cost.",
         },
         {
           type: "paragraph",
-          content: "5.5.7. Not conduct any commercial activity or provide paid or free professional consultations on Club premises.",
+          content:
+            "5.5.7. Not conduct any commercial activity or provide paid or free professional consultations on Club premises.",
         },
         {
           type: "paragraph",
-          content: "5.5.8. Not assign rights and obligations under the Contract to third parties.",
+          content:
+            "5.5.8. Not assign rights and obligations under the Contract to third parties.",
         },
 
         {
@@ -1553,19 +1585,23 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "5.6.1. Purchase and use Additional Services available at the Club in accordance with the Price List.",
+          content:
+            "5.6.1. Purchase and use Additional Services available at the Club in accordance with the Price List.",
         },
         {
           type: "paragraph",
-          content: "5.6.2. Use services of third parties operating at the Club under agreement with the Service Provider; payment for such services is made directly to the third party.",
+          content:
+            "5.6.2. Use services of third parties operating at the Club under agreement with the Service Provider; payment for such services is made directly to the third party.",
         },
         {
           type: "paragraph",
-          content: "5.6.3. Pay for Basic Services even if there is debt on the Contract Owner's side.",
+          content:
+            "5.6.3. Pay for Basic Services even if there is debt on the Contract Owner's side.",
         },
         {
           type: "paragraph",
-          content: "5.6.4. Waive the right to visit the Club by notifying the Contract Owner. Only the Contract Owner may terminate the Contract by written application at the Club reception (10:00–22:00) or via email to info@fitura.lv, in accordance with clause 4.6.",
+          content:
+            "5.6.4. Waive the right to visit the Club by notifying the Contract Owner. Only the Contract Owner may terminate the Contract by written application at the Club reception (10:00–22:00) or via email to info@fitura.lv, in accordance with clause 4.6.",
         },
       ],
     },
@@ -1577,23 +1613,28 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "6.1. The Contract enters into force from the moment of offer acceptance and is valid for 13 (thirteen) Payment Periods with automatic renewal until terminated.",
+          content:
+            "6.1. The Contract enters into force from the moment of offer acceptance and is valid for 13 (thirteen) Payment Periods with automatic renewal until terminated.",
         },
         {
           type: "paragraph",
-          content: "6.2. The Contract may be terminated unilaterally by the Contract Owner, or by the Service Provider in case of violation of Contract terms and/or Club Rules by the Contract Owner and/or Club Member.",
+          content:
+            "6.2. The Contract may be terminated unilaterally by the Contract Owner, or by the Service Provider in case of violation of Contract terms and/or Club Rules by the Contract Owner and/or Club Member.",
         },
         {
           type: "paragraph",
-          content: "6.3. The Contract Owner may prevent automatic renewal after the 12th Payment Period by notifying the Service Provider at least 28 calendar days in advance via written application at the club reception (10:00–22:00) or by email to info@fitura.lv. Termination becomes effective upon expiry of the 13th Payment Period.",
+          content:
+            "6.3. The Contract Owner may prevent automatic renewal after the 12th Payment Period by notifying the Service Provider at least 28 calendar days in advance via written application at the club reception (10:00–22:00) or by email to info@fitura.lv. Termination becomes effective upon expiry of the 13th Payment Period.",
         },
         {
           type: "paragraph",
-          content: "6.4. A termination request by the Contract Owner is deemed received upon delivery and may be submitted in accordance with clause 4.6.",
+          content:
+            "6.4. A termination request by the Contract Owner is deemed received upon delivery and may be submitted in accordance with clause 4.6.",
         },
         {
           type: "paragraph",
-          content: "6.5. The Service Provider may terminate the Contract with 1 (one) calendar day's notice in the following cases:",
+          content:
+            "6.5. The Service Provider may terminate the Contract with 1 (one) calendar day's notice in the following cases:",
         },
         {
           type: "list",
@@ -1606,7 +1647,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "6.6. The Service Provider may terminate the Contract with 30 (thirty) calendar days' notice in the event of Club closure or termination of Club operations.",
+          content:
+            "6.6. The Service Provider may terminate the Contract with 30 (thirty) calendar days' notice in the event of Club closure or termination of Club operations.",
         },
       ],
     },
@@ -1618,11 +1660,13 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "7.1. The Club Member bears material liability for any damage caused to the Club's property and is obliged to compensate the cost of damaged and/or lost property. Damage is confirmed by an Official Report (“Act”) signed by the Club Member and a Club representative. If the Club Member refuses to sign, the Act is signed unilaterally by the Club. Compensation must be made within 5 (five) calendar days from the date of the Act.",
+          content:
+            "7.1. The Club Member bears material liability for any damage caused to the Club's property and is obliged to compensate the cost of damaged and/or lost property. Damage is confirmed by an Official Report (“Act”) signed by the Club Member and a Club representative. If the Club Member refuses to sign, the Act is signed unilaterally by the Club. Compensation must be made within 5 (five) calendar days from the date of the Act.",
         },
         {
           type: "paragraph",
-          content: "7.1.1. By accepting the Offer, the Contract Owner and/or Club Member confirm that they have no medical contraindications for visiting the Club and receiving physical training and health services.",
+          content:
+            "7.1.1. By accepting the Offer, the Contract Owner and/or Club Member confirm that they have no medical contraindications for visiting the Club and receiving physical training and health services.",
         },
         {
           type: "paragraph",
@@ -1641,7 +1685,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "7.3. The Parties are released from liability for partial or full non-performance of obligations due to force majeure circumstances. The affected Party must notify the other Party within 3 (three) calendar days of such circumstances. Force majeure must be confirmed by a competent authority.",
+          content:
+            "7.3. The Parties are released from liability for partial or full non-performance of obligations due to force majeure circumstances. The affected Party must notify the other Party within 3 (three) calendar days of such circumstances. Force majeure must be confirmed by a competent authority.",
         },
       ],
     },
@@ -1676,11 +1721,13 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "8.3. All disputes, including those related to Contract modification and termination, shall be resolved through negotiations. If negotiations fail, either party may submit a written claim by registered mail to the Service Provider's legal address. The claim review period is 10 (ten) calendar days. Unresolved disputes may be submitted to the court at the Service Provider's location.",
+          content:
+            "8.3. All disputes, including those related to Contract modification and termination, shall be resolved through negotiations. If negotiations fail, either party may submit a written claim by registered mail to the Service Provider's legal address. The claim review period is 10 (ten) calendar days. Unresolved disputes may be submitted to the court at the Service Provider's location.",
         },
         {
           type: "paragraph",
-          content: "8.4. In all matters not covered by the Contract, the parties are governed by the legislation of the Republic of Latvia.",
+          content:
+            "8.4. In all matters not covered by the Contract, the parties are governed by the legislation of the Republic of Latvia.",
         },
       ],
     },
@@ -1926,7 +1973,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "15. Club Members must comply with the following requirements:",
+          content:
+            "15. Club Members must comply with the following requirements:",
         },
         {
           type: "list",
@@ -2565,7 +2613,8 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "2.1. Klubs sniedz, bet Kluba biedrs pieņem un apmaksā (vai Kluba biedrs pieņem, bet Līguma īpašnieks apmaksā) pakalpojumus fiziskās kultūras, fiziskās kultūras un veselības uzlabošanas pasākumu organizēšanā un vadīšanā saskaņā ar līguma nosacījumiem, kluba apstiprinātajiem noteikumiem (reglamentiem) un kluba noteikumiem.",
+          content:
+            "2.1. Klubs sniedz, bet Kluba biedrs pieņem un apmaksā (vai Kluba biedrs pieņem, bet Līguma īpašnieks apmaksā) pakalpojumus fiziskās kultūras, fiziskās kultūras un veselības uzlabošanas pasākumu organizēšanā un vadīšanā saskaņā ar līguma nosacījumiem, kluba apstiprinātajiem noteikumiem (reglamentiem) un kluba noteikumiem.",
         },
       ],
     },
@@ -2576,23 +2625,28 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "3.1. Galveno pakalpojumu sniegšanas kārtība, kā arī Pušu tiesības un pienākumi ir noteikti Līgumā un Kluba noteikumos.",
+          content:
+            "3.1. Galveno pakalpojumu sniegšanas kārtība, kā arī Pušu tiesības un pienākumi ir noteikti Līgumā un Kluba noteikumos.",
         },
         {
           type: "paragraph",
-          content: "3.2. Noslēdzot Līgumu un veicot Līgumā paredzētos maksājumus, Kluba biedrs/Līguma īpašnieks apstiprina, ka ir iepazinisies ar Kluba noteikumiem un apņemas tos izpildīt, turklāt, ja Līguma īpašnieks un Kluba biedrs ir atšķirīgas personas, Kluba biedrs pieņem šā piedāvājuma nosacījumus, veicot noteiktas darbības, piemēram, ienākot fitnesa kluba teritorijā caur turniketu.",
+          content:
+            "3.2. Noslēdzot Līgumu un veicot Līgumā paredzētos maksājumus, Kluba biedrs/Līguma īpašnieks apstiprina, ka ir iepazinisies ar Kluba noteikumiem un apņemas tos izpildīt, turklāt, ja Līguma īpašnieks un Kluba biedrs ir atšķirīgas personas, Kluba biedrs pieņem šā piedāvājuma nosacījumus, veicot noteiktas darbības, piemēram, ienākot fitnesa kluba teritorijā caur turniketu.",
         },
         {
           type: "paragraph",
-          content: "3.3. Fiziskas vai juridiskas personas, kas vēlas noslēgt Līgumu, veiktā maksājuma summa, kas atbilst Pamata pakalpojumu vērtībai par Pakalpojumu sniegšanas maksājuma periodu, kāda tā ir noteikta Cenrādī brīdī, kad tiek veikts šāds maksājums, tiek uzskatīta par šā piedāvājuma pieņemšanu un Līguma noslēgšanu saskaņā ar šā piedāvājuma nosacījumiem pilnā apjomā bez jebkādiem izņēmumiem un ierobežojumiem. Šā piedāvājuma 3.2. punktā paredzētā maksājuma nosacījuma neizpilde vai nepareiza izpilde netiek uzskatīta par pieņemšanu un neizraisa Līguma noslēgšanu.",
+          content:
+            "3.3. Fiziskas vai juridiskas personas, kas vēlas noslēgt Līgumu, veiktā maksājuma summa, kas atbilst Pamata pakalpojumu vērtībai par Pakalpojumu sniegšanas maksājuma periodu, kāda tā ir noteikta Cenrādī brīdī, kad tiek veikts šāds maksājums, tiek uzskatīta par šā piedāvājuma pieņemšanu un Līguma noslēgšanu saskaņā ar šā piedāvājuma nosacījumiem pilnā apjomā bez jebkādiem izņēmumiem un ierobežojumiem. Šā piedāvājuma 3.2. punktā paredzētā maksājuma nosacījuma neizpilde vai nepareiza izpilde netiek uzskatīta par pieņemšanu un neizraisa Līguma noslēgšanu.",
         },
         {
           type: "paragraph",
-          content: "3.4. Pakalpojumu sniegšanas maksājumu periods tiek aprēķināts no Līguma aktivizēšanas dienas. Līgums tiek aktivizēts vai nu 10 (desmit) dienu laikā no maksājuma veikšanas dienas, vai pirmajā apmeklējuma dienā, atkarībā no tā, kas notiek agrāk. Ja Abonementa maksa tika samaksāta pirmspārdošanas posmā, šāds Līgums tiek aktivizēts no Kluba atvēršanas dienas, par to paziņojot uz e-pastu, kuru Kluba Biedrs norādīja, reģistrējoties un samaksājot Pievienošanās maksu un Abonementa maksu. Paziņojums par jauna kluba atvēršanu tiek nosūtīts ne vēlāk kā 24 (divdesmit četras) stundas iepriekš. Līguma aktivizēšanas datums netiek pārcelts. Kluba biedrs, Līguma īpašnieks ir iepazinušies un piekrīt, ka Līgums tiek noslēgts saskaņā ar abonementa līguma nosacījumiem. Attiecīgi, ja Klubs ir nodrošinājis kluba loceklim piekļuvi pamata pakalpojumiem un/vai papildu pakalpojumiem, bet no kluba neatkarīgu iemeslu dēļ Kluba Biedrs nav izmantojis pakalpojumus, pakalpojumu sniegšanas periods netiek pagarināts un samaksātā nauda netiek atgriezta.",
+          content:
+            "3.4. Pakalpojumu sniegšanas maksājumu periods tiek aprēķināts no Līguma aktivizēšanas dienas. Līgums tiek aktivizēts vai nu 10 (desmit) dienu laikā no maksājuma veikšanas dienas, vai pirmajā apmeklējuma dienā, atkarībā no tā, kas notiek agrāk. Ja Abonementa maksa tika samaksāta pirmspārdošanas posmā, šāds Līgums tiek aktivizēts no Kluba atvēršanas dienas, par to paziņojot uz e-pastu, kuru Kluba Biedrs norādīja, reģistrējoties un samaksājot Pievienošanās maksu un Abonementa maksu. Paziņojums par jauna kluba atvēršanu tiek nosūtīts ne vēlāk kā 24 (divdesmit četras) stundas iepriekš. Līguma aktivizēšanas datums netiek pārcelts. Kluba biedrs, Līguma īpašnieks ir iepazinušies un piekrīt, ka Līgums tiek noslēgts saskaņā ar abonementa līguma nosacījumiem. Attiecīgi, ja Klubs ir nodrošinājis kluba loceklim piekļuvi pamata pakalpojumiem un/vai papildu pakalpojumiem, bet no kluba neatkarīgu iemeslu dēļ Kluba Biedrs nav izmantojis pakalpojumus, pakalpojumu sniegšanas periods netiek pagarināts un samaksātā nauda netiek atgriezta.",
         },
         {
           type: "paragraph",
-          content: "3.5. Līguma darbības laikā piekļuve Klubam tiek nodrošināta uz vispārīgiem pamatiem:",
+          content:
+            "3.5. Līguma darbības laikā piekļuve Klubam tiek nodrošināta uz vispārīgiem pamatiem:",
         },
         {
           type: "paragraph",
@@ -2601,19 +2655,23 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "3.6. Ja Līgums ir noslēgts, samaksājot par pakalpojumiem saskaņā ar šā piedāvājuma 3.2. punktu, Līguma īpašnieks uzskatāms par pieņēmušu līguma nosacījumus un apņemas tos stingri ievērot. Klubu aproci izsniedz Izpildītājs kluba loceklim pēc tam, kad tas ir izpildījis šā piedāvājuma 5.5.3. punkta prasības un samaksājis pakalpojuma maksu.",
+          content:
+            "3.6. Ja Līgums ir noslēgts, samaksājot par pakalpojumiem saskaņā ar šā piedāvājuma 3.2. punktu, Līguma īpašnieks uzskatāms par pieņēmušu līguma nosacījumus un apņemas tos stingri ievērot. Klubu aproci izsniedz Izpildītājs kluba loceklim pēc tam, kad tas ir izpildījis šā piedāvājuma 5.5.3. punkta prasības un samaksājis pakalpojuma maksu.",
         },
         {
           type: "paragraph",
-          content: "3.7. Tajā pašā laikā brīdis, kad Kluba Biedrs saņem kluba aproci, neietekmē līguma aktivizēšanas datumu.",
+          content:
+            "3.7. Tajā pašā laikā brīdis, kad Kluba Biedrs saņem kluba aproci, neietekmē līguma aktivizēšanas datumu.",
         },
         {
           type: "paragraph",
-          content: "3.8. Fakts, ka kluba loceklim ir sniegtas Līgumā paredzētās pakalpojumi, nav jāapstiprina ar pakalpojumu sniegšanas aktiem un tiek uzskatīts par izpildītu saskaņā ar Līguma nosacījumiem. Pakalpojumi tiek uzskatīti par sniegtiem pilnā apjomā saskaņā ar Līguma nosacījumiem, ja pēc 5 (piecu) kalendāro dienu termiņa no brīža, kad Līguma īpašnieks un (vai) Kluba biedrs ir samaksājis par pakalpojumiem, rakstveidā nav iesniegtas pretenzijas par to apjomu un kvalitāti.",
+          content:
+            "3.8. Fakts, ka kluba loceklim ir sniegtas Līgumā paredzētās pakalpojumi, nav jāapstiprina ar pakalpojumu sniegšanas aktiem un tiek uzskatīts par izpildītu saskaņā ar Līguma nosacījumiem. Pakalpojumi tiek uzskatīti par sniegtiem pilnā apjomā saskaņā ar Līguma nosacījumiem, ja pēc 5 (piecu) kalendāro dienu termiņa no brīža, kad Līguma īpašnieks un (vai) Kluba biedrs ir samaksājis par pakalpojumiem, rakstveidā nav iesniegtas pretenzijas par to apjomu un kvalitāti.",
         },
         {
           type: "paragraph",
-          content: "3.9. Izpildītājam ir tiesības veikt kluba demonstrāciju tiešsaistē, izmantojot fotogrāfijas un videomateriālus, kas pieejami tīmekļa vietnē.",
+          content:
+            "3.9. Izpildītājam ir tiesības veikt kluba demonstrāciju tiešsaistē, izmantojot fotogrāfijas un videomateriālus, kas pieejami tīmekļa vietnē.",
         },
       ],
     },
@@ -2624,11 +2682,13 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
       content: [
         {
           type: "paragraph",
-          content: "4.1. Klubu locekļiem sniegto pamata pakalpojumu cena tiek noteikta, pamatojoties uz cenrādi, kas ir spēkā brīdī, kad šie pamata pakalpojumi ir jāapmaksā. Cenrādis tiek publicēts izpildītāja oficiālajā tīmekļa vietnē https://www.fitura.lv un/vai izvietots klubā visiem pieejamā vietā.",
+          content:
+            "4.1. Klubu locekļiem sniegto pamata pakalpojumu cena tiek noteikta, pamatojoties uz cenrādi, kas ir spēkā brīdī, kad šie pamata pakalpojumi ir jāapmaksā. Cenrādis tiek publicēts izpildītāja oficiālajā tīmekļa vietnē https://www.fitura.lv un/vai izvietots klubā visiem pieejamā vietā.",
         },
         {
           type: "paragraph",
-          content: "4.2. Galveno pakalpojumu izmaksas apmaksā Līguma īpašnieks eiro valūtā, ieskaitot PVN, ar priekšapmaksu par galveno pakalpojumu sniegšanas maksājumu periodu. Maksājums par pirmo periodu tiek veikts Līguma noslēgšanas brīdī un ietver abonementa maksu atbilstoši izvēlētajam tarifam: FULL ACCESS, DUO, JUNIOR.",
+          content:
+            "4.2. Galveno pakalpojumu izmaksas apmaksā Līguma īpašnieks eiro valūtā, ieskaitot PVN, ar priekšapmaksu par galveno pakalpojumu sniegšanas maksājumu periodu. Maksājums par pirmo periodu tiek veikts Līguma noslēgšanas brīdī un ietver abonementa maksu atbilstoši izvēlētajam tarifam: FULL ACCESS, DUO, JUNIOR.",
         },
         {
           type: "paragraph",
@@ -2646,51 +2706,63 @@ export const publicOfferSectionsLangs: Record<"ru" | "en" | "lv", Section[]> = {
         },
         {
           type: "paragraph",
-          content: "4.2.1. Līguma noslēgšanas brīdī tiek veikta pieslēgšanās maksas apmaksa, ja vien nav piemēroti īpašie piedāvājumi. Informācija pieejama https://www.fitura.lv.",
+          content:
+            "4.2.1. Līguma noslēgšanas brīdī tiek veikta pieslēgšanās maksas apmaksa, ja vien nav piemēroti īpašie piedāvājumi. Informācija pieejama https://www.fitura.lv.",
         },
         {
           type: "paragraph",
-          content: "4.2.2. Maksājums par otro un turpmākajiem periodiem tiek veikts ik pēc 28 kalendārajām dienām ne vēlāk kā pēdējā dienā pirms nākamā perioda sākuma.",
+          content:
+            "4.2.2. Maksājums par otro un turpmākajiem periodiem tiek veikts ik pēc 28 kalendārajām dienām ne vēlāk kā pēdējā dienā pirms nākamā perioda sākuma.",
         },
         {
           type: "paragraph",
-          content: "4.2.3. Pievienošanās maksa ir vienreizējs maksājums, kas ietver digitālo atslēgu (aproci), piekļuvi mobilajai lietotnei, ķermeņa sastāva analīzi, ievadapmācību un citus akcijas ietvaros noteiktus pakalpojumus.",
+          content:
+            "4.2.3. Pievienošanās maksa ir vienreizējs maksājums, kas ietver digitālo atslēgu (aproci), piekļuvi mobilajai lietotnei, ķermeņa sastāva analīzi, ievadapmācību un citus akcijas ietvaros noteiktus pakalpojumus.",
         },
         {
           type: "paragraph",
-          content: "4.3. Maksājumu kārtība un veidi tiek publicēti oficiālajā tīmekļa vietnē https://www.fitura.lv.",
+          content:
+            "4.3. Maksājumu kārtība un veidi tiek publicēti oficiālajā tīmekļa vietnē https://www.fitura.lv.",
         },
         {
           type: "paragraph",
-          content: "4.4. Kavējuma gadījumā Kluba biedram var tikt ierobežota piekļuve Klubam līdz maksājuma veikšanai.",
+          content:
+            "4.4. Kavējuma gadījumā Kluba biedram var tikt ierobežota piekļuve Klubam līdz maksājuma veikšanai.",
         },
         {
           type: "paragraph",
-          content: "4.5. Līgums ir beztermiņa, ar automātisku pagarināšanu. Piekļuves apturēšana maksājumu kavējuma gadījumā neizbeidz Līgumu un neparedz kompensāciju.",
+          content:
+            "4.5. Līgums ir beztermiņa, ar automātisku pagarināšanu. Piekļuves apturēšana maksājumu kavējuma gadījumā neizbeidz Līgumu un neparedz kompensāciju.",
         },
         {
           type: "paragraph",
-          content: "4.6. Kluba biedrs var izbeigt Līgumu, paziņojot par to vismaz 20 kalendārās dienas iepriekš un dzēšot visas saistības.",
+          content:
+            "4.6. Kluba biedrs var izbeigt Līgumu, paziņojot par to vismaz 20 kalendārās dienas iepriekš un dzēšot visas saistības.",
         },
         {
           type: "paragraph",
-          content: "4.7. Līguma atkārtotas noslēgšanas gadījumā tiek piemērota Pievienošanās maksa saskaņā ar spēkā esošo cenrādi.",
+          content:
+            "4.7. Līguma atkārtotas noslēgšanas gadījumā tiek piemērota Pievienošanās maksa saskaņā ar spēkā esošo cenrādi.",
         },
         {
           type: "paragraph",
-          content: "4.8. Maksājums par pamata pakalpojumiem tiek veikts par visu maksājumu periodu iepriekš.",
+          content:
+            "4.8. Maksājums par pamata pakalpojumiem tiek veikts par visu maksājumu periodu iepriekš.",
         },
         {
           type: "paragraph",
-          content: "4.9. Papildu pakalpojumi tiek apmaksāti 100% priekšapmaksā saskaņā ar cenrādi.",
+          content:
+            "4.9. Papildu pakalpojumi tiek apmaksāti 100% priekšapmaksā saskaņā ar cenrādi.",
         },
         {
           type: "paragraph",
-          content: "4.10. Visi maksājumi ietver pievienotās vērtības nodokli (PVN).",
+          content:
+            "4.10. Visi maksājumi ietver pievienotās vērtības nodokli (PVN).",
         },
         {
           type: "paragraph",
-          content: "4.11. Papildu pakalpojumu apraksts, sniegšanas kārtība un cena tiek publicēta Kluba telpās vai tīmekļa vietnē.",
+          content:
+            "4.11. Papildu pakalpojumu apraksts, sniegšanas kārtība un cena tiek publicēta Kluba telpās vai tīmekļa vietnē.",
         },
       ],
     },
