@@ -1,7 +1,8 @@
 import classes from "./section.module.scss";
-import { ElementType } from "react";
+import { ElementType, Fragment } from "react";
 import { Section, TableData } from "../../../model";
 import { TableRenderer } from "../table-renderer";
+import { linkify } from "../linkify";
 
 interface Props {
   section: Section;
@@ -27,9 +28,9 @@ export const SectionRenderer = ({ section, tables }: Props) => {
               >
                 {node.content.map((item, i) =>
                   typeof item === "string" ? (
-                    item
+                    <Fragment key={i}>{linkify(item)}</Fragment>
                   ) : (
-                    <strong key={i}>{item.content}</strong>
+                    <strong key={i}>{linkify(item.content)}</strong>
                   ),
                 )}
               </p>
@@ -38,7 +39,7 @@ export const SectionRenderer = ({ section, tables }: Props) => {
 
           return (
             <p key={index} className={`text-body m white ${classes.paragraph}`}>
-              {node.content}
+              {linkify(node.content)}
             </p>
           );
         }
@@ -53,7 +54,7 @@ export const SectionRenderer = ({ section, tables }: Props) => {
                       key={i}
                       className={`${classes.paragraph} text-body m white`}
                     >
-                      {item}
+                      {linkify(item)}
                     </li>
                   );
                 }
@@ -63,7 +64,7 @@ export const SectionRenderer = ({ section, tables }: Props) => {
                     key={i}
                     className={`${classes.paragraph} text-body m white`}
                   >
-                    {item.text}
+                    {linkify(item.text)}
                     {item.children && (
                       <ul className={classes.list}>
                         {item.children.map((child, ci) => (
@@ -71,7 +72,7 @@ export const SectionRenderer = ({ section, tables }: Props) => {
                             key={ci}
                             className={`${classes.paragraph} text-body m white`}
                           >
-                            {child}
+                            {linkify(child)}
                           </li>
                         ))}
                       </ul>

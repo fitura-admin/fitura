@@ -11,7 +11,9 @@ export const TableRenderer = ({ table }: Props) => {
       <thead className={classes.thead}>
         <tr className="heading h6 white">
           {table.columns.map((col) => (
-            <th key={col.key}>{col.title}</th>
+            <th key={col.key} style={{ whiteSpace: "pre-line" }}>
+              {col.title}
+            </th>
           ))}
         </tr>
       </thead>

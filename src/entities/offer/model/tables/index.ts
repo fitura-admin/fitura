@@ -5,18 +5,15 @@ export const pricingTableLangs: Record<LangT, TableData> = {
   ru: {
     id: "main-services",
     columns: [
-      { key: "joinFee", title: "JOINING FEE" },
+      { key: "joinFee", title: "ПЛАТА ЗА ПРИСОЕДИНЕНИЕ" },
       { key: "fullAccess", title: "FULL ACCESS" },
-      { key: "duo", title: "DUO" },
+      {
+        key: "duo",
+        title: "DUO\nВЛАДЕЛЕЦ КОНТРАКТА + ЧЛЕН КЛУБА / РАЗДЕЛЬНОЕ ПОСЕЩЕНИЕ",
+      },
       { key: "junior", title: "JUNIOR" },
     ],
     rows: [
-      {
-        joinFee: "ВЛАДЕЛЕЦ КОНТРАКТА + ЧЛЕН КЛУБА / РАЗДЕЛЬНОЕ ПОСЕЩЕНИЕ",
-        fullAccess: "",
-        duo: "",
-        junior: "Junior",
-      },
       {
         joinFee: "Персональный браслет с электронным доступом",
         fullAccess: "Тренажерный зал",
@@ -66,16 +63,13 @@ export const pricingTableLangs: Record<LangT, TableData> = {
     columns: [
       { key: "joinFee", title: "JOINING FEE" },
       { key: "fullAccess", title: "FULL ACCESS" },
-      { key: "duo", title: "DUO" },
+      {
+        key: "duo",
+        title: "DUO\nCONTRACT OWNER + CLUB MEMBER / SEPARATE VISITS",
+      },
       { key: "junior", title: "JUNIOR" },
     ],
     rows: [
-      {
-        joinFee: "CONTRACT OWNER + CLUB MEMBER / INDIVIDUAL VISIT",
-        fullAccess: "",
-        duo: "",
-        junior: "",
-      },
       {
         joinFee: "Personal bracelet with electronic access",
         fullAccess: "Gym",
@@ -124,17 +118,14 @@ export const pricingTableLangs: Record<LangT, TableData> = {
     id: "main-services",
     columns: [
       { key: "joinFee", title: "PIEDALĪŠANĀS MAKSA" },
-      { key: "fullAccess", title: "FULL ACCES" },
-      { key: "duo", title: "DUO" },
-      { key: "junior", title: "JUNIOR" },
+      { key: "fullAccess", title: "PILNA PIEEJA" },
+      {
+        key: "duo",
+        title: "DUO\nLĪGUMA ĪPAŠNIEKS + KLUBA BIEDRS / ATSEVIŠĶA APMEKLĒŠANA",
+      },
+      { key: "junior", title: "JAUNIEŠI" },
     ],
     rows: [
-      {
-        joinFee: "LĪGUMA ĪPAŠNIEKS + KLUBA LOCEKĻIS / ATSEVIŠĶA APMEKLĒŠANA",
-        fullAccess: "",
-        duo: "",
-        junior: "Junior",
-      },
       {
         joinFee: "Personīgā aproce ar elektronisko piekļuvi",
         fullAccess: "Trenažieru zāle",
