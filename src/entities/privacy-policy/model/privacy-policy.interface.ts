@@ -6,8 +6,8 @@ export interface ILegalNotice {
   };
 }
 
-type Langs = "ru" | "en" | "lv";
-
-export type ILegalNoticeLangs = {
-  [lang in Langs]: ILegalNotice;
-};
+export interface ILegalNoticeLangs {
+  ru: ILegalNotice;
+  en: ILegalNotice;
+  lv: ILegalNotice;
+}

@@ -11,6 +11,9 @@
 .next
 /out
 
+# typescript
+*.tsbuildinfo
+
 # User-specific files
 *.rsuser
 *.suo
