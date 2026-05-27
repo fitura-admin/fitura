@@ -1,79 +1,89 @@
 .container {
-    width: clamp(27.938rem, 12.938rem + 18.75vw, 35.438rem);
-    height: 100%;
-    padding: $space-8;
+  width: clamp(27.938rem, 12.938rem + 18.75vw, 35.438rem);
+  height: 100%;
+  padding: $space-8;
 
-    border-radius: $space-5;
-    backdrop-filter: $blur-2;
-    -webkit-backdrop-filter: $blur-2;
-    box-shadow: $shadow-300;
-    background-color: rgba(255, 255, 255, 0.06);
+  border-radius: $space-5;
+  backdrop-filter: $blur-2;
+  -webkit-backdrop-filter: $blur-2;
+  box-shadow: $shadow-300;
+  background-color: rgba(255, 255, 255, 0.06);
 
-    align-items: center;
-    gap: 80px;
+  align-items: center;
+  gap: 80px;
 }
 
 .qr {
-    max-width: 200px;
-    max-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .text {
-    opacity: 0.8;
+  opacity: 0.8;
+  transition: opacity $transition;
 }
 
 .links {
-    gap: $space-8;
-    align-items: flex-start;
+  gap: $space-8;
+  align-items: flex-start;
 }
 
 .link {
-    cursor: pointer;
-    &:first-child {
-        align-items: center;
-    }
+  cursor: pointer;
+  &:first-child {
+    align-items: center;
+  }
 
-    svg {
-        min-width: $space-6;
-        min-height: $space-6;
-    }
+  svg {
+    min-width: $space-6;
+    min-height: $space-6;
+  }
 
-    @media screen and (any-hover: hover) {
-        &:hover {
-            svg path,
-            .text {
-                opacity: 1;
-            }
-        }
+  svg path {
+    fill: $neutral-400;
+    opacity: 1;
+  }
+
+  @media screen and (any-hover: hover) {
+    &:hover {
+      svg path {
+        fill: $neutral-100;
+      }
+
+      svg path,
+      .text {
+        opacity: 1;
+      }
     }
+  }
 }
 
 @media screen and (width <=1280px) {
-    .container {
-        gap: $space-60px;
-        width: clamp(20.5rem, 9.344rem + 23.24vw, 27.938rem);
-    }
+  .container {
+    gap: $space-60px;
+    width: clamp(20.5rem, 9.344rem + 23.24vw, 27.938rem);
+  }
 
-    .links {
-        gap: $space-7;
-    }
+  .links {
+    gap: $space-7;
+  }
 }
 
 @media screen and (width <=1024px) {
-    .container {
-        gap: $space-6;
-        max-width: unset;
-        padding: $space-4;
-        width: 100%;
-        justify-content: center;
+  .container {
+    gap: $space-6;
+    max-width: unset;
+    padding: $space-4;
+    width: 100%;
+    justify-content: center;
 
-        .qr {
-            max-width: 100px;
-            max-height: 100px;
-        }
+    .qr {
+      max-width: 100px;
+      max-height: 100px;
     }
+  }
 
-    .links {
-        gap: $space-3;
-    }
+  .links {
+    gap: $space-3;
+  }
 }

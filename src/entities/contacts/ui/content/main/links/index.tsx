@@ -6,6 +6,7 @@ import classes from "./contacts-links.module.scss";
 import Inst from "~/public/contacts/instagram.svg";
 import GeoAlt from "~/public/contacts/geo-alt.svg";
 import Tel from "~/public/contacts/telephone.svg";
+import Clock from "~/public/contacts/clock.svg";
 import Image from "next/image";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 
@@ -35,6 +36,11 @@ export default function ContactsLinks() {
       Icon: Tel,
       title: "63013400",
       href: "tel:63013400",
+    },
+    {
+      Icon: Clock,
+      title: t("hours"),
+      href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
     },
   ];
 
