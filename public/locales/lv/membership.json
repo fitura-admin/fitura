@@ -3,7 +3,7 @@
     "plans": {
         "full": {
             "heading": "Full Access",
-            "text": "Viss iekļauts: trenažieru zāle, SPA, grupu nodarbības, atjaunošanās procedūras un daudz vēl vairāk.",
+            "text": "Viss iekļauts: trenažieru zāle, grupu nodarbības, atjaunošanās procedūras un daudz vēl vairāk.",
             "price": "€ 69.5",
             "age": "18+"
         },
@@ -15,7 +15,7 @@
         },
         "junior": {
             "heading": "Junior",
-            "text": "Programma jauniešiem 14–17 g.: pilna piekļuve trenažieru zālei, SPA, grupu nodarbībām, lietotnei u.c.",
+            "text": "Programma jauniešiem 14–17 g.: pilna piekļuve trenažieru zālei, grupu nodarbībām, lietotnei u.c.",
             "price": "€ 50",
             "age": "14-17"
         },
