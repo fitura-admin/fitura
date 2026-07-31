@@ -14,11 +14,11 @@ import CookiesBanner from "~/src/shared/widgets/cookies-banner/ui";
 import { GTM } from "~/src/shared/widgets/gtm";
 
 export const metadata: Metadata = {
-  title: "Fitura Fitness & SPA",
+  title: "Fitura Fitness",
   description: `
     📍Via Jurmala Outlet Village
     2,000m² of wellness in one space
-    Open-space gym · SPA zone
+    Open-space gym
     Train · Recover · Recharge
   `,
   icons: ["/icon.svg"],

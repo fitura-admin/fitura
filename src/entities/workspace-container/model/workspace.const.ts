@@ -2,10 +2,8 @@ import { FC, SVGProps } from "react";
 
 import TrainersSub from "~/public/workspace/trainers-sub.svg";
 import GroupSub from "~/public/workspace/group-sub.svg";
-import SpaSub from "~/public/workspace/spa-sub.svg";
 import TrainersSubMedia from "~/public/workspace/trainers-sub-media.svg";
 import GroupSubMedia from "~/public/workspace/group-sub-media.svg";
-import SpaSubMedia from "~/public/workspace/spa-sub-media.svg";
 
 export interface IAnimateImage {
   big: boolean;
@@ -34,7 +32,6 @@ export const swiperImages: string[][] = [
     "/together/7.webp",
     "/together/9.webp",
   ],
-  ["/spa/1.webp", "/spa/3.webp", "/spa/6.webp", "/spa/7.webp", "/spa/9.webp"],
   ["/lab/1.webp", "/lab/3.webp", "/lab/6.webp", "/lab/7.webp", "/lab/9.webp"],
 ];
 
@@ -46,7 +43,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/1.webp",
       "/trainers/1.webp",
       "/together/1.webp",
-      "/spa/1.webp",
       "/lab/1.webp",
     ],
   },
@@ -56,7 +52,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/2.webp",
       "/trainers/2.webp",
       "/together/2.webp",
-      "/spa/2.webp",
       "/lab/2.webp",
     ],
   },
@@ -66,7 +61,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/3.webp",
       "/trainers/3.webp",
       "/together/3.webp",
-      "/spa/3.webp",
       "/lab/3.webp",
     ],
   },
@@ -76,7 +70,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/4.webp",
       "/trainers/4.webp",
       "/together/4.webp",
-      "/spa/4.webp",
       "/lab/4.webp",
     ],
   },
@@ -86,7 +79,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/5.webp",
       "/trainers/5.webp",
       "/together/5.webp",
-      "/spa/5.webp",
       "/lab/5.webp",
     ],
   },
@@ -96,7 +88,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/6.webp",
       "/trainers/6.webp",
       "/together/6.webp",
-      "/spa/6.webp",
       "/lab/6.webp",
     ],
   },
@@ -106,7 +97,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/7.webp",
       "/trainers/7.webp",
       "/together/7.webp",
-      "/spa/7.webp",
       "/lab/7.webp",
     ],
   },
@@ -116,7 +106,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/8.webp",
       "/trainers/8.webp",
       "/together/8.webp",
-      "/spa/8.webp",
       "/lab/8.webp",
     ],
   },
@@ -126,7 +115,6 @@ export const animatingImages: IAnimateImage[] = [
       "/space/9.webp",
       "/trainers/9.webp",
       "/together/9.webp",
-      "/spa/9.webp",
       "/lab/9.webp",
     ],
   },
@@ -140,7 +128,6 @@ export const animatingMediaImages: IAnimateImage[] = [
       "/space/1-media.webp",
       "/trainers/1-media.webp",
       "/together/1-media.webp",
-      "/spa/1-media.webp",
       "/lab/1-media.webp",
     ],
   },
@@ -150,7 +137,6 @@ export const animatingMediaImages: IAnimateImage[] = [
       "/space/2-media.webp",
       "/trainers/2-media.webp",
       "/together/2-media.webp",
-      "/spa/2-media.webp",
       "/lab/2-media.webp",
     ],
   },
@@ -160,7 +146,6 @@ export const animatingMediaImages: IAnimateImage[] = [
       "/space/3-media.webp",
       "/trainers/3-media.webp",
       "/together/3-media.webp",
-      "/spa/3-media.webp",
       "/lab/3-media.webp",
     ],
   },
@@ -170,7 +155,6 @@ export const animatingMediaImages: IAnimateImage[] = [
       "/space/4-media.webp",
       "/trainers/4-media.webp",
       "/together/4-media.webp",
-      "/spa/4-media.webp",
       "/lab/4-media.webp",
     ],
   },
@@ -180,7 +164,6 @@ export const animatingMediaImages: IAnimateImage[] = [
       "/space/5-media.webp",
       "/trainers/5-media.webp",
       "/together/5-media.webp",
-      "/spa/5-media.webp",
       "/lab/5-media.webp",
     ],
   },
@@ -215,13 +198,6 @@ export const workspaceHeadings: IWorkspaceHeading[] = [
     },
   },
   {
-    tName: "spa",
-    Icon: {
-      Icon: SpaSub,
-      IconMedia: SpaSubMedia,
-    },
-  },
-  {
     tName: "lab",
     Icon: null,
   },
@@ -231,6 +207,5 @@ export const workspaceContainers: string[] = [
   "bg-100",
   "bg-200",
   "bg-300",
-  "bg-400",
   "bg-500",
 ];

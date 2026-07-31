@@ -3,7 +3,7 @@
     "plans": {
         "full": {
             "heading": "Full Access",
-            "text": "All-inclusive membership with gym, spa, classes, recovery, and more",
+            "text": "All-inclusive membership with gym, classes, recovery, and more",
             "price": "€ 69.5",
             "age": "18+"
         },
@@ -15,7 +15,7 @@
         },
         "junior": {
             "heading": "Junior",
-            "text": "Smart start for ages 14-17: full gym, spa, classes, app access, and more",
+            "text": "Smart start for ages 14-17: full gym, classes, app access, and more",
             "price": "€ 50",
             "age": "14-17"
         },
