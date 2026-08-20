@@ -42,7 +42,7 @@ export default function CardHeadingInfo({
           nameSpace={NAMESPACE}
           tName="plans.joiningFee"
         >
-          &nbsp;– 37,5 € (<span className={classes.crossed}>50 €</span>)
+          &nbsp;– 50 €
         </TextTranslate>
       </div>
       <MembershipCardButton moreContent={moreContent} openModal={openModal} />
