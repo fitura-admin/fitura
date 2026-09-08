@@ -12,6 +12,7 @@ import CLientRootLayout from "~/src/app/client-layout";
 import NoiseOverlay from "~/src/shared/ui/noise-overlay/ui";
 import CookiesBanner from "~/src/shared/widgets/cookies-banner/ui";
 import { GTM } from "~/src/shared/widgets/gtm";
+import { FBPixel } from "~/src/shared/widgets/fb-pixel";
 
 export const metadata: Metadata = {
   title: "Fitura Fitness & SPA",
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang={lang}>
       <body className="body relative flex-column">
         <GTM id={GTM_ID} />
+        <FBPixel />
         <CLientRootLayout>
           {children}
           <CookiesBanner />
