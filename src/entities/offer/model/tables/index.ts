@@ -117,13 +117,13 @@ export const pricingTableLangs: Record<LangT, TableData> = {
   lv: {
     id: "main-services",
     columns: [
-      { key: "joinFee", title: "PIEDALĪŠANĀS MAKSA" },
-      { key: "fullAccess", title: "PILNA PIEEJA" },
+      { key: "joinFee", title: "PIEVIENOŠANĀS MAKSA" },
+      { key: "fullAccess", title: "FULL ACCES" },
       {
         key: "duo",
-        title: "DUO\nLĪGUMA ĪPAŠNIEKS + KLUBA BIEDRS / ATSEVIŠĶA APMEKLĒŠANA",
+        title: "DUO\nLĪGUMA ĪPAŠNIEKS + KLUBA BIEDRS / ATSEVIŠĶS APMEKLĒJUMS",
       },
-      { key: "junior", title: "JAUNIEŠI" },
+      { key: "junior", title: "JUNIOR" },
     ],
     rows: [
       {
@@ -141,8 +141,8 @@ export const pricingTableLangs: Record<LangT, TableData> = {
       {
         joinFee: "Ķermeņa sastāva analīze",
         fullAccess: "Grupu nodarbības saskaņā ar grafiku",
-        duo: "Grupu nodarbības saskaņā ar grafiku",
-        junior: "Grupu nodarbības saskaņā ar grafiku",
+        duo: "Grupu nodarbības pēc grafika",
+        junior: "Grupu nodarbības pēc grafika",
       },
       {
         joinFee: "40 minūšu ievadapmācība",
@@ -150,13 +150,7 @@ export const pricingTableLangs: Record<LangT, TableData> = {
         duo: "Piekļuve SPA zonai",
         junior: "Piekļuve SPA zonai",
       },
-      {
-        joinFee:
-          "1 (viena) izmēģinājuma atjaunojoša procedūra saskaņā ar spēkā esošo akciju Fitura LAB",
-        fullAccess: "Pirts",
-        duo: "Pirts",
-        junior: "Pirts",
-      },
+      { joinFee: "", fullAccess: "Pirts", duo: "Pirts", junior: "Pirts" },
       { joinFee: "", fullAccess: "Sauna", duo: "Sauna", junior: "Sauna" },
       { joinFee: "", fullAccess: "Hammam", duo: "Hammam", junior: "Hammam" },
     ],
