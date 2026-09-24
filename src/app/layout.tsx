@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   title: "Fitura Fitness & SPA",
   description: `
     📍Via Jurmala Outlet Village
-    2,000m² of wellness in one space
     Open-space gym · SPA zone
     Train · Recover · Recharge
   `,

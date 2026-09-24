@@ -34,7 +34,6 @@ export default function Marquee({
     t("marquee.first"),
     t("marquee.second"),
     t("marquee.third"),
-    t("marquee.fourth"),
   ];
 
   const list = items

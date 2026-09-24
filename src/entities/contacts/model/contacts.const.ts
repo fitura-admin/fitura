@@ -65,4 +65,6 @@ export const mapCustomStyleJSON = [
     stylers: [{ color: "#000000" }, { lightness: 17 }],
   },
 ];
-export const mapCenter = { lat: 56.95610117925549, lng: 23.907324835582514 };
+export const mapCenter = { lat: 56.95709, lng: 23.90259 };
+export const mapLink =
+  "https://www.google.com/maps/search/?api=1&query=Fitura+Fitness+%26+SPA%2C+Jaun%C4%81+iela+12%2C+Pi%C5%86%C4%B7i";
