@@ -9,6 +9,7 @@ import Tel from "~/public/contacts/telephone.svg";
 import Clock from "~/public/contacts/clock.svg";
 import Image from "next/image";
 import AnimatedItem from "~/src/shared/ui/animated-item";
+import { mapLink } from "~/src/entities/contacts/model/contacts.const";
 
 interface ILink {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -29,7 +30,7 @@ export default function ContactsLinks() {
     {
       Icon: GeoAlt,
       title: t("address"),
-      href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
+      href: mapLink,
       target: "_blank",
     },
     {
@@ -40,7 +41,7 @@ export default function ContactsLinks() {
     {
       Icon: Clock,
       title: t("hours"),
-      href: "https://www.google.com/maps?q=56.95610117925549,23.907324835582514",
+      href: mapLink,
     },
   ];
 

@@ -8,6 +8,7 @@ import Link from "next/link";
 import {
   mapCenter,
   mapCustomStyleJSON,
+  mapLink,
 } from "~/src/entities/contacts/model/contacts.const";
 
 export default function ContactsMap() {
@@ -45,7 +46,7 @@ export default function ContactsMap() {
       onClick={() => linkRef.current?.click()}
     >
       <Link
-        href="https://www.google.com/maps?q=56.95610117925549,23.907324835582514"
+        href={mapLink}
         ref={linkRef}
         target="_blank"
         rel="noopener noreferrer"

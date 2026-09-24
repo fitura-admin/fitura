@@ -13,33 +13,18 @@ interface IMarquee {
 export default function AppPhoneMarquess() {
   const marquees: IMarquee[] = [
     {
-      items: [
-        "2000 m² of Gym",
-        "Spa & Recovery",
-        "premium equipment",
-        "Fitura App",
-      ],
+      items: ["Spa & Recovery", "premium equipment", "Fitura App"],
       duration: 0.1,
       relativityCount: 0.1,
       direction: "right",
     },
     {
-      items: [
-        "premium equipment",
-        "2000 m² of Gym",
-        "Fitura App",
-        "Spa & Recovery",
-      ],
+      items: ["premium equipment", "Fitura App", "Spa & Recovery"],
       duration: 0.3,
       relativityCount: 0.6,
     },
     {
-      items: [
-        "Spa & Recovery",
-        "premium equipment",
-        "2000 m² of Gym",
-        "Fitura App",
-      ],
+      items: ["Spa & Recovery", "premium equipment", "Fitura App"],
       duration: 0.3,
       relativityCount: 0.5,
       direction: "right",
