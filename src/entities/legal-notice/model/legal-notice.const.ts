@@ -13,4 +13,8 @@ export const legalNoticeLinks: ILegalNoticeLink[] = [
     title: "minor",
     href: "/legal-notice/minors",
   },
+  {
+    title: "withdrawal",
+    href: "/legal-notice/withdrawal",
+  },
 ];

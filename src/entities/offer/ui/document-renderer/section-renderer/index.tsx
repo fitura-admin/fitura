@@ -14,9 +14,11 @@ export const SectionRenderer = ({ section, tables }: Props) => {
 
   return (
     <section className={classes.section}>
-      <HeadingTag className={`heading h6 white ${classes.heading}`}>
-        {section.title}
-      </HeadingTag>
+      {section.title && (
+        <HeadingTag className={`heading h6 white ${classes.heading}`}>
+          {section.title}
+        </HeadingTag>
+      )}
 
       {section.content.map((node, index) => {
         if (node.type === "paragraph") {
