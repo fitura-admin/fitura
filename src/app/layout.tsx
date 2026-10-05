@@ -13,8 +13,10 @@ import NoiseOverlay from "~/src/shared/ui/noise-overlay/ui";
 import CookiesBanner from "~/src/shared/widgets/cookies-banner/ui";
 import { GTM } from "~/src/shared/widgets/gtm";
 import { FBPixel } from "~/src/shared/widgets/fb-pixel";
+import { SITE_URL } from "~/src/shared/lib/utils/canonical";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Fitura Fitness & SPA",
   description: `
     📍Via Jurmala Outlet Village
