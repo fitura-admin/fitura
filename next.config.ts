@@ -25,6 +25,8 @@ const nextConfig: NextConfig = {
     BREVO_API_URL: process.env.BREVO_API_URL,
   },
 
+  htmlLimitedBots: /.*/,
+
   output: "standalone",
 };
 
