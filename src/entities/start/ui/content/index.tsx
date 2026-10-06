@@ -11,6 +11,12 @@ export default function StartContent() {
   return (
     <div className={`flex-column ${classes.container}`}>
       <div className={`flex-column ${classes.heading}`}>
+        <TextTranslate
+          nameSpace="start"
+          tName="text.title"
+          as="h1"
+          className="body-text regular white text-center"
+        />
         <TextScroll
           textClassName="heading display1 white text-center"
           onInView

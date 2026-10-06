@@ -10,8 +10,16 @@
     align-items: center;
     gap: $space-7;
 
+    h1,
     p {
         opacity: 0.8;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 1.25;
+        // до слогана — 8px вместо общего gap
+        margin-bottom: $space-2 - $space-7;
     }
 }
 
@@ -23,10 +31,15 @@
     .heading {
         gap: $space-5;
 
+        h1 {
+            margin-bottom: $space-2 - $space-5;
+        }
+
         div {
             line-height: 100% !important;
         }
 
+        h1,
         p {
             letter-spacing: -0.32px;
         }
