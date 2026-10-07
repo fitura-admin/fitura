@@ -60,6 +60,7 @@ export default function StartContent() {
           className="body-text regular white text-center"
         />
         <TextScroll
+          className={`display1 ${classes.slogan}`}
           textClassName="heading display1 white text-center"
           onInView
           nameSpace="start"
