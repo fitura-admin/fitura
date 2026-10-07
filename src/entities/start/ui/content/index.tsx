@@ -28,25 +28,38 @@ export default function StartContent() {
     ...gapVariant("1. H1 → слоган", ["4", "8", "12", "16", "24"]),
     default: "8",
   });
-  const gapLocation = useVariant(
-    "hero.gap.location",
-    gapVariant(
-      "2. Слоган → адрес",
-      ["8", "12", "16", "20", "28", "40"],
-      "28 / моб. 20",
-    ),
-  );
+  const gapLocation = useVariant("hero.gap.location", {
+    ...gapVariant("2. Слоган → адрес", ["8", "12", "16", "20", "28", "40"]),
+    default: "16",
+  });
   const gapButton = useVariant(
     "hero.gap.button",
     gapVariant(
       "3. Адрес → кнопка",
       ["16", "24", "32", "48", "64"],
-      "48 / моб. 16",
+      "32 / моб. 16",
     ),
   );
+  // "mobile1" — line-height из scss: на desktop из класса display1 (72–80px при шрифте
+  // 60–84px), на мобильном 1. Число — множитель на всех ширинах.
+  const sloganLineHeight = useVariant("hero.slogan.lineHeight", {
+    options: ["mobile1", "0.9", "1", "1.1", "1.2", "1.3"],
+    labels: {
+      mobile1: "72–80px / моб. 1",
+      "0.9": "0.9",
+      "1": "1",
+      "1.1": "1.1",
+      "1.2": "1.2",
+      "1.3": "1.3",
+    },
+    title: "Высота строки",
+    section: "Hero: слоган",
+  });
+  const customLineHeight = sloganLineHeight !== "mobile1";
   const gaps = {
+    ...(customLineHeight && { "--slogan-line-height": sloganLineHeight }),
     "--gap-title": `${gapTitle}px`,
-    ...(gapLocation !== "auto" && { "--gap-location": `${gapLocation}px` }),
+    "--gap-location": `${gapLocation}px`,
     ...(gapButton !== "auto" && { "--gap-button": `${gapButton}px` }),
   } as React.CSSProperties;
 
@@ -60,7 +73,7 @@ export default function StartContent() {
           className="body-text regular white text-center"
         />
         <TextScroll
-          className={`display1 ${classes.slogan}`}
+          className={`display1 ${classes.slogan} ${customLineHeight ? classes.customLineHeight : ""}`}
           textClassName="heading display1 white text-center"
           onInView
           nameSpace="start"

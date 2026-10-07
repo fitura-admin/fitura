@@ -1,6 +1,6 @@
 // --gap-* задаются из переключателя вариантов; без них работают значения по умолчанию
 .container {
-    gap: var(--gap-button, #{$space-12});
+    gap: var(--gap-button, #{$space-8});
     align-items: center;
     position: relative;
     top: 50%;
@@ -9,7 +9,7 @@
 
 .heading {
     align-items: center;
-    gap: var(--gap-location, #{$space-7});
+    gap: var(--gap-location, #{$space-4});
 
     h1,
     .location {
@@ -21,7 +21,7 @@
         line-height: 1.25;
         // до слогана — 8px вместо общего gap
         margin-bottom: calc(
-            var(--gap-title, #{$space-2}) - var(--gap-location, #{$space-7})
+            var(--gap-title, #{$space-2}) - var(--gap-location, #{$space-4})
         );
     }
 }
@@ -35,6 +35,18 @@
 
     span {
         padding-bottom: 0.14em;
+    }
+
+    // на desktop высота строки из display1, до 768px — в размер шрифта
+    @media screen and (width <=768px) {
+        span {
+            line-height: 1;
+        }
+    }
+
+    // класс вешается, только когда в переключателе вариантов выбрано число
+    &.customLineHeight span {
+        line-height: var(--slogan-line-height);
     }
 }
 
@@ -73,14 +85,6 @@
     }
 
     .heading {
-        gap: var(--gap-location, #{$space-5});
-
-        h1 {
-            margin-bottom: calc(
-                var(--gap-title, #{$space-2}) - var(--gap-location, #{$space-5})
-            );
-        }
-
         div {
             line-height: 100% !important;
         }
