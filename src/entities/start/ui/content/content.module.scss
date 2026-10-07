@@ -1,5 +1,6 @@
+// --gap-* задаются из переключателя вариантов; без них работают значения по умолчанию
 .container {
-    gap: $space-12;
+    gap: var(--gap-button, #{$space-12});
     align-items: center;
     position: relative;
     top: 50%;
@@ -8,10 +9,10 @@
 
 .heading {
     align-items: center;
-    gap: $space-7;
+    gap: var(--gap-location, #{$space-7});
 
     h1,
-    p {
+    .location {
         opacity: 0.8;
     }
 
@@ -19,20 +20,65 @@
         font-size: 20px;
         line-height: 1.25;
         // до слогана — 8px вместо общего gap
-        margin-bottom: $space-2 - $space-7;
+        margin-bottom: calc(
+            var(--gap-title, #{$space-2}) - var(--gap-location, #{$space-7})
+        );
+    }
+}
+
+// Строка слогана ниже, чем нужно шрифту, а TextScroll обрезает всё за её пределами —
+// у кириллицы срезались нижние хвосты (у, д, щ). Даём им место внутри области обрезки
+// и на столько же подтягиваем блок, чтобы вёрстка не сдвинулась. display1 на самом
+// блоке нужен, чтобы em здесь и в span считались от одного размера шрифта.
+.slogan {
+    margin-bottom: -0.14em;
+
+    span {
+        padding-bottom: 0.14em;
+    }
+}
+
+.location {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    // зона нажатия 44px по высоте, вёрстку не сдвигает
+    padding: 10px $space-3;
+    margin: -10px (-$space-3);
+    transition: opacity $transition;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+
+        // в самой иконке зашита прозрачность 0.6 (после svgo она на path) —
+        // выравниваем с текстом
+        g,
+        path {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (any-hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
 @media screen and (width <=768px) {
     .container {
-        gap: $space-4;
+        gap: var(--gap-button, #{$space-4});
     }
 
     .heading {
-        gap: $space-5;
+        gap: var(--gap-location, #{$space-5});
 
         h1 {
-            margin-bottom: $space-2 - $space-5;
+            margin-bottom: calc(
+                var(--gap-title, #{$space-2}) - var(--gap-location, #{$space-5})
+            );
         }
 
         div {
@@ -40,16 +86,14 @@
         }
 
         h1,
-        p {
+        .location {
             letter-spacing: -0.32px;
         }
     }
 }
 
 @media screen and (width <=480px) {
-    .heading {
-        p {
-            max-width: 247px;
-        }
+    .location span {
+        max-width: 247px;
     }
 }

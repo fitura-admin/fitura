@@ -14,6 +14,7 @@ import CookiesBanner from "~/src/shared/widgets/cookies-banner/ui";
 import { GTM } from "~/src/shared/widgets/gtm";
 import { FBPixel } from "~/src/shared/widgets/fb-pixel";
 import { SITE_URL } from "~/src/shared/lib/utils/canonical";
+import { VariantSwitcher } from "~/src/shared/lib/variants";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,6 +55,7 @@ export default function RootLayout({
           <CookiesBanner />
         </CLientRootLayout>
         <NoiseOverlay mono opacity={0.05} scale={2} />
+        <VariantSwitcher />
       </body>
     </html>
   );

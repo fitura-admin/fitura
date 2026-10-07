@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import classes from "./content.module.scss";
@@ -6,10 +7,51 @@ import LinkContainer from "~/src/shared/ui/link-container";
 import AnimatedItem from "~/src/shared/ui/animated-item";
 import Button from "~/src/shared/ui/button";
 import { TextTranslate } from "~/src/shared/ui/text-translate/ui";
+import { useVariant } from "~/src/shared/lib/variants";
+import { mapLink } from "~/src/entities/contacts/model/contacts.const";
+import GeoAlt from "~/public/contacts/geo-alt.svg";
+
+const section = "Hero: отступы";
+// Число — px на всех ширинах. "auto" — отступ из scss, свой для desktop и мобильного;
+// в подписи стоят оба его значения.
+const gapVariant = (title: string, px: string[], auto?: string) => ({
+  options: auto ? ["auto", ...px] : px,
+  ...(auto && {
+    labels: Object.fromEntries([["auto", auto], ...px.map((v) => [v, v])]),
+  }),
+  title,
+  section,
+});
 
 export default function StartContent() {
+  const gapTitle = useVariant("hero.gap.title", {
+    ...gapVariant("1. H1 → слоган", ["4", "8", "12", "16", "24"]),
+    default: "8",
+  });
+  const gapLocation = useVariant(
+    "hero.gap.location",
+    gapVariant(
+      "2. Слоган → адрес",
+      ["8", "12", "16", "20", "28", "40"],
+      "28 / моб. 20",
+    ),
+  );
+  const gapButton = useVariant(
+    "hero.gap.button",
+    gapVariant(
+      "3. Адрес → кнопка",
+      ["16", "24", "32", "48", "64"],
+      "48 / моб. 16",
+    ),
+  );
+  const gaps = {
+    "--gap-title": `${gapTitle}px`,
+    ...(gapLocation !== "auto" && { "--gap-location": `${gapLocation}px` }),
+    ...(gapButton !== "auto" && { "--gap-button": `${gapButton}px` }),
+  } as React.CSSProperties;
+
   return (
-    <div className={`flex-column ${classes.container}`}>
+    <div className={`flex-column ${classes.container}`} style={gaps}>
       <div className={`flex-column ${classes.heading}`}>
         <TextTranslate
           nameSpace="start"
@@ -18,17 +60,28 @@ export default function StartContent() {
           className="body-text regular white text-center"
         />
         <TextScroll
+          className={`display1 ${classes.slogan}`}
           textClassName="heading display1 white text-center"
           onInView
           nameSpace="start"
           tName="text.heading"
         />
-        <TextTranslate
-          nameSpace="start"
-          tName="text.subtext"
-          as="p"
-          className="body-text base big white text-center"
-        />
+        <a
+          href={mapLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.location}
+        >
+          {/* viewBox задаём явно: сборка вырезает его из svg, и без него иконка
+              при уменьшении обрезается, а не масштабируется */}
+          <GeoAlt viewBox="0 0 24 24" aria-hidden="true" />
+          <TextTranslate
+            nameSpace="start"
+            tName="text.subtext"
+            as="span"
+            className="body-text base big white text-center"
+          />
+        </a>
       </div>
       <AnimatedItem delay={0.1}>
         <LinkContainer href="#space">
