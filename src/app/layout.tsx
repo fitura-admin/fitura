@@ -55,7 +55,8 @@ export default function RootLayout({
           <CookiesBanner />
         </CLientRootLayout>
         <NoiseOverlay mono opacity={0.05} scale={2} />
-        <VariantSwitcher />
+        {/* панель сравнения вариантов интерфейса — только на dev-сервере */}
+        {process.env.NODE_ENV === "development" && <VariantSwitcher />}
       </body>
     </html>
   );

@@ -87,6 +87,28 @@ function saveCollapsed(v: boolean) {
   }
 }
 
+// Свёрнутые темы (section) внутри виджета — тоже помним между перезагрузками.
+const SECTIONS_KEY = "variants:__sections";
+function loadClosedSections(): string[] {
+  try {
+    const parsed: unknown = JSON.parse(
+      window.localStorage.getItem(SECTIONS_KEY) ?? "[]",
+    );
+    return Array.isArray(parsed)
+      ? parsed.filter((s): s is string => typeof s === "string")
+      : [];
+  } catch {
+    return [];
+  }
+}
+function saveClosedSections(v: string[]) {
+  try {
+    window.localStorage.setItem(SECTIONS_KEY, JSON.stringify(v));
+  } catch {
+    /* игнорируем */
+  }
+}
+
 function register(
   id: string,
   cfg: {
@@ -242,14 +264,19 @@ function persistPresets() {
   emit();
 }
 
-// Набор «активен», если все его группы, которые сейчас на экране, стоят в его значениях.
+// Значение, которое набор задаёт группе: своё, а если группы в наборе нет (или её
+// вариант с тех пор удалили из кода) — вариант по умолчанию.
+const valueIn = (values: Record<string, string>, g: Group) =>
+  g.id in values && g.options.includes(values[g.id]) ? values[g.id] : g.default;
+
+// Набор «активен», если он касается хотя бы одной группы на экране и все группы на
+// экране стоят в его значениях (не упомянутые в нём — по умолчанию).
 function isActive(values: Record<string, string>): boolean {
   let seen = false;
-  for (const [id, value] of Object.entries(values)) {
-    const g = groups.get(id);
-    if (!g || !tracked(g)) continue;
-    seen = true;
-    if (g.current !== value) return false;
+  for (const g of groups.values()) {
+    if (!tracked(g)) continue;
+    if (g.id in values) seen = true;
+    if (g.current !== valueIn(values, g)) return false;
   }
   return seen;
 }
@@ -297,16 +324,16 @@ function deletePreset(name: string) {
   persistPresets();
 }
 
-// Применяем сразу к зарегистрированным группам, а в localStorage пишем и для тех, что
-// сейчас не на экране, — они подхватят значение при монтировании.
+// Применяем ко всем группам на экране: которых в наборе нет — возвращаем к варианту
+// по умолчанию, иначе в них осталось бы значение от прошлого набора или ручной правки.
+// В localStorage пишем и для групп, которых сейчас нет на экране, — они подхватят
+// значение при монтировании.
 function applyValues(values: Record<string, string>) {
+  for (const g of groups.values()) {
+    if (tracked(g)) writeValue(g, valueIn(values, g));
+  }
   for (const [id, value] of Object.entries(values)) {
-    const g = groups.get(id);
-    if (g) {
-      if (!g.options.includes(value)) continue; // вариант с тех пор удалили из кода
-      writeValue(g, value);
-      continue;
-    }
+    if (groups.has(id)) continue;
     try {
       window.localStorage.setItem(storageKey(id), value);
     } catch {
@@ -453,6 +480,17 @@ export function VariantSwitcher() {
       return !c;
     });
 
+  // Темы (section) сворачиваются по клику на заголовок — когда групп много, лишние
+  // можно убрать с глаз. Свёрнутая тема показывает число групп и сколько из них изменено.
+  const [closedSections, setClosedSections] = useState<string[]>([]);
+  useEffect(() => setClosedSections(loadClosedSections()), []);
+  const toggleSection = (sec: string) =>
+    setClosedSections((c) => {
+      const next = c.includes(sec) ? c.filter((s) => s !== sec) : [...c, sec];
+      saveClosedSections(next);
+      return next;
+    });
+
   // Видимость панели. Стартуем с false (совпадает с SSR), затем в эффекте включаем,
   // если задан ?variants в URL или ранее включили клавишами.
   const [visible, setVisible] = useState(false);
@@ -511,6 +549,12 @@ export function VariantSwitcher() {
     bySection.get(sec)!.push(g);
   }
   const sections = [...bySection.keys()].sort((a, b) => a.localeCompare(b));
+  // Подпись свёрнутой темы: «3» или «3 · изменено 1».
+  const sectionSummary = (sec: string) => {
+    const gs = bySection.get(sec)!;
+    const changed = gs.filter((g) => g.current !== g.default).length;
+    return changed ? `${gs.length} · изменено ${changed}` : `${gs.length}`;
+  };
 
   // Строка пресетов. «По умолчанию» — встроенный пресет: он же сброс всех групп.
   // Показываем только пресеты, которые касаются групп на этом экране.
@@ -554,7 +598,7 @@ export function VariantSwitcher() {
   // приложения живут на z-[9999], их дропдауны выше, и переключатель, будучи
   // инструментом сравнения, обязан оставаться доступным поверх любого из них.
   // Адаптация под проект без Tailwind: разметка панели та же, классы заменены на
-  // inline-стили (без hover-эффектов; control "slider" рисуется кнопками).
+  // inline-стили (без hover-эффектов).
   const PINK = "#c026d3";
   const pill = (active: boolean): React.CSSProperties => ({
     borderRadius: 999,
@@ -815,9 +859,18 @@ export function VariantSwitcher() {
           >
             {sections.map((sec, si) => (
               <Fragment key={sec}>
-                <div
+                <button
+                  type="button"
+                  onClick={() => toggleSection(sec)}
+                  aria-expanded={!closedSections.includes(sec)}
                   style={{
+                    ...bare,
                     gridColumn: "1 / -1",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    padding: 0,
+                    textAlign: "left",
                     fontSize: 9,
                     fontWeight: 600,
                     textTransform: "uppercase",
@@ -832,69 +885,160 @@ export function VariantSwitcher() {
                         }),
                   }}
                 >
-                  {sec}
-                </div>
-                {bySection.get(sec)!.map((g) => (
-                  <Fragment key={g.id}>
-                    <span
-                      title={g.id}
-                      style={{
-                        whiteSpace: "nowrap",
-                        paddingTop: 4,
-                        textAlign: "right",
-                        // Жирность постоянная: толстые штрихи лучше передают цвет, и
-                        // разница «дефолт — бледный / изменено — насыщенный» заметна.
-                        fontWeight: 700,
-                        color:
-                          g.current === g.default
-                            ? "rgba(112, 26, 117, 0.45)"
-                            : "#701a75",
-                      }}
-                    >
-                      {g.title ?? g.id}
-                    </span>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-                      {g.options.map((opt) => {
-                        const active = g.current === opt;
-                        return (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => setVariant(g.id, opt)}
+                  <span>{sec}</span>
+                  {closedSections.includes(sec) && (
+                    <span style={{ opacity: 0.7 }}>{sectionSummary(sec)}</span>
+                  )}
+                  <span style={{ marginLeft: "auto" }} aria-hidden="true">
+                    {closedSections.includes(sec) ? "▸" : "▾"}
+                  </span>
+                </button>
+                {(closedSections.includes(sec) ? [] : bySection.get(sec)!).map(
+                  (g) => (
+                    <Fragment key={g.id}>
+                      <span
+                        title={g.id}
+                        style={{
+                          whiteSpace: "nowrap",
+                          paddingTop: 4,
+                          textAlign: "right",
+                          // Жирность постоянная: толстые штрихи лучше передают цвет, и
+                          // разница «дефолт — бледный / изменено — насыщенный» заметна.
+                          fontWeight: 700,
+                          color:
+                            g.current === g.default
+                              ? "rgba(112, 26, 117, 0.45)"
+                              : "#701a75",
+                        }}
+                      >
+                        {g.title ?? g.id}
+                      </span>
+                      {g.control === "slider" ? (
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 8,
+                          }}
+                        >
+                          {/* Нотчевый ползунок: точки-деления, залитые до текущей включительно. */}
+                          <div
                             style={{
-                              ...pill(active),
-                              borderRadius: 6,
-                              padding: "4px 8px",
-                              cursor: "pointer",
+                              position: "relative",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 8,
+                              padding: "0 4px",
                             }}
                           >
-                            {g.labels?.[opt] ?? opt}
-                            {opt === g.default && (
-                              <span
-                                style={{ marginLeft: 4, opacity: 0.5 }}
-                                title="По умолчанию"
-                                aria-label="по умолчанию"
-                              >
-                                •
-                              </span>
-                            )}
-                          </button>
-                        );
-                      })}
-                      {g.current !== g.default && (
-                        <button
-                          type="button"
-                          onClick={() => resetVariant(g.id)}
-                          title="Вернуть вариант по умолчанию"
-                          aria-label={`Вернуть вариант по умолчанию: ${g.title ?? g.id}`}
-                          style={{ ...bare, padding: "4px 6px", color: PINK }}
+                            <div
+                              style={{
+                                position: "absolute",
+                                left: 4,
+                                right: 4,
+                                top: "50%",
+                                height: 1,
+                                background: "#f5d0fe",
+                              }}
+                            />
+                            {g.options.map((opt, i) => {
+                              const filled =
+                                i <= Math.max(0, g.options.indexOf(g.current));
+                              return (
+                                <button
+                                  key={opt}
+                                  type="button"
+                                  onClick={() => setVariant(g.id, opt)}
+                                  title={g.labels?.[opt] ?? opt}
+                                  style={{
+                                    position: "relative",
+                                    height: 12,
+                                    width: 12,
+                                    padding: 0,
+                                    borderRadius: "50%",
+                                    border: `1px solid ${filled ? PINK : "#f0abfc"}`,
+                                    background: filled ? PINK : "#fff",
+                                    cursor: "pointer",
+                                  }}
+                                />
+                              );
+                            })}
+                          </div>
+                          <span
+                            style={{
+                              color: "#a21caf",
+                              fontVariantNumeric: "tabular-nums",
+                            }}
+                          >
+                            {g.labels?.[g.current] ?? g.current}
+                          </span>
+                          {g.current !== g.default && (
+                            <button
+                              type="button"
+                              onClick={() => resetVariant(g.id)}
+                              title="Вернуть вариант по умолчанию"
+                              aria-label={`Вернуть вариант по умолчанию: ${g.title ?? g.id}`}
+                              style={{
+                                ...bare,
+                                padding: "4px 6px",
+                                color: PINK,
+                              }}
+                            >
+                              ↺
+                            </button>
+                          )}
+                        </div>
+                      ) : (
+                        <div
+                          style={{ display: "flex", flexWrap: "wrap", gap: 4 }}
                         >
-                          ↺
-                        </button>
+                          {g.options.map((opt) => {
+                            const active = g.current === opt;
+                            return (
+                              <button
+                                key={opt}
+                                type="button"
+                                onClick={() => setVariant(g.id, opt)}
+                                style={{
+                                  ...pill(active),
+                                  borderRadius: 6,
+                                  padding: "4px 8px",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                {g.labels?.[opt] ?? opt}
+                                {opt === g.default && (
+                                  <span
+                                    style={{ marginLeft: 4, opacity: 0.5 }}
+                                    title="По умолчанию"
+                                    aria-label="по умолчанию"
+                                  >
+                                    •
+                                  </span>
+                                )}
+                              </button>
+                            );
+                          })}
+                          {g.current !== g.default && (
+                            <button
+                              type="button"
+                              onClick={() => resetVariant(g.id)}
+                              title="Вернуть вариант по умолчанию"
+                              aria-label={`Вернуть вариант по умолчанию: ${g.title ?? g.id}`}
+                              style={{
+                                ...bare,
+                                padding: "4px 6px",
+                                color: PINK,
+                              }}
+                            >
+                              ↺
+                            </button>
+                          )}
+                        </div>
                       )}
-                    </div>
-                  </Fragment>
-                ))}
+                    </Fragment>
+                  ),
+                )}
               </Fragment>
             ))}
           </div>
